@@ -18,19 +18,22 @@ class Master extends React.Component {
 
 
   render() {
+    console.log("This is state:", this.state);
     return (
       <div>
         <h1>Active Listings</h1>
 
         {this.state.listings.map((c, i) => {
-          return <li key={i}>{c.name} <Link to={'/detail/' + i}>Detail</Link></li>
+          console.log("***************************");
+          console.log("This is search item: ", i+1);
+          console.log(c[i]);
+          return <li key={i}>{c.address.full} <Link to={'/detail/' + i}>Detail</Link></li>
         })}
 
       </div>
 
     );
   }
-
 
 }
 

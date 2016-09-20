@@ -25,6 +25,11 @@ var config = {
         test: /\.scss$/,
         //loaders: ["style", "css?sourceMap", "sass?sourceMap"]
         loader: extractSCSS.extract(['css?sourceMap','sass?sourceMap'])
+      },
+
+      {
+        test: /\.(png|jpg)$/,
+        loader: 'file-loader?name=images/[name].[ext]'
       }
     ]
   },

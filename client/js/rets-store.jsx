@@ -49,7 +49,7 @@ store.actions.load = function() {
    })
    .done(function(returnedData) {
      console.log('data', returnedData);
-     state.listings = returnedData.results;
+     state.listings = returnedData;
      changed();
    });
 

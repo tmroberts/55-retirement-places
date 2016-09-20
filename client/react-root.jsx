@@ -15,19 +15,21 @@ class App extends React.Component {
       <div>
         <p>This is the new REACTIFIED listing page woot!</p>
 
+        <Master/>
+
     </div>
     );
   }
 }
 
-// render((
-//   <Router history={hashHistory}>
-//     <Route path="/" component={App}>
-//       <Route path="master" component={Master}/>
-//       <Route path="detail/:index" component={Detail} />
-//       //<Route path="whateverIwantittobe" component={Third} />
-//     </Route>
-//   </Router>
-// ), document.getElementById('app'));
+render((
+  <Router history={hashHistory}>
+    <Route path="/" component={App}>
+      <Route path="master" component={Master}/>
+      <Route path="detail/:index" component={Detail} />
 
-render(<App/>, document.getElementById('app'));
+    </Route>
+  </Router>
+), document.getElementById('app'));
+
+//render(<App/>, document.getElementById('app'));

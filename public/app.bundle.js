@@ -93,7 +93,8 @@
 	          'p',
 	          null,
 	          'This is the new REACTIFIED listing page woot!'
-	        )
+	        ),
+	        _react2.default.createElement(_activeListings2.default, null)
 	      );
 	    }
 	  }]);
@@ -101,17 +102,18 @@
 	  return App;
 	}(_react2.default.Component);
 	
-	// render((
-	//   <Router history={hashHistory}>
-	//     <Route path="/" component={App}>
-	//       <Route path="master" component={Master}/>
-	//       <Route path="detail/:index" component={Detail} />
-	//       //<Route path="whateverIwantittobe" component={Third} />
-	//     </Route>
-	//   </Router>
-	// ), document.getElementById('app'));
+	(0, _reactDom.render)(_react2.default.createElement(
+	  _reactRouter.Router,
+	  { history: _reactRouter.hashHistory },
+	  _react2.default.createElement(
+	    _reactRouter.Route,
+	    { path: '/', component: App },
+	    _react2.default.createElement(_reactRouter.Route, { path: 'master', component: _activeListings2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'detail/:index', component: _listingDetail2.default })
+	  )
+	), document.getElementById('app'));
 	
-	(0, _reactDom.render)(_react2.default.createElement(App, null), document.getElementById('app'));
+	//render(<App/>, document.getElementById('app'));
 
 /***/ },
 /* 1 */
@@ -27183,6 +27185,7 @@
 	  _createClass(Master, [{
 	    key: 'render',
 	    value: function render() {
+	      console.log("This is state:", this.state);
 	      return _react2.default.createElement(
 	        'div',
 	        null,
@@ -27192,10 +27195,13 @@
 	          'Active Listings'
 	        ),
 	        this.state.listings.map(function (c, i) {
+	          console.log("***************************");
+	          console.log("This is search item: ", i + 1);
+	          console.log(c[i]);
 	          return _react2.default.createElement(
 	            'li',
 	            { key: i },
-	            c.name,
+	            c.address.full,
 	            ' ',
 	            _react2.default.createElement(
 	              _reactRouter.Link,
@@ -27268,7 +27274,7 @@
 	    }
 	  }).done(function (returnedData) {
 	    console.log('data', returnedData);
-	    state.listings = returnedData.results;
+	    state.listings = returnedData;
 	    changed();
 	  });
 	};

@@ -183,6 +183,7 @@ img {
 .box-1 {
   border-radius: 10px;
   background-color: red;
+  background-image: url(images/robson_ranch.jpg);
   background-position: center;
   background-size: cover;
   margin: 1.5% 1.5% 1.0% 0%;
