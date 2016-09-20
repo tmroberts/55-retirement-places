@@ -1,0 +1,372 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+#app {
+  padding: 5px; }
+
+body {
+  font-family: Helvetica, Verdana, sans-serif;
+  background-color: #000; }
+
+p {
+  color: blue; }
+
+header {
+  background-color: #000;
+  color: beige;
+  padding: 20px;
+  text-align: center;
+  letter-spacing: 2px; }
+
+header h1 {
+  font-size: 2em;
+  letter-spacing: 2px; }
+
+nav {
+  background-color: #555;
+  overflow: auto;
+  letter-spacing: .1em; }
+
+nav li {
+  float: right;
+  margin: 10px 20px; }
+
+nav li a {
+  color: beige;
+  text-decoration: none; }
+
+footer {
+  background-color: #555;
+  clear: both;
+  color: beige;
+  letter-spacing: .1em;
+  padding: 20px; }
+
+img {
+  width: 200px; }
+
+#output {
+  border: solid 2px #fff;
+  padding: 40px;
+  color: #fff;
+  overflow: auto; }
+
+#app {
+  border: solid 3px #fff;
+  padding: 40px;
+  color: #fff;
+  overflow: auto;
+  width: 90%;
+  overflow: auto; }
+
+.banner {
+  /* NO tiling; */
+  background-size: cover;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  height: 250px;
+  padding-top: 150px;
+  width: 100%;
+  position: relative; }
+
+.banner h1 {
+  color: beige;
+  font-size: 72px;
+  text-align: center;
+  margin-top: 0; }
+
+.container {
+  margin: 0 auto;
+  max-width: 960px;
+  overflow: auto; }
+
+.ntx-heading {
+  border-radius: 10px;
+  font-family: Gotham SSm A, Helvetica, Verdana, sans-serif;
+  font-size: 1.5em;
+  font-weight: 300;
+  line-height: 1.3em;
+  padding: 40px;
+  text-align: center;
+  transition: background-color 7.0s ease;
+  background-colr: #000;
+  color: #fff;
+  margin-top: 40px;
+  letter-spacing: 2px; }
+
+.ntx-heading:hover {
+  background-color: beige;
+  color: #000; }
+
+.map {
+  border-radius: 10px;
+  text-align: center;
+  max-width: 100%;
+  height: 400px;
+  background-size: cover;
+  margin: 0 auto;
+  margin-bottom: 1.5%; }
+
+.communities .community {
+  float: left;
+  padding: 1%;
+  width: 31.3333333%; }
+
+.communities img {
+  max-width: 100%; }
+
+.communities h2 {
+  font-size: 1.2em; }
+
+.communities p {
+  line-height: 1.2em;
+  margin: 10px 0; }
+
+.img-container {
+  float: left;
+  margin: .65%;
+  width: 31%; }
+
+.img-container img {
+  width: 100%; }
+
+.box {
+  border-radius: 10px;
+  float: left;
+  height: 200px;
+  position: relative; }
+
+.box-1 {
+  border-radius: 10px;
+  background-color: red;
+  background-position: center;
+  background-size: cover;
+  margin: 1.5% 1.5% 1.0% 0%;
+  width: 22.5%; }
+
+.box-5 {
+  background-color: red;
+  background-position: center;
+  background-size: cover;
+  margin: 1.5% 1.5% 1.5% 0%;
+  width: 22.5%; }
+
+.box-9 {
+  background-color: red;
+  background-position: center;
+  background-size: cover;
+  margin: 1.5% 1.5% 1.5% 0%;
+  width: 22.5%; }
+
+.box-13 {
+  background-color: red;
+  background-position: center;
+  background-size: cover;
+  margin: 1.5% 1.5% 3% 0%;
+  width: 22.5%; }
+
+.box-2 {
+  background-color: green;
+  background-position: center;
+  background-size: cover;
+  margin: 1.5% 1.5% 1.5% 1.5%;
+  width: 22.5%; }
+
+.box-6 {
+  background-color: green;
+  background-position: center;
+  background-size: cover;
+  margin: 1.5% 1.5% 1.5% 1.5%;
+  width: 22.5%; }
+
+.box-10 {
+  background-color: green;
+  background-position: center;
+  background-size: cover;
+  margin: 1.5% 1.5% 1.5% 1.5%;
+  width: 22.5%; }
+
+.box-14 {
+  background-color: green;
+  background-position: center;
+  background-size: cover;
+  margin: 1.5% 1.5% 3% 1.5%;
+  width: 22.5%; }
+
+.box-3 {
+  background-color: orange;
+  background-position: center;
+  background-size: cover;
+  margin: 1.5% 1.5% 1.5% 1.5%;
+  width: 22.5%; }
+
+.box-7 {
+  background-color: orange;
+  background-position: center;
+  background-size: cover;
+  margin: 1.5% 1.5% 1.5% 1.5%;
+  width: 22.5%; }
+
+.box-11 {
+  background-color: orange;
+  background-position: center;
+  background-size: cover;
+  margin: 1.5% 1.5% 1.5% 1.5%;
+  width: 22.5%; }
+
+.box-4 {
+  background-color: blue;
+  background-position: center;
+  background-size: cover;
+  margin: 1.5% 1% 1.5% 1.5%;
+  width: 22.5%; }
+
+.box-8 {
+  background-color: blue;
+  background-position: center;
+  background-size: cover;
+  margin: 1.5% 1% 1.5% 1.5%;
+  width: 22.5%; }
+
+.box-12 {
+  background-color: blue;
+  background-position: center;
+  background-size: cover;
+  margin: 1.5% 1% 1.5% 1.5%;
+  width: 22.5%; }
+
+.overlay {
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #FFF;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  top: 0; }
+
+.box:hover .overlay {
+  background-color: rgba(0, 0, 0, 0.6); }
+
+.overlay .content {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  transition: 0.2s; }
+
+.box:hover .content {
+  bottom: 15px; }
+
+.overlay .view-community {
+  border: solid 1px #FFF;
+  opacity: 0;
+  margin: 20px auto;
+  max-width: 130px;
+  padding: 10px;
+  transition: 0.2s;
+  transition-property: bottom; }
+
+.box:hover .view-community {
+  opacity: .6; }
+
+.view-community:hover {
+  background-color: #000;
+  color: #fff; }
+
+.overlay .heading {
+  font-family: "Verlag A", "Verlag B", "Helvetica", "Arial", sans-serif;
+  font-size: 1.8em;
+  font-weight: 100;
+  letter-spacing: 2px;
+  line-height: 1.1em;
+  margin-top: 100px auto;
+  margin-bottom: 0.15em;
+  text-align: center;
+  text-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2); }
+
+.overlay .desc {
+  font-size: 1em;
+  letter-spacing: .1em;
+  line-height: 1.2em;
+  font-weight: 100;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  text-align: center; }
+
+@media screen and (max-width: 750px) {
+  .communities .community {
+    border-top: solid 1px #000;
+    float: none;
+    padding: 40px 20px;
+    width: auto; } }
+
+@media (max-width: 600px) {
+  nav li {
+    float: none;
+    padding: 5px 0px; }
+  nav li a {
+    text-decoration: none; } }
+
+.the-list li {
+  color: #636363;
+  list-style-type: disc;
+  line-height: 1.2em;
+  margin: 10px 0; }
+
+.listings-button {
+  background-color: #c33;
+  color: #FFF;
+  width: 150px;
+  float: left;
+  font-size: 1em;
+  display: inline-block;
+  padding: 10px;
+  text-align: center; }
+
+/*# sourceMappingURL=style.css.map*/
