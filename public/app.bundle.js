@@ -60,7 +60,7 @@
 	
 	var _activeListings2 = _interopRequireDefault(_activeListings);
 	
-	var _listingDetail = __webpack_require__(238);
+	var _listingDetail = __webpack_require__(236);
 	
 	var _listingDetail2 = _interopRequireDefault(_listingDetail);
 	
@@ -94,7 +94,7 @@
 	          null,
 	          'This is the new REACTIFIED listing page woot!'
 	        ),
-	        _react2.default.createElement(_activeListings2.default, null)
+	        this.props.children
 	      );
 	    }
 	  }]);
@@ -108,7 +108,7 @@
 	  _react2.default.createElement(
 	    _reactRouter.Route,
 	    { path: '/', component: App },
-	    _react2.default.createElement(_reactRouter.Route, { path: 'master', component: _activeListings2.default }),
+	    _react2.default.createElement(_reactRouter.IndexRoute, { component: _activeListings2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: 'detail/:index', component: _listingDetail2.default })
 	  )
 	), document.getElementById('app'));
@@ -27150,7 +27150,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _retsStore = __webpack_require__(236);
+	var _retsStore = __webpack_require__(237);
 	
 	var _retsStore2 = _interopRequireDefault(_retsStore);
 	
@@ -27177,6 +27177,7 @@
 	    _this.state = _retsStore2.default.copyState();
 	
 	    _retsStore2.default.addListener(function (state) {
+	      console.log("State has changed", state);
 	      _this.setState(state);
 	    });
 	    return _this;
@@ -27188,25 +27189,106 @@
 	      console.log("This is state:", this.state);
 	      return _react2.default.createElement(
 	        'div',
-	        null,
+	        { className: 'listings' },
 	        _react2.default.createElement(
 	          'h1',
 	          null,
 	          'Active Listings'
 	        ),
-	        this.state.listings.map(function (c, i) {
-	          console.log("***************************");
-	          console.log("This is search item: ", i + 1);
-	          console.log(c[i]);
+	        this.state.listings.map(function (listings) {
+	          console.log('listings', listings);
+	
 	          return _react2.default.createElement(
-	            'li',
-	            { key: i },
-	            c.address.full,
-	            ' ',
+	            'div',
+	            { className: 'listings-container', key: listings.listing_id },
+	            _react2.default.createElement('br', null),
+	            _react2.default.createElement('hr', null),
+	            _react2.default.createElement('br', null),
 	            _react2.default.createElement(
-	              _reactRouter.Link,
-	              { to: '/detail/' + i },
-	              'Detail'
+	              'div',
+	              { id: 'image' },
+	              _react2.default.createElement('img', { src: listings.photos[0] })
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              listings.address.full
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              '"Address: " ',
+	              listings.address.full,
+	              '  "  "  ',
+	              listings.address.city,
+	              '  "  "   ',
+	              listings.address.postalCode,
+	              ' '
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              '"City: "  ',
+	              listings.address.city,
+	              '  '
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              '"Zip Code: "  ',
+	              listings.address.postalCode,
+	              '  '
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              '"MLS Area: "  ',
+	              listings.mls.area,
+	              '  '
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              '"MLS Area: " ',
+	              listings.geo.marketArea,
+	              '  '
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              '"Directions: " ',
+	              listings.geo.directions,
+	              '  '
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              '"MLS Id: "  ',
+	              listings.mlsId,
+	              '  '
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              '"NEW MLS Id: " ',
+	              listings.listingId,
+	              '  '
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              '"Status: "  ',
+	              listings.mls.status,
+	              '  '
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'listings-button' },
+	              _react2.default.createElement(
+	                _reactRouter.Link,
+	                { to: '/detail/' + listings.listingId },
+	                'View Listing Detail'
+	              )
 	            )
 	          );
 	        })
@@ -27225,7 +27307,179 @@
 
 	'use strict';
 	
-	var $ = __webpack_require__(237);
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _retsStore = __webpack_require__(237);
+	
+	var _retsStore2 = _interopRequireDefault(_retsStore);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Detail = function (_React$Component) {
+	  _inherits(Detail, _React$Component);
+	
+	  function Detail() {
+	    _classCallCheck(this, Detail);
+	
+	    return _possibleConstructorReturn(this, (Detail.__proto__ || Object.getPrototypeOf(Detail)).apply(this, arguments));
+	  }
+	
+	  _createClass(Detail, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      console.log('the params', this.props.params);
+	      var id = Number(this.props.params.index);
+	      var stateObj = _retsStore2.default.copyState();
+	      var dude = stateObj.listings[id];
+	      console.log('teh dude', dude);
+	      this.setState(dude);
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      console.log('detail state is what?', this.state);
+	
+	      if (this.state === null) {
+	        return _react2.default.createElement(
+	          'div',
+	          null,
+	          'loading listing...'
+	        );
+	      }
+	
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'listings' },
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          'Active Listings'
+	        ),
+	        this.state.listings.map(function (listings, i) {
+	          console.log('listings', listings);
+	          console.log("***************************");
+	          console.log("This is search item: ", i + 1);
+	          console.log(listings[i]);
+	          return _react2.default.createElement(
+	            'div',
+	            { className: 'listings-container', key: listings.listing_id },
+	            _react2.default.createElement('br', null),
+	            _react2.default.createElement('hr', null),
+	            _react2.default.createElement('br', null),
+	            _react2.default.createElement(
+	              'div',
+	              { id: 'image' },
+	              _react2.default.createElement('img', { src: listings.photos[0] })
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              listings.address.full
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              '"Address: " ',
+	              listings.address.full,
+	              '  "  "  ',
+	              listings.address.city,
+	              '  "  "   ',
+	              listings.address.postalCode,
+	              ' '
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              '"City: "  ',
+	              listings.address.city,
+	              '  '
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              '"Zip Code: "  ',
+	              listings.address.postalCode,
+	              '  '
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              '"MLS Area: "  ',
+	              listings.mls.area,
+	              '  '
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              '"MLS Area: " ',
+	              listings.geo.marketArea,
+	              '  '
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              '"Directions: " ',
+	              listings.geo.directions,
+	              '  '
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              '"MLS Id: "  ',
+	              listings.mlsId,
+	              '  '
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              '"NEW MLS Id: " ',
+	              listings.listingId,
+	              '  '
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              '"Status: "  ',
+	              listings.mls.status,
+	              '  '
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { 'class': 'listings-button' },
+	              _react2.default.createElement(
+	                Link,
+	                { to: '/detail/' + listings.listingId },
+	                'Return to  Listings'
+	              )
+	            )
+	          );
+	        })
+	      );
+	    }
+	  }]);
+	
+	  return Detail;
+	}(_react2.default.Component);
+	
+	module.exports = Detail;
+
+/***/ },
+/* 237 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var $ = __webpack_require__(238);
 	
 	var state = {
 	  listings: []
@@ -27282,7 +27536,7 @@
 	module.exports = store;
 
 /***/ },
-/* 237 */
+/* 238 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*eslint-disable no-unused-vars*/
@@ -37360,85 +37614,6 @@
 	return jQuery;
 	} );
 
-
-/***/ },
-/* 238 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _retsStore = __webpack_require__(236);
-	
-	var _retsStore2 = _interopRequireDefault(_retsStore);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var Detail = function (_React$Component) {
-	  _inherits(Detail, _React$Component);
-	
-	  function Detail() {
-	    _classCallCheck(this, Detail);
-	
-	    return _possibleConstructorReturn(this, (Detail.__proto__ || Object.getPrototypeOf(Detail)).apply(this, arguments));
-	  }
-	
-	  _createClass(Detail, [{
-	    key: 'componentDidMount',
-	    value: function componentDidMount() {
-	      console.log('the params', this.props.params);
-	      var id = Number(this.props.params.index);
-	      var stateObj = _retsStore2.default.copyState();
-	      var dude = stateObj.listings[id];
-	      console.log('teh dude', dude);
-	      this.setState(dude);
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      console.log('detail state is what?', this.state);
-	
-	      if (this.state === null) {
-	        return _react2.default.createElement(
-	          'div',
-	          null,
-	          'loading listing...'
-	        );
-	      }
-	
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(
-	          'h2',
-	          null,
-	          this.state.address.full
-	        ),
-	        _react2.default.createElement(
-	          'p',
-	          null,
-	          'Listing Id: ',
-	          this.state.listingId
-	        )
-	      );
-	    }
-	  }]);
-	
-	  return Detail;
-	}(_react2.default.Component);
-	
-	module.exports = Detail;
 
 /***/ },
 /* 239 */

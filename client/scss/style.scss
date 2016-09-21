@@ -74,7 +74,7 @@ img {
 }
 
 .banner {
-  //background: url('./images/header_test1.jpg') fixed;
+  background: url('./images/header_test1.jpg') fixed;
   /* NO tiling; */
   background-size: cover;
   border-bottom-left-radius: 10px;
@@ -129,7 +129,7 @@ img {
   text-align: center;
   max-width: 100%;
   height:400px;
-  //background: url('./images/Robson-Ranch-Map.jpg');
+  background: url('./images/Robson-Ranch-Map.jpg');
   background-size: cover;
   margin: 0 auto;
   margin-bottom: 1.5%;
@@ -186,7 +186,7 @@ img {
 
 .box-5 {
 	background-color: red;
-	//background-image: url(./images/villas_in_the_park.jpg);
+	background-image: url(./images/villas_in_the_park.jpg);
 	background-position: center;
 	background-size: cover;
 	margin: 1.5% 1.5% 1.5% 0%;
@@ -195,7 +195,7 @@ img {
 
 .box-9 {
 	background-color: red;
-	//background-image: url(./images/village_at_prestonwood.jpg);
+	background-image: url(./images/village_at_prestonwood.jpg);
 	background-position: center;
 	background-size: cover;
 	margin: 1.5% 1.5% 1.5% 0%;
@@ -204,7 +204,7 @@ img {
 
 .box-13 {
 	background-color: red;
-	//background-image: url(./images/the_legends.jpg);
+	background-image: url(./images/the_legends.jpg);
 	background-position: center;
 	background-size: cover;
 	margin: 1.5% 1.5% 3% 0%;
@@ -213,7 +213,7 @@ img {
 
 .box-2 {
 	background-color: green;
-	//background-image: url(./images/frisco_lakes_clubhouse.jpg);
+	background-image: url(./images/frisco_lakes_clubhouse.jpg);
 	background-position: center;
 	background-size:cover;
 	margin: 1.5% 1.5% 1.5% 1.5%;
@@ -222,7 +222,7 @@ img {
 
 .box-6 {
 	background-color: green;
-	//background-image: url(./images/ladera_mansfield.jpg);
+	background-image: url(./images/ladera_mansfield.jpg);
 	background-position: center;
 	background-size:cover;
 	margin: 1.5% 1.5% 1.5% 1.5%;
@@ -231,7 +231,7 @@ img {
 
 .box-10 {
 	background-color: green;
-	//background-image: url(./images/villas_of_stone_glen.jpg);
+	background-image: url(./images/villas_of_stone_glen.jpg);
 	background-position: center;
 	background-size:cover;
 	margin: 1.5% 1.5% 1.5% 1.5%;
@@ -240,7 +240,7 @@ img {
 
 .box-14 {
 	background-color: green;
-	//background-image: url(./images/cottages_at_lyndhurst.jpg);
+	background-image: url(./images/cottages_at_lyndhurst.jpg);
 	background-position: center;
 	background-size:cover;
 	margin: 1.5% 1.5% 3% 1.5%;
@@ -249,7 +249,7 @@ img {
 
 .box-3 {
 	background-color: orange;
-	//background-image: url(./images/heritage_ranch.jpg);
+	background-image: url(./images/heritage_ranch.jpg);
 	background-position: center;
 	background-size:cover;
 	margin: 1.5% 1.5% 1.5% 1.5%;
@@ -258,7 +258,7 @@ img {
 
 .box-7 {
 	background-color: orange;
-	//background-image: url(./images/isabella_village_savannah.jpg);
+	background-image: url(./images/isabella_village_savannah.jpg);
 	background-position: center;
 	background-size:cover;
 	margin: 1.5% 1.5% 1.5% 1.5%;
@@ -267,7 +267,7 @@ img {
 
 .box-11 {
 	background-color: orange;
-	//background-image: url(./images/tuscan_hills.jpg);
+	background-image: url(./images/tuscan_hills.jpg);
 	background-position: center;
 	background-size:cover;
 	margin: 1.5% 1.5% 1.5% 1.5%;
@@ -276,7 +276,7 @@ img {
 
 .box-4 {
 	background-color: blue;
-	//background-image: url(./images/craig_ranch.jpg);
+	background-image: url(./images/craig_ranch.jpg);
 	background-position: center;
 	background-size: cover;
 	margin: 1.5% 1% 1.5% 1.5%;
@@ -285,7 +285,7 @@ img {
 
 .box-8 {
 	background-color: blue;
-	//background-image: url(./images/villas_at_willow_grove.jpg);
+	background-image: url(./images/villas_at_willow_grove.jpg);
 	background-position: center;
 	background-size: cover;
 	margin: 1.5% 1% 1.5% 1.5%;
@@ -294,7 +294,7 @@ img {
 
 .box-12 {
 	background-color: blue;
-	//background-image: url(./images/orchard_flower.jpg);
+	background-image: url(./images/orchard_flower.jpg);
 	background-position: center;
 	background-size: cover;
 	margin: 1.5% 1% 1.5% 1.5%;
@@ -396,7 +396,6 @@ img {
 }
 
 
-//remove these? Noooooooo
  .the-list li {
    color: #636363;
    list-style-type: disc;
@@ -413,4 +412,9 @@ img {
    display: inline-block;
    padding: 10px;
    text-align:center;
+ }
+
+
+ .listings-button a {
+   text-decoration: none;
  }
