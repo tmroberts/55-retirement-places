@@ -23,6 +23,12 @@ class Detail extends React.Component {
     }
   }
 
+  handleClick() {
+    var historyObj = window.history;
+    history.back();
+  }
+
+
   componentDidMount() {
     this.findListing();
   }
@@ -50,8 +56,7 @@ class Detail extends React.Component {
         <p>"MLS Id: "  {this.state.mlsId}  </p>
         <p>"NEW MLS Id: " {this.state.listingId}  </p>
         <p>"Status: "  {this.state.mls.status}  </p>
-        <div className = "listings-button"><Link to={'/master/' + this.state.listingId}>Return to Listings</Link></div>
-
+        <div className = "listings-button" onClick={this.handleClick}>Return to Listings</div>
 
       </div>
     );

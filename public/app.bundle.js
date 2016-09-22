@@ -27346,6 +27346,19 @@
 	store.actions.load = function () {
 	  //load the state
 	  console.log('load action fired');
+	  // Dynamic elements:
+	  // q = 'the community'
+	  // postalCode = 'zip code'
+	
+	  //
+	  //var ref = document.referrer;
+	  //if(url(ref) =='...robson_ranch.html')
+	  //{
+	  // q_param = robson%20ranch
+	  //}
+	
+	  // var zip_param =
+	  // url: 'https://api.simplyrets.com/properties?q={q_param}&status=active&type=residential&postalCode={zip_param}&limit=50'
 	
 	  if (state.listings.length === 0) {
 	    $.ajax({
@@ -37501,6 +37514,12 @@
 	      }
 	    }
 	  }, {
+	    key: 'handleClick',
+	    value: function handleClick() {
+	      var historyObj = window.history;
+	      history.back();
+	    }
+	  }, {
 	    key: 'componentDidMount',
 	    value: function componentDidMount() {
 	      this.findListing();
@@ -37614,12 +37633,8 @@
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'listings-button' },
-	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: '/master/' + this.state.listingId },
-	            'Return to Listings'
-	          )
+	          { className: 'listings-button', onClick: this.handleClick },
+	          'Return to Listings'
 	        )
 	      );
 	    }
