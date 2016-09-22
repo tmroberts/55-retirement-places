@@ -39,20 +39,21 @@ store.actions.load = function() {
   //load the state
   console.log('load action fired');
 
-  $.ajax({
-     //these AJAX calls are using the /properties endpoint
-     url: 'https://api.simplyrets.com/properties?q=Robson%20Ranch&status=active&type=residential&postalCode=76207&limit=50',
+  if (state.listings.length === 0) {
+    $.ajax({
+       //these AJAX calls are using the /properties endpoint
+       url: 'https://api.simplyrets.com/properties?q=Robson%20Ranch&status=active&type=residential&postalCode=76207&limit=50',
 
-     beforeSend: function (xhr) {
-         xhr.setRequestHeader ("Authorization", "Basic " + btoa('tmrob_3503e746'+ ":" + '4221b62v5493lg44'));
-     }
-   })
-   .done(function(returnedData) {
-     console.log('data', returnedData);
-     state.listings = returnedData;
-     changed();
-   });
-
+       beforeSend: function (xhr) {
+           xhr.setRequestHeader ("Authorization", "Basic " + btoa('tmrob_3503e746'+ ":" + '4221b62v5493lg44'));
+       }
+     })
+     .done(function(returnedData) {
+       console.log('data', returnedData);
+       state.listings = returnedData;
+       changed();
+     });
+  }
 }
 
 module.exports = store;

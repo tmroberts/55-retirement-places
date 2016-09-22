@@ -27,7 +27,7 @@ render((
   <Router history={hashHistory}>
     <Route path="/" component={App}>
       <IndexRoute component={Master} />
-      <Route path="detail/:index" component={Detail} />
+      <Route path="detail/:listingId" component={Detail} />
     </Route>
   </Router>
 ), document.getElementById('app'));
