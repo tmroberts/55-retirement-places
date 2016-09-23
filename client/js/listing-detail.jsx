@@ -43,6 +43,10 @@ class Detail extends React.Component {
       <div  className = "detail-container">
         <h2>Listing Detail</h2>
         <br/><hr /><br/>
+        //
+        // put image galery here . . . 
+        //
+
         <div id="image"><img src={this.state.photos[0]} /></div>
         <p>{this.state.address.full}</p>
         <p>Listing Id: {this.state.listingId}</p>

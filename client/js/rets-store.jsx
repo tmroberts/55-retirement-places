@@ -29,33 +29,36 @@ function changed() {
   });
 }
 
+// Parameterize the query string so that all 14 communities can be handled here.
+
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
 
 /* ========================================= */
 /* Actions                                   */
 /* ========================================= */
-
 //Action to increment the state
 store.actions.load = function() {
   //load the state
   console.log('load action fired');
   // Dynamic elements:
-  // q = 'the community'
-  // postalCode = 'zip code'
-
-  //
-  //var ref = document.referrer;
-      //if(url(ref) =='...robson_ranch.html')
-      //{
-          // q_param = robson%20ranch
-      //}
-
-  // var zip_param =
-  // url: 'https://api.simplyrets.com/properties?q={q_param}&status=active&type=residential&postalCode={zip_param}&limit=50'
+  var q = getParameterByName('q');
+  var postalCode = getParameterByName('postalCode');
 
   if (state.listings.length === 0) {
     $.ajax({
-       //these AJAX calls are using the /properties endpoint
-       url: 'https://api.simplyrets.com/properties?q=Robson%20Ranch&status=active&type=residential&postalCode=76207&limit=50',
+       //the AJAX call uses the /properties endpoint
+       //url: 'https://api.simplyrets.com/properties?q=Robson%20Ranch&status=active&type=residential&postalCode=76207&limit=50',
+
+       url: 'https://api.simplyrets.com/properties?limit=50&type=residential&status=active&q='+ q + '&postalCode=' + postalCode,
 
        beforeSend: function (xhr) {
            xhr.setRequestHeader ("Authorization", "Basic " + btoa('tmrob_3503e746'+ ":" + '4221b62v5493lg44'));
