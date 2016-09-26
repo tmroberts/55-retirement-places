@@ -37557,11 +37557,27 @@
 	        _react2.default.createElement('br', null),
 	        _react2.default.createElement('hr', null),
 	        _react2.default.createElement('br', null),
-	        '// // put image galery here . . . //',
+	        '// // put image gallery heeeere . . . //',
 	        _react2.default.createElement(
 	          'div',
-	          { id: 'image' },
+	          { className: 'main-pic' },
 	          _react2.default.createElement('img', { src: this.state.photos[0] })
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'images' },
+	          _react2.default.createElement(
+	            'ul',
+	            { id: 'thumbnails' },
+	            this.state.photos.map(function (item, i) {
+	              return _react2.default.createElement(
+	                'li',
+	                { key: i },
+	                _react2.default.createElement('img', { src: item }),
+	                ' '
+	              );
+	            })
+	          )
 	        ),
 	        _react2.default.createElement(
 	          'p',
@@ -37571,7 +37587,7 @@
 	        _react2.default.createElement(
 	          'p',
 	          null,
-	          'Listing Id: ',
+	          '"Listing Id: "',
 	          this.state.listingId
 	        ),
 	        _react2.default.createElement(

@@ -40,16 +40,30 @@ class Detail extends React.Component {
     }
 
     return (
-      <div  className = "detail-container">
+      <div className = "detail-container">
         <h2>Listing Detail</h2>
         <br/><hr /><br/>
         //
-        // put image galery here . . . 
+        // put image gallery heeeere . . .
         //
 
-        <div id="image"><img src={this.state.photos[0]} /></div>
+        <div className="main-pic">
+          <img src={this.state.photos[0]} />
+        </div>
+
+        <div className="images">
+
+            <ul id="thumbnails">
+              {this.state.photos.map(function(item,i){
+                return <li key={i}><img src={item}/> </li>
+               })
+             }
+            </ul>
+
+        </div>
+
         <p>{this.state.address.full}</p>
-        <p>Listing Id: {this.state.listingId}</p>
+        <p>"Listing Id: "{this.state.listingId}</p>
 
         <p>"Address: " {this.state.address.full}  "  "  {this.state.address.city}  "  "   {this.state.address.postalCode} </p>
         <p>"City: "  {this.state.address.city}  </p>
