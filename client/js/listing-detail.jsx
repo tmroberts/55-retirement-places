@@ -2,6 +2,7 @@ import React from 'react';
 import store from './rets-store.jsx';
 import { Link } from 'react-router'
 
+
 class Detail extends React.Component {
 
   findListing() {
@@ -41,41 +42,37 @@ class Detail extends React.Component {
 
     return (
       <div className = "detail-container">
-        <h2>Listing Detail</h2>
-        <br/><hr /><br/>
-        //
-        // put image gallery heeeere . . .
-        //
 
-        <div className="main-pic">
+        <h1>Listing Detail</h1>
+        <br/><br/>
+        <div id="main-pic">
           <img src={this.state.photos[0]} />
         </div>
 
         <div className="images">
-
-            <ul id="thumbnails">
-              {this.state.photos.map(function(item,i){
-                return <li key={i}><img src={item}/> </li>
-               })
-             }
-            </ul>
-
+          <ul id="thumbnails">
+            {this.state.photos.map(function(item,i){
+              return <li key={i}><img src={item}/> </li>
+             })
+           }
+          </ul>
         </div>
 
-        <p>{this.state.address.full}</p>
-        <p>"Listing Id: "{this.state.listingId}</p>
+        <div id="listing-detail">
+          <p>{this.state.address.full}</p>
+          <p>"Listing Id: "{this.state.listingId}</p>
 
-        <p>"Address: " {this.state.address.full}  "  "  {this.state.address.city}  "  "   {this.state.address.postalCode} </p>
-        <p>"City: "  {this.state.address.city}  </p>
-        <p>"Zip Code: "  {this.state.address.postalCode}  </p>
-        <p>"MLS Area: "  {this.state.mls.area}  </p>
-        <p>"MLS Area: " {this.state.geo.marketArea}  </p>
-        <p>"Directions: " {this.state.geo.directions}  </p>
-        <p>"MLS Id: "  {this.state.mlsId}  </p>
-        <p>"NEW MLS Id: " {this.state.listingId}  </p>
-        <p>"Status: "  {this.state.mls.status}  </p>
-        <div className = "listings-button" onClick={this.handleClick}>Return to Listings</div>
-
+          <p>"Address: " {this.state.address.full}  "  "  {this.state.address.city}  "  "   {this.state.address.postalCode} </p>
+          <p>"City: "  {this.state.address.city}  </p>
+          <p>"Zip Code: "  {this.state.address.postalCode}  </p>
+          <p>"MLS Area: "  {this.state.mls.area}  </p>
+          <p>"MLS Area: " {this.state.geo.marketArea}  </p>
+          <p>"Directions: " {this.state.geo.directions}  </p>
+          <p>"MLS Id: "  {this.state.mlsId}  </p>
+          <p>"NEW MLS Id: " {this.state.listingId}  </p>
+          <p>"Status: "  {this.state.mls.status}  </p>
+        </div>
+        <div className = "return-listings-button" onClick={this.handleClick}>Return to Listings</div>
       </div>
     );
 

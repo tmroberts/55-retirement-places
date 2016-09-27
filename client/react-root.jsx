@@ -14,7 +14,7 @@ class App extends React.Component {
 
       <div>
 
-        <p>This is the new REACTIFIED listing page woot!</p>
+        {/*<p>This is the new REACTIFIED listing page woot!</p>*/}
 
         {this.props.children}
 

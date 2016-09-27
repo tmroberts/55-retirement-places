@@ -42,8 +42,9 @@ class Master extends React.Component {
               <p>"NEW MLS Id: " {listings.listingId}  </p>
               <p>"Status: "  {listings.mls.status}  </p>
               <p>"Subdivision:" {listings.subdivision}</p>
-              <div className = "listings-button"><Link to={'/detail/' + listings.listingId}>View Listing Detail</Link></div>
 
+              <div className = "listings-button"><Link to={'/detail/' + listings.listingId}>View Listing Detail</Link></div>
+              <br/><br/>
             </div>
           );
         })}
