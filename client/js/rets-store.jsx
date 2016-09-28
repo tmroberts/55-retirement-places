@@ -17,7 +17,8 @@ store.addListener = function(listener) {
 //Makes a copy of the state. This is to protect the state that is managed by the store.
 store.copyState = function() {
   return {
-    listings: state.listings
+    listings: state.listings,
+    selectedUrl: state.selectedUrl
   };
 }
 
@@ -28,6 +29,7 @@ function changed() {
     listener(copiedState);
   });
 }
+
 
 // Parameterize the query string so that all 14 communities can be handled here.
 
@@ -71,5 +73,12 @@ store.actions.load = function() {
      });
   }
 }
+
+
+store.actions.updateImage = function(url) {
+  state.selectedUrl=url;
+  changed();
+}
+
 
 module.exports = store;

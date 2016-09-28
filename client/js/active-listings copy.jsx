@@ -12,7 +12,7 @@ class Master extends React.Component {
     this.state = store.copyState();
 
     store.addListener(state => {
-      console.log("MASTER State has changed", state);
+      console.log("State has changed", state);
       this.setState(state);
     });
   }
