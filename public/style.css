@@ -51,7 +51,7 @@ body {
 
 nav {
   background-color: rgba(0, 0, 0, 0.5);
-  height: 100px;
+  height: 50px;
   position: fixed;
   width: 100%;
   letter-spacing: .2em;
@@ -112,12 +112,11 @@ footer {
   font-size: 1.5em;
   font-weight: 300;
   line-height: 1.3em;
-  padding: 40px;
+  padding: 10px;
   text-align: center;
   transition: background-color 7.0s ease;
   background-colr: #000;
   color: #fff;
-  margin-top: 40px;
   letter-spacing: 2px; }
 
 .ntx-heading:hover {
@@ -373,7 +372,6 @@ footer {
   clear: both; }
 
 #app {
-  border: solid 3px #3A3A3A;
   padding: 40px;
   color: #fff;
   overflow: auto;
