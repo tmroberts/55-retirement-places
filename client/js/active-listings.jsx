@@ -11,11 +11,18 @@ class Master extends React.Component {
 
     this.state = store.copyState();
 
-    store.addListener(state => {
+    this.listeningFunc = (state) => {
       console.log("MASTER State has changed", state);
       this.setState(state);
-    });
+    }
+    store.addListener(this.listeningFunc);
   }
+
+  componentWillUnmount() {
+    console.log('component will unmount');
+    store.removeListener(this.isteningFunc);
+  }
+
 
   render() {
   console.log("This is state:", this.state);

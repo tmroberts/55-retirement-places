@@ -7,8 +7,13 @@ import { Link } from 'react-router'
 class Detail extends React.Component {
 
   mapStoreState(state){
+    if (state.listings.length === 0) {
+      store.actions.load();
+      return;
+    }
+
     var componentState = {};
-    // state and map it to
+    // take state and map the detail view
     var listingId = Number(this.props.params.listingId);
     for (var i = 0; i < state.listings.length; i++) {
       var compare_id = state.listings[i].listingId;
@@ -20,6 +25,9 @@ class Detail extends React.Component {
       }
     }
     componentState.selectedUrl=state.selectedUrl;
+    //If componentStateUrl is 'undefined', that means we just entered the Detail and no thumbnail
+    //has been selected.  Defaulting the selection to [0] causes the first image to display
+    //as the default 'main-pic'.
     if (componentState.selectedUrl == undefined){
       componentState.selectedUrl = componentState.currentListing.photos[0];
     }
@@ -27,7 +35,6 @@ class Detail extends React.Component {
     console.log('This is componentState: ', componentState);
     this.setState(componentState);
   }
-
 
   handleClick() {
     var historyObj = window.history;
@@ -44,9 +51,8 @@ class Detail extends React.Component {
 
   componentWillUnmount(){
     store.actions.updateImage(undefined);
+    store.removeListener(this.listeningFunc);
   }
-
-
 
   componentDidMount() {
     var stateObj = store.copyState();

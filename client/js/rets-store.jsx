@@ -14,6 +14,14 @@ store.addListener = function(listener) {
   store.listeners.push(listener);
 }
 
+store.removeListener = function(listener) {
+  var index = store.listeners.indexOf(listener);
+  store.listeners.splice(index, 1);
+  console.log('listener length (remove)', store.listeners.length);
+}
+
+
+
 //Makes a copy of the state. This is to protect the state that is managed by the store.
 store.copyState = function() {
   return {
@@ -55,6 +63,14 @@ store.actions.load = function() {
   var q = getParameterByName('q');
   var postalCode = getParameterByName('postalCode');
 
+  // th 9/28/2016: to stop extraneous
+  // api calls
+  // I have data already! Don't make ajax call.
+  // if (state.listings.length > 0) {
+  //   changed();
+  //   return;
+  // }
+
   if (state.listings.length === 0) {
     $.ajax({
        //the AJAX call uses the /properties endpoint
@@ -74,11 +90,9 @@ store.actions.load = function() {
   }
 }
 
-
 store.actions.updateImage = function(url) {
   state.selectedUrl=url;
   changed();
 }
-
 
 module.exports = store;
