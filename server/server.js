@@ -11,6 +11,11 @@ var apiKey = process.env.SIMPLYRETS_KEY;
 //   console.log('listening on port 5000.');
 // });
 
+// npm run-script node server/server.js
+//
+// sh launch.sh
+
+
 var port = process.env.PORT || 5000;
 
 app.listen(port, function() {

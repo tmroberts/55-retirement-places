@@ -60,7 +60,7 @@
 	
 	var _activeListings2 = _interopRequireDefault(_activeListings);
 	
-	var _listingDetail = __webpack_require__(236);
+	var _listingDetail = __webpack_require__(238);
 	
 	var _listingDetail2 = _interopRequireDefault(_listingDetail);
 	
@@ -27145,7 +27145,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _retsStore = __webpack_require__(237);
+	var _retsStore = __webpack_require__(236);
 	
 	var _retsStore2 = _interopRequireDefault(_retsStore);
 	
@@ -27317,254 +27317,7 @@
 
 	'use strict';
 	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _retsStore = __webpack_require__(237);
-	
-	var _retsStore2 = _interopRequireDefault(_retsStore);
-	
-	var _reactRouter = __webpack_require__(172);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	//var render = require('react-dom').render;
-	
-	var Detail = function (_React$Component) {
-	  _inherits(Detail, _React$Component);
-	
-	  function Detail() {
-	    _classCallCheck(this, Detail);
-	
-	    return _possibleConstructorReturn(this, (Detail.__proto__ || Object.getPrototypeOf(Detail)).apply(this, arguments));
-	  }
-	
-	  _createClass(Detail, [{
-	    key: 'mapStoreState',
-	    value: function mapStoreState(state) {
-	      if (state.listings.length === 0) {
-	        _retsStore2.default.actions.load();
-	        return;
-	      }
-	
-	      var componentState = {};
-	      // take state and map the detail view
-	      var listingId = Number(this.props.params.listingId);
-	      for (var i = 0; i < state.listings.length; i++) {
-	        var compare_id = state.listings[i].listingId;
-	        //console.log("compare_id",compare_id,"listingId",listingId);
-	        if (compare_id == listingId) {
-	          var listing = state.listings[i];
-	          console.log('The listing', listing);
-	          componentState.currentListing = listing;
-	        }
-	      }
-	      componentState.selectedUrl = state.selectedUrl;
-	      //If componentStateUrl is 'undefined', that means we just entered the Detail and no thumbnail
-	      //has been selected.  Defaulting the selection to [0] causes the first image to display
-	      //as the default 'main-pic'.
-	      if (componentState.selectedUrl == undefined) {
-	        componentState.selectedUrl = componentState.currentListing.photos[0];
-	      }
-	
-	      console.log('This is componentState: ', componentState);
-	      this.setState(componentState);
-	    }
-	  }, {
-	    key: 'handleClick',
-	    value: function handleClick() {
-	      var historyObj = window.history;
-	      history.back();
-	    }
-	  }, {
-	    key: 'selectPhoto',
-	    value: function selectPhoto(evt) {
-	      console.log('You selected thumbnail', evt.target);
-	      var url = evt.target.src;
-	      //call the store
-	      _retsStore2.default.actions.updateImage(url);
-	      console.log('This is the url', url);
-	    }
-	  }, {
-	    key: 'componentWillUnmount',
-	    value: function componentWillUnmount() {
-	      _retsStore2.default.actions.updateImage(undefined);
-	      _retsStore2.default.removeListener(this.listeningFunc);
-	    }
-	  }, {
-	    key: 'componentDidMount',
-	    value: function componentDidMount() {
-	      var _this2 = this;
-	
-	      var stateObj = _retsStore2.default.copyState();
-	      this.mapStoreState(stateObj);
-	
-	      _retsStore2.default.addListener(function (state) {
-	        console.log("State has changed", state);
-	        _this2.mapStoreState(state);
-	      });
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      console.log('This is DETAIL state: ', this.state);
-	
-	      if (this.state === null) {
-	        return _react2.default.createElement(
-	          'div',
-	          null,
-	          'loading listing...'
-	        );
-	      }
-	
-	      var self = this;
-	      //var selectedPhoto = this.state.photo;
-	      //console.log('This is selectedPhoto: ', selectedPhoto);
-	
-	
-	      return _react2.default.createElement(
-	        'div',
-	        { className: 'detail-container' },
-	        _react2.default.createElement(
-	          'h1',
-	          null,
-	          'Listing Detail'
-	        ),
-	        _react2.default.createElement('br', null),
-	        _react2.default.createElement('br', null),
-	        _react2.default.createElement(
-	          'div',
-	          { id: 'main-pic' },
-	          _react2.default.createElement('img', { src: this.state.selectedUrl })
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'images' },
-	          _react2.default.createElement(
-	            'ul',
-	            { id: 'thumbnails' },
-	            this.state.currentListing.photos.map(function (item, i) {
-	              {/*return <li key={i}><img src={item}/> </li>*/}
-	              return _react2.default.createElement(
-	                'li',
-	                { key: i, onClick: self.selectPhoto },
-	                _react2.default.createElement('img', { src: self.state.currentListing.photos[i] })
-	              );
-	            })
-	          )
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { id: 'listing-detail' },
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            this.state.currentListing.address.full
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            '"Listing Id: "',
-	            this.state.currentListing.listingId
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            '"Address: " ',
-	            this.state.currentListing.address.full,
-	            '  "  "  ',
-	            this.state.currentListing.address.city,
-	            '  "  "   ',
-	            this.state.currentListing.address.postalCode,
-	            ' '
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            '"City: "  ',
-	            this.state.currentListing.address.city,
-	            '  '
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            '"Zip Code: "  ',
-	            this.state.currentListing.address.postalCode,
-	            '  '
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            '"MLS Area: "  ',
-	            this.state.currentListing.mls.area,
-	            '  '
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            '"MLS Area: " ',
-	            this.state.currentListing.geo.marketArea,
-	            '  '
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            '"Directions: " ',
-	            this.state.currentListing.geo.directions,
-	            '  '
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            '"MLS Id: "  ',
-	            this.state.currentListing.mlsId,
-	            '  '
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            '"NEW MLS Id: " ',
-	            this.state.currentListing.listingId,
-	            '  '
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            '"Status: "  ',
-	            this.state.currentListing.mls.status,
-	            '  '
-	          )
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'return-listings-button', onClick: this.handleClick },
-	          'Return to Listings'
-	        )
-	      );
-	    }
-	  }]);
-	
-	  return Detail;
-	}(_react2.default.Component);
-	
-	module.exports = Detail;
-
-/***/ },
-/* 237 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	var $ = __webpack_require__(238);
+	var $ = __webpack_require__(237);
 	
 	var state = {
 	  listings: []
@@ -27659,7 +27412,7 @@
 	module.exports = store;
 
 /***/ },
-/* 238 */
+/* 237 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*eslint-disable no-unused-vars*/
@@ -37737,6 +37490,253 @@
 	return jQuery;
 	} );
 
+
+/***/ },
+/* 238 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _retsStore = __webpack_require__(236);
+	
+	var _retsStore2 = _interopRequireDefault(_retsStore);
+	
+	var _reactRouter = __webpack_require__(172);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	//var render = require('react-dom').render;
+	
+	var Detail = function (_React$Component) {
+	  _inherits(Detail, _React$Component);
+	
+	  function Detail() {
+	    _classCallCheck(this, Detail);
+	
+	    return _possibleConstructorReturn(this, (Detail.__proto__ || Object.getPrototypeOf(Detail)).apply(this, arguments));
+	  }
+	
+	  _createClass(Detail, [{
+	    key: 'mapStoreState',
+	    value: function mapStoreState(state) {
+	      if (state.listings.length === 0) {
+	        _retsStore2.default.actions.load();
+	        return;
+	      }
+	
+	      var componentState = {};
+	      // take state and map the detail view
+	      var listingId = Number(this.props.params.listingId);
+	      for (var i = 0; i < state.listings.length; i++) {
+	        var compare_id = state.listings[i].listingId;
+	        //console.log("compare_id",compare_id,"listingId",listingId);
+	        if (compare_id == listingId) {
+	          var listing = state.listings[i];
+	          console.log('The listing', listing);
+	          componentState.currentListing = listing;
+	        }
+	      }
+	      componentState.selectedUrl = state.selectedUrl;
+	      //If componentStateUrl is 'undefined', that means we just entered the Detail and no thumbnail
+	      //has been selected.  Defaulting the selection to [0] causes the first image to display
+	      //as the default 'main-pic'.
+	      if (componentState.selectedUrl == undefined) {
+	        componentState.selectedUrl = componentState.currentListing.photos[0];
+	      }
+	
+	      console.log('This is componentState: ', componentState);
+	      this.setState(componentState);
+	    }
+	  }, {
+	    key: 'handleClick',
+	    value: function handleClick() {
+	      var historyObj = window.history;
+	      history.back();
+	    }
+	  }, {
+	    key: 'selectPhoto',
+	    value: function selectPhoto(evt) {
+	      console.log('You selected thumbnail', evt.target);
+	      var url = evt.target.src;
+	      //call the store
+	      _retsStore2.default.actions.updateImage(url);
+	      console.log('This is the url', url);
+	    }
+	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      _retsStore2.default.actions.updateImage(undefined);
+	      _retsStore2.default.removeListener(this.listeningFunc);
+	    }
+	  }, {
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      var _this2 = this;
+	
+	      var stateObj = _retsStore2.default.copyState();
+	      this.mapStoreState(stateObj);
+	
+	      _retsStore2.default.addListener(function (state) {
+	        console.log("State has changed", state);
+	        _this2.mapStoreState(state);
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      console.log('This is DETAIL state: ', this.state);
+	
+	      if (this.state === null) {
+	        return _react2.default.createElement(
+	          'div',
+	          null,
+	          'loading listing...'
+	        );
+	      }
+	
+	      var self = this;
+	      //var selectedPhoto = this.state.photo;
+	      //console.log('This is selectedPhoto: ', selectedPhoto);
+	
+	
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'detail-container' },
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          'Listing Detail'
+	        ),
+	        _react2.default.createElement('br', null),
+	        _react2.default.createElement('br', null),
+	        _react2.default.createElement(
+	          'div',
+	          { id: 'main-pic' },
+	          _react2.default.createElement('img', { src: this.state.selectedUrl })
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'images' },
+	          _react2.default.createElement(
+	            'ul',
+	            { id: 'thumbnails' },
+	            this.state.currentListing.photos.map(function (item, i) {
+	              {/*return <li key={i}><img src={item}/> </li>*/}
+	              return _react2.default.createElement(
+	                'li',
+	                { key: i, onClick: self.selectPhoto },
+	                _react2.default.createElement('img', { src: self.state.currentListing.photos[i] })
+	              );
+	            })
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { id: 'listing-detail' },
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            this.state.currentListing.address.full
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            '"Listing Id: "',
+	            this.state.currentListing.listingId
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            '"Address: " ',
+	            this.state.currentListing.address.full,
+	            '  "  "  ',
+	            this.state.currentListing.address.city,
+	            '  "  "   ',
+	            this.state.currentListing.address.postalCode,
+	            ' '
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            '"City: "  ',
+	            this.state.currentListing.address.city,
+	            '  '
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            '"Zip Code: "  ',
+	            this.state.currentListing.address.postalCode,
+	            '  '
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            '"MLS Area: "  ',
+	            this.state.currentListing.mls.area,
+	            '  '
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            '"MLS Area: " ',
+	            this.state.currentListing.geo.marketArea,
+	            '  '
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            '"Directions: " ',
+	            this.state.currentListing.geo.directions,
+	            '  '
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            '"MLS Id: "  ',
+	            this.state.currentListing.mlsId,
+	            '  '
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            '"NEW MLS Id: " ',
+	            this.state.currentListing.listingId,
+	            '  '
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            '"Status: "  ',
+	            this.state.currentListing.mls.status,
+	            '  '
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'return-listings-button', onClick: this.handleClick },
+	          'Return to Listings'
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return Detail;
+	}(_react2.default.Component);
+	
+	module.exports = Detail;
 
 /***/ },
 /* 239 */

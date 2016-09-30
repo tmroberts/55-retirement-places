@@ -115,15 +115,22 @@ footer {
   color: #000;
 }
 
-.map {
+#map {
   border-radius: 10px;
   text-align: center;
-  max-width: 100%;
-  height:400px;
-  background: url('./images/Robson-Ranch-Map.jpg');
-  background-size: cover;
+  max-width: 80%;
+  //height:400px;
+  //background: url('./images/Robson-Ranch-Map.jpg');
+  //background-size: cover;
   margin: 0 auto;
   margin-bottom: 1.5%;
+  min-height: 600px;
+  min-width: 800px;
+  // #map {
+  //   min-height: 600px;
+  //   min-width: 800px;
+  // }
+
 }
 
 .communities .community {
@@ -436,7 +443,11 @@ footer {
   text-align:center;
   //border: 1px solid red;
   margin-bottom: 20px;
-  width: 400px;
+  //width: 400px;
+  max-width: 400px;
+  max-height:300px;
+  min-width: 400px;
+  min-height: 300px;
 }
 
 #thumbnails img {
