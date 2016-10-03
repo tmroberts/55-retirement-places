@@ -10,7 +10,7 @@
 //   function start() {
 
     //Call your code here
-    console.log('Map is starting!');
+    console.log('Map is invoked!');
     // code to draw map
     var map;
     var col = '#FF0000';
