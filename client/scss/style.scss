@@ -3,29 +3,22 @@
 body {
   font-family: Helvetica, Verdana, sans-serif;
   //background-color: #adadad;
-  background-color: #000;
+  //background-color: #000;
+  //background-color: #201d1c
 }
 
-.container {
-  //background-color: #E6E6E6;
-  //border: solid 1px #555;
-  margin: 0 auto;
-  //max-width: 960px;
-  width:96%;
-  overflow: auto;
-}
 
 nav {
-  //background-color: #555;
   background-color: rgba(0,0,0,0.5);
   height: 50px;
   position: fixed;
-  width:96%;
+  width:100%;
   letter-spacing: .2em;
   z-index: 100;
   padding-top:12px;
   padding-bottom: 12px;
   padding-left: 10px;
+  top:0;
 }
 
 nav ul li {
@@ -50,32 +43,47 @@ nav h1 {
   //padding-top:10px;
 }
 
+
 .banner {
-  background: url('./images/header_test1.jpg') fixed;
+  background-color: #000;
+  background-image: url('./images/header_test1.jpg');
   /* NO tiling; */
-  //border: 1px solid red;
+  border: 1px solid blue;
   background-size: cover;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  background-position:bottom;
   height: 350px;
+  top: 0;
+  //left:0;
   padding-top: 150px;
-  //width: 100%;
-  position: relative;
+  width: 100%;
+  position:fixed;
+  z-index: -1000;
 }
 
 .banner h1 {
+  //outline: 1px solid red;
   color:beige;
   font-size: 72px;
   text-align: center;
   margin-top: 50px;
-  z-index: -1000;
+  //z-index: -1000;
+  position: fixed;
+  width:100%;
 }
 
+.container {
+  background-color: #201d1c;
+  //background-color: rgba(0,0,0,0.5);
+  border: 5px solid red;
+      margin-top: 42%;
 
-
+  width:100%;
+  overflow: auto;
+}
 
 .ntx-heading {
-  //border: 1px solid #adadad;
+
+  border: 1px solid green;
   border-radius: 10px;
   font-family: Gotham SSm A, Helvetica, Verdana, sans-serif;
   //background-color: #EEE;
@@ -86,7 +94,7 @@ nav h1 {
   text-align: center;
   transition: background-color 7.0s ease;
   //background-color: #fff;
-  background-colr: #000;
+  background-color: #000;
   color: #fff;
   //margin-top: 40px;
   letter-spacing: 2px;
@@ -95,9 +103,11 @@ nav h1 {
 .ntx-heading:hover {
   background-color: beige;
   color: #000;
+
 }
 
 #map {
+    //margin-top: 40%;
   border-radius: 10px;
   text-align: center;
   //background-color: red;
@@ -107,6 +117,7 @@ nav h1 {
   //background-size: cover;
   margin: 0 auto;
   margin-bottom: 1.5%;
+
   max-height: 350px;
   //max-width: 617px;
   min-height: 350px;
@@ -357,7 +368,8 @@ nav h1 {
 
 
 footer {
-  background-color: #555;
+  //background-color: #555;
+  background-color: #201D1C;
   clear: both;
   color: beige;
   letter-spacing: .1em;

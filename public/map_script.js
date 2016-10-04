@@ -36,15 +36,15 @@
         scrollwheel: true,
         scaleControl: true,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
-        // zoomControl: true,
-        // zoomControlOptions: {
-        //     style: google.maps.ZoomControlStyle.LARGE,
-        //     position: google.maps.ControlPosition.RIGHT_TOP
-        //   },
-        // panControl: true,
-        //     panControlOptions: {
-        //     position: google.maps.ControlPosition.TOP_RIGHT
-        // }
+        zoomControl: true,
+        zoomControlOptions: {
+             style: google.maps.ZoomControlStyle.LARGE,
+             position: google.maps.ControlPosition.RIGHT_TOP
+           },
+         panControl: true,
+             panControlOptions: {
+             position: google.maps.ControlPosition.TOP_RIGHT
+         }
       };
 
       map = new google.maps.Map(document.getElementById('map'),
