@@ -63,6 +63,7 @@
           map: map
           ,id: id
           //,icon: 'red_circle.png'
+          ,icon:'pin-red.png'
           ,url: community_locations[i][5]
           ,zIndex:100
           //,size: new google.maps.Size(20, 32)
@@ -71,10 +72,12 @@
         });
 
           google.maps.event.addListener(marker, 'mouseover', function(event) {
-              this.setIcon(this.altIcon);
+              //this.setIcon(this.altIcon);
+              this.setIcon('pin-blue.png');
           });
           google.maps.event.addListener(marker, 'mouseout', function(event) {
-              this.setIcon('blue_circle.png');
+              //this.setIcon('blue_circle.png');
+              this.setIcon('pin-red.png');
           });
       }
     }

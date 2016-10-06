@@ -27211,84 +27211,91 @@
 	              { id: 'image' },
 	              _react2.default.createElement('img', { src: listings.photos[0] })
 	            ),
+	            _react2.default.createElement('br', null),
+	            _react2.default.createElement('br', null),
 	            _react2.default.createElement(
 	              'p',
 	              null,
+	              'List Price:  ',
+	              listings.listPrice
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              'Status:   ',
+	              listings.mls.status
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              'Bedrooms: ',
+	              listings.property.bedrooms
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              'Full Baths: ',
+	              listings.property.bathsFull
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              'Half Baths: ',
+	              listings.property.bathsHalf
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              'Square Feet: ',
+	              listings.property.area
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              'Year Built: ',
+	              listings.property.yearBuilt
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              'Property Type: ',
+	              listings.property.type
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              'MLS Id:  ',
+	              listings.listingId
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              'Address: ',
 	              listings.address.full
 	            ),
 	            _react2.default.createElement(
 	              'p',
 	              null,
-	              '"Address: " ',
-	              listings.address.full,
-	              '  "  "  ',
-	              listings.address.city,
-	              '  "  "   ',
-	              listings.address.postalCode,
-	              ' '
-	            ),
-	            _react2.default.createElement(
-	              'p',
-	              null,
-	              '"City: "  ',
+	              'City:   ',
 	              listings.address.city,
 	              '  '
 	            ),
 	            _react2.default.createElement(
 	              'p',
 	              null,
-	              '"Zip Code: "  ',
+	              'Zip Code:   ',
 	              listings.address.postalCode,
 	              '  '
 	            ),
 	            _react2.default.createElement(
 	              'p',
 	              null,
-	              '"MLS Area: "  ',
-	              listings.mls.area,
-	              '  '
-	            ),
-	            _react2.default.createElement(
-	              'p',
-	              null,
-	              '"MLS Area: " ',
-	              listings.geo.marketArea,
-	              '  '
-	            ),
-	            _react2.default.createElement(
-	              'p',
-	              null,
-	              '"Directions: " ',
+	              'Directions:  ',
 	              listings.geo.directions,
 	              '  '
 	            ),
-	            _react2.default.createElement(
-	              'p',
-	              null,
-	              '"MLS Id: "  ',
-	              listings.mlsId,
-	              '  '
-	            ),
-	            _react2.default.createElement(
-	              'p',
-	              null,
-	              '"NEW MLS Id: " ',
-	              listings.listingId,
-	              '  '
-	            ),
-	            _react2.default.createElement(
-	              'p',
-	              null,
-	              '"Status: "  ',
-	              listings.mls.status,
-	              '  '
-	            ),
-	            _react2.default.createElement(
-	              'p',
-	              null,
-	              '"Subdivision:" ',
-	              listings.subdivision
-	            ),
+	            _react2.default.createElement('br', null),
+	            _react2.default.createElement('br', null),
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'listings-button' },
@@ -37648,79 +37655,82 @@
 	          _react2.default.createElement(
 	            'p',
 	            null,
-	            this.state.currentListing.address.full
+	            'List Price:  ',
+	            this.state.currentListing.listPrice
 	          ),
 	          _react2.default.createElement(
 	            'p',
 	            null,
-	            '"Listing Id: "',
+	            'Status:   ',
+	            this.state.currentListing.mls.status
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Bedrooms: ',
+	            this.state.currentListing.property.bedrooms
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Full Baths: ',
+	            this.state.currentListing.property.bathsFull
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Half Baths: ',
+	            this.state.currentListing.property.bathsHalf
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Square Feet: ',
+	            this.state.currentListing.property.area
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Year Built: ',
+	            this.state.currentListing.property.yearBuilt
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Property Type: ',
+	            this.state.currentListing.property.type
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'MLS Id:  ',
 	            this.state.currentListing.listingId
 	          ),
 	          _react2.default.createElement(
 	            'p',
 	            null,
-	            '"Address: " ',
-	            this.state.currentListing.address.full,
-	            '  "  "  ',
-	            this.state.currentListing.address.city,
-	            '  "  "   ',
-	            this.state.currentListing.address.postalCode,
-	            ' '
+	            'Address: ',
+	            this.state.currentListing.address.full
 	          ),
 	          _react2.default.createElement(
 	            'p',
 	            null,
-	            '"City: "  ',
+	            'City:   ',
 	            this.state.currentListing.address.city,
 	            '  '
 	          ),
 	          _react2.default.createElement(
 	            'p',
 	            null,
-	            '"Zip Code: "  ',
+	            'Zip Code:   ',
 	            this.state.currentListing.address.postalCode,
 	            '  '
 	          ),
 	          _react2.default.createElement(
 	            'p',
 	            null,
-	            '"MLS Area: "  ',
-	            this.state.currentListing.mls.area,
-	            '  '
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            '"MLS Area: " ',
-	            this.state.currentListing.geo.marketArea,
-	            '  '
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            '"Directions: " ',
+	            'Directions:  ',
 	            this.state.currentListing.geo.directions,
-	            '  '
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            '"MLS Id: "  ',
-	            this.state.currentListing.mlsId,
-	            '  '
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            '"NEW MLS Id: " ',
-	            this.state.currentListing.listingId,
-	            '  '
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            '"Status: "  ',
-	            this.state.currentListing.mls.status,
 	            '  '
 	          )
 	        ),

@@ -35,24 +35,38 @@ class Master extends React.Component {
 
           return (
 
+
             <div className ="listings-container" key={listings.listing_id}>
               <br/><hr /><br/>
               <div id="image"><img src={listings.photos[0]} /></div>
-              <br/><br/>
-              <p>List Price:  {listings.listPrice}</p>
+              <p>List Price:  {listings.geo.listPrice}</p>
               <p>Status:   {listings.mls.status}</p>
               <p>Bedrooms: {listings.property.bedrooms}</p>
               <p>Full Baths: {listings.property.bathsFull}</p>
-              <p>Half Baths: {listings.property.bathsHalf}</p>
-              <p>Square Feet: {listings.property.area}</p>
-              <p>Year Built: {listings.property.yearBuilt}</p>
-              <p>Property Type: {listings.property.type}</p>
-              <p>MLS Id:  {listings.listingId}</p>
-              <p>Address: {listings.address.full}</p>
+              <p>Half Baths {listings.property.bathsHalf}</p>
+              <p>Square Feet: {listings.mls.area}</p>
+
+
+              <p>NEW MLS Id:  {listings.listingId}  </p>
+              <p>{listings.address.full}</p>
+              <p>Address:  {listings.address.full}  "  "  {listings.address.city}  "  "   {listings.address.postalCode} </p>
               <p>City:   {listings.address.city}  </p>
               <p>Zip Code:   {listings.address.postalCode}  </p>
               <p>Directions:  {listings.geo.directions}  </p>
-              <br/><br/>
+
+
+
+
+
+
+              <p>"MLS Area: "  {listings.mls.area}  </p>
+              <p>"MLS Area: " {listings.geo.marketArea}  </p>
+
+
+
+
+              //<p>"Subdivision:" {listings.subdivision}</p>
+
               <div className = "listings-button"><Link to={'/detail/' + listings.listingId}>View Listing Detail</Link></div>
               <br/><br/>
             </div>

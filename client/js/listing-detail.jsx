@@ -100,18 +100,22 @@ class Detail extends React.Component {
         </div>
 
         <div id="listing-detail">
-          <p>{this.state.currentListing.address.full}</p>
-          <p>"Listing Id: "{this.state.currentListing.listingId}</p>
 
-          <p>"Address: " {this.state.currentListing.address.full}  "  "  {this.state.currentListing.address.city}  "  "   {this.state.currentListing.address.postalCode} </p>
-          <p>"City: "  {this.state.currentListing.address.city}  </p>
-          <p>"Zip Code: "  {this.state.currentListing.address.postalCode}  </p>
-          <p>"MLS Area: "  {this.state.currentListing.mls.area}  </p>
-          <p>"MLS Area: " {this.state.currentListing.geo.marketArea}  </p>
-          <p>"Directions: " {this.state.currentListing.geo.directions}  </p>
-          <p>"MLS Id: "  {this.state.currentListing.mlsId}  </p>
-          <p>"NEW MLS Id: " {this.state.currentListing.listingId}  </p>
-          <p>"Status: "  {this.state.currentListing.mls.status}  </p>
+          <p>List Price:  {this.state.currentListing.listPrice}</p>
+          <p>Status:   {this.state.currentListing.mls.status}</p>
+          <p>Bedrooms: {this.state.currentListing.property.bedrooms}</p>
+          <p>Full Baths: {this.state.currentListing.property.bathsFull}</p>
+          <p>Half Baths: {this.state.currentListing.property.bathsHalf}</p>
+          <p>Square Feet: {this.state.currentListing.property.area}</p>
+          <p>Year Built: {this.state.currentListing.property.yearBuilt}</p>
+          <p>Property Type: {this.state.currentListing.property.type}</p>
+          <p>MLS Id:  {this.state.currentListing.listingId}</p>
+          <p>Address: {this.state.currentListing.address.full}</p>
+          <p>City:   {this.state.currentListing.address.city}  </p>
+          <p>Zip Code:   {this.state.currentListing.address.postalCode}  </p>
+          <p>Directions:  {this.state.currentListing.geo.directions}  </p>
+
+
         </div>
 
         <div className = "return-listings-button" onClick={this.handleClick}>Return to Listings</div>
