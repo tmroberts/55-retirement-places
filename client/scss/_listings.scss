@@ -1,0 +1,165 @@
+/* Styling for 55 Retirement Places 'listings pages' 20161009
+   License: Team Trosclair
+*/
+
+.the-list li {
+ //color: #636363;
+ //color: #fff;
+ color: beige;
+ list-style-type: disc;
+ line-height: 1.2em;
+ margin: 10px 0;
+}
+
+//
+// react styling
+//
+
+#app {
+	//border: solid 3px #fff;
+  //border: solid 3px #3A3A3A;
+  padding: 40px;
+  color: #fff;
+  overflow:auto;
+  width: 90%;
+  text-align:center;
+}
+
+
+.detail-container{
+
+}
+
+// Styling for Active Listings page
+#listing-actives {
+  border: 3px solid green;
+  color: beige;
+  //float:left;
+  //clear:both;
+  //overflow: auto;
+  margin: 0 auto;
+  text-align:left;
+  //margin-top: 50px;
+   line-height: 1.5em;
+}
+
+
+.actives-container {
+  border: 1px solid yellow;
+  background-color: rgb(39, 48, 63);
+  color: yellow;
+  padding: 10px;
+  font-size: 5em;
+	font-weight: lighter;
+  text-align: center;
+	font-weight: bold;
+}
+
+
+#main-pic-actives img {
+  border: 1px solid red;
+  border-radius: 8px;
+  //margin: 0 auto;
+  //text-align:center;
+    overflow: auto;
+  margin-bottom: 20px;
+  max-width: 400px;
+  max-height:300px;
+  min-width: 400px;
+  min-height: 300px;
+ //width: 400px;
+}
+
+
+// Styling for Detail page
+
+#listing-detail {
+   border: 3px solid green;
+   color: beige;
+   float:left;
+   clear:both;
+   text-align:left;
+   margin-top: 50px;
+      line-height: 1.5em;
+}
+
+#main-pic-detail img {
+  border-radius: 8px;
+  //margin: auto;
+  //text-align:center;
+  //border: 1px solid red;
+  margin-bottom: 20px;
+  //width: 400px;
+  max-width: 400px;
+  max-height:300px;
+  min-width: 400px;
+  min-height: 300px;
+}
+
+#thumbnails img {
+  border-radius: 8px;
+  float:left;
+  text-align:center;
+  max-width: 100px;
+  max-height:65px;
+  min-width: 100px;
+  min-height: 65px;
+  padding: 5px;
+  //clear:both;
+}
+
+#thumbnails img:hover {
+  //#thumbnails img:hover
+  //outline: 3px solid blue;
+  box-shadow: 0 0 8px 8px cyan inset;
+  //box-shadow: 0 0 8px 8px blue inset;
+}
+
+// Button to view Listings
+.listings-button {
+ //background-color: #c33;
+ background-color: #B40101;
+ border: 1px solid #fff;
+ border-radius: 8px;
+ color: #FFF;
+ width: 150px;
+ float: left;
+ font-size: 1em;
+ display: inline-block;
+ padding: 10px;
+ text-align:center;
+ clear:both;
+}
+
+.listings-button a {
+  border-radius: 8px;
+  text-decoration: none;
+  color: #FFF;
+  clear:both;
+}
+
+
+// button to return to Active Listings
+.return-listings-button {
+  border: 1px solid #fff;
+  border-radius: 8px;
+  background-color: #B40101;
+  color: #FFF;
+  width: 150px;
+  float: left;
+  font-size: 1em;
+  //display: inline-block;
+  padding: 10px;
+  text-align:center;
+  clear:both;
+  margin-top: 10px;
+}
+
+
+.return-listings-button a {
+  border-radius: 8px;
+  text-decoration: none;
+  color: #FFF;
+}
+
+//

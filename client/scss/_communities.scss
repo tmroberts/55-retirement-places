@@ -1,0 +1,242 @@
+/* Styling for 55 Retirement Places Main Landing page with 14 community rollowvers - 20161009
+   License: Team Trosclair
+*/
+
+
+.communities .community {
+  float: left;
+	padding: 1%;
+	width: 31.3333333%;
+}
+
+.communities img {
+	max-width: 100%;
+}
+
+.communities h2 {
+  font-size: 1.2em;
+}
+
+.communities p {
+  line-height: 1.2em;
+  margin: 10px 0;
+}
+
+
+//moved from landing-page mockup
+
+.img-container {
+	float: left;
+	margin: .65%;
+	width: 31%;
+}
+
+.img-container img {
+	width: 100%;
+}
+
+.box {
+  border-radius: 10px;
+	float: left;
+	height: 200px;
+	position: relative;
+}
+
+.box-1 {
+  border-radius: 10px;
+	background-color: red;
+	background-image: url(./images/robson_ranch.jpg);
+	background-position: center;
+	background-size: cover;
+	margin: 1.5% 1.5% 1.0% 0%;
+	width: 22.5%;
+}
+
+.box-5 {
+	background-color: red;
+	background-image: url(./images/villas_in_the_park.jpg);
+	background-position: center;
+	background-size: cover;
+	margin: 1.5% 1.5% 1.5% 0%;
+	width: 22.5%;
+}
+
+.box-9 {
+	background-color: red;
+	background-image: url(./images/village_at_prestonwood.jpg);
+	background-position: center;
+	background-size: cover;
+	margin: 1.5% 1.5% 1.5% 0%;
+	width: 22.5%;
+}
+
+.box-13 {
+	background-color: red;
+	background-image: url(./images/the_legends.jpg);
+	background-position: center;
+	background-size: cover;
+	margin: 1.5% 1.5% 3% 0%;
+	width: 22.5%;
+}
+
+.box-2 {
+	background-color: green;
+	background-image: url(./images/frisco_lakes_clubhouse.jpg);
+	background-position: center;
+	background-size:cover;
+	margin: 1.5% 1.5% 1.5% 1.5%;
+	width: 22.5%;
+}
+
+.box-6 {
+	background-color: green;
+	background-image: url(./images/ladera_mansfield.jpg);
+	background-position: center;
+	background-size:cover;
+	margin: 1.5% 1.5% 1.5% 1.5%;
+	width: 22.5%;
+}
+
+.box-10 {
+	background-color: green;
+	background-image: url(./images/villas_of_stone_glen.jpg);
+	background-position: center;
+	background-size:cover;
+	margin: 1.5% 1.5% 1.5% 1.5%;
+	width: 22.5%;
+}
+
+.box-14 {
+	background-color: green;
+	background-image: url(./images/cottages_at_lyndhurst.jpg);
+	background-position: center;
+	background-size:cover;
+	margin: 1.5% 1.5% 3% 1.5%;
+	width: 22.5%;
+}
+
+.box-3 {
+	background-color: orange;
+	background-image: url(./images/heritage_ranch.jpg);
+	background-position: center;
+	background-size:cover;
+	margin: 1.5% 1.5% 1.5% 1.5%;
+	width: 22.5%;
+}
+
+.box-7 {
+	background-color: orange;
+	background-image: url(./images/isabella_village_savannah.jpg);
+	background-position: center;
+	background-size:cover;
+	margin: 1.5% 1.5% 1.5% 1.5%;
+	width: 22.5%;
+}
+
+.box-11 {
+	background-color: orange;
+	background-image: url(./images/tuscan_hills.jpg);
+	background-position: center;
+	background-size:cover;
+	margin: 1.5% 1.5% 1.5% 1.5%;
+	width: 22.5%;
+}
+
+.box-4 {
+	background-color: blue;
+	background-image: url(./images/craig_ranch.jpg);
+	background-position: center;
+	background-size: cover;
+	margin: 1.5% 1% 1.5% 1.5%;
+	width: 22.5%;
+}
+
+.box-8 {
+	background-color: blue;
+	background-image: url(./images/villas_at_willow_grove.jpg);
+	background-position: center;
+	background-size: cover;
+	margin: 1.5% 1% 1.5% 1.5%;
+	width: 22.5%;
+}
+
+.box-12 {
+	background-color: blue;
+	background-image: url(./images/orchard_flower.jpg);
+	background-position: center;
+	background-size: cover;
+	margin: 1.5% 1% 1.5% 1.5%;
+	width: 22.5%;
+}
+
+.overlay {
+  border-radius: 10px;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: #FFF;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	top: 0;
+}
+
+.box:hover .overlay {
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.overlay .content {
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	right: 0;
+	transition: 0.2s;
+}
+
+.box:hover .content {
+	bottom: 15px;
+}
+
+.overlay .view-community {
+	border: solid 1px #FFF;
+  border-radius: 7px;
+	opacity: 0;
+	margin: 20px auto;
+	max-width: 130px;
+	padding: 10px;
+	transition: 0.2s;
+	transition-property: bottom;
+}
+
+.box:hover .view-community {
+	opacity: .6;
+}
+
+.view-community:hover {
+	background-color: #000;
+	color: #fff;
+}
+
+.overlay .heading {
+	font-family: "Verlag A", "Verlag B", "Helvetica", "Arial", sans-serif;
+	font-size: 1.8em;
+	font-weight: 100;
+  letter-spacing: 2px;
+	line-height: 1.1em;
+	margin-top: 100px auto;
+	margin-bottom: 0.15em;
+	text-align: center;
+	text-shadow: 2px 0px 5px rgba(0,0,0,0.2);
+}
+
+.overlay .desc {
+	font-size: 1em;
+  letter-spacing: .1em;
+	line-height: 1.2em;
+	font-weight: 100;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
+	text-align: center;
+}
+
+// moved from mockup
