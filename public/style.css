@@ -54,24 +54,24 @@ body {
   font-size: 2em;
   margin: 0 auto;
   position: fixed;
+  top: 0;
   letter-spacing: .1em;
   z-index: 500;
   padding-top: 12px;
   padding-bottom: 12px;
-  padding-left: 10px;
-  top: 0; }
+  padding-left: 10px; }
 
 nav {
   background-color: rgba(0, 0, 0, 0.5);
   height: 50px;
   position: fixed;
+  top: 0;
   width: 100%;
   letter-spacing: .2em;
   z-index: 100;
   padding-top: 12px;
   padding-bottom: 12px;
-  padding-left: 10px;
-  top: 0; }
+  padding-left: 10px; }
 
 nav ul li {
   float: right;
@@ -92,10 +92,10 @@ nav li a {
   background-size: cover;
   background-position: bottom;
   height: 350px;
+  position: fixed;
   top: 0;
   padding-top: 150px;
   width: 100%;
-  position: fixed;
   z-index: -1000; }
 
 .banner h1 {
@@ -342,7 +342,7 @@ nav li a {
   text-align: center; }
 
 footer {
-  background-color: #201D1C;
+  background-color: #333333;
   clear: both;
   color: beige;
   letter-spacing: .1em;
@@ -369,7 +369,7 @@ footer {
   margin: 10px 0; }
 
 .listings-button {
-  background-color: #c33;
+  background-color: #B40101;
   border: 1px solid #fff;
   border-radius: 8px;
   color: #FFF;
@@ -394,10 +394,44 @@ footer {
   width: 90%;
   text-align: center; }
 
-#main-pic img {
-  border-radius: 8px;
-  margin: auto;
+#listing-actives {
+  border: 3px solid green;
+  color: beige;
+  margin: 0 auto;
+  text-align: left;
+  line-height: 1.5em; }
+
+.actives-container {
+  border: 1px solid yellow;
+  background-color: #27303f;
+  color: yellow;
+  padding: 10px;
+  font-size: 5em;
+  font-weight: lighter;
   text-align: center;
+  font-weight: bold; }
+
+#main-pic-actives img {
+  border: 1px solid red;
+  border-radius: 8px;
+  overflow: auto;
+  margin-bottom: 20px;
+  max-width: 400px;
+  max-height: 300px;
+  min-width: 400px;
+  min-height: 300px; }
+
+#listing-detail {
+  border: 3px solid green;
+  color: beige;
+  float: left;
+  clear: both;
+  text-align: left;
+  margin-top: 50px;
+  line-height: 1.5em; }
+
+#main-pic-detail img {
+  border-radius: 8px;
   margin-bottom: 20px;
   max-width: 400px;
   max-height: 300px;
@@ -417,16 +451,10 @@ footer {
 #thumbnails img:hover {
   box-shadow: 0 0 8px 8px cyan inset; }
 
-#listing-detail {
-  float: left;
-  clear: both;
-  text-align: left;
-  margin-top: 50px; }
-
 .return-listings-button {
   border: 1px solid #fff;
   border-radius: 8px;
-  background-color: #c33;
+  background-color: #B40101;
   color: #FFF;
   width: 150px;
   float: left;

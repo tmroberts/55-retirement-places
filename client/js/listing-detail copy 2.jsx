@@ -65,19 +65,24 @@ class Detail extends React.Component {
   }
   render() {
     console.log('This is DETAIL state: ', this.state);
+
     if (this.state === null) {
       return (<div>loading listing...</div>)
     }
+
+
     var self = this;
     //var selectedPhoto = this.state.photo;
     //console.log('This is selectedPhoto: ', selectedPhoto);
 
+
     return (
       <div className = "detail-container">
+
         <h1>Listing Detail</h1>
         <br/><br/>
 
-        <div id="main-pic-detail">
+        <div id="main-pic">
           <img src={this.state.selectedUrl} />
         </div>
 
@@ -91,6 +96,7 @@ class Detail extends React.Component {
              })
            }
           </ul>
+
         </div>
 
         <div id="listing-detail">
@@ -108,16 +114,19 @@ class Detail extends React.Component {
           <p>City:   {this.state.currentListing.address.city}  </p>
           <p>Zip Code:   {this.state.currentListing.address.postalCode}  </p>
           <p>Directions:  {this.state.currentListing.geo.directions}  </p>
-          <p>Prpoerty Description:  {this.state.currentListing.remarks}  </p>
+
 
         </div>
 
-        <div className = "return-listings-button" onClick={this.handleClick}>Return to Listings
-        </div>
+        <div className = "return-listings-button" onClick={this.handleClick}>Return to Listings</div>
 
 
       </div>
     );
+
   }
+
 }
+
+
 module.exports = Detail;

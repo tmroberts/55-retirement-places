@@ -27191,7 +27191,7 @@
 	      console.log("This is state:", this.state);
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'listings' },
+	        { className: 'detail-container' },
 	        _react2.default.createElement(
 	          'h1',
 	          null,
@@ -27202,100 +27202,114 @@
 	
 	          return _react2.default.createElement(
 	            'div',
-	            { className: 'listings-container', key: listings.listing_id },
+	            { id: 'listing-actives', key: listings.listing_id },
 	            _react2.default.createElement('br', null),
 	            _react2.default.createElement('hr', null),
 	            _react2.default.createElement('br', null),
 	            _react2.default.createElement(
 	              'div',
-	              { id: 'image' },
+	              { id: 'main-pic-actives' },
 	              _react2.default.createElement('img', { src: listings.photos[0] })
 	            ),
-	            _react2.default.createElement('br', null),
-	            _react2.default.createElement('br', null),
 	            _react2.default.createElement(
-	              'p',
-	              null,
-	              'List Price:  ',
-	              listings.listPrice
+	              'div',
+	              { id: 'actives-container' },
+	              _react2.default.createElement(
+	                'h1',
+	                null,
+	                _react2.default.createElement(
+	                  'span',
+	                  { 'class': 'actives-heading' },
+	                  'Active'
+	                ),
+	                ' Listings'
+	              ),
+	              _react2.default.createElement('br', null),
+	              _react2.default.createElement('br', null),
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                'List Price:  ',
+	                listings.listPrice
+	              ),
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                'Status:   ',
+	                listings.mls.status
+	              ),
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                'Bedrooms: ',
+	                listings.property.bedrooms
+	              ),
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                'Full Baths: ',
+	                listings.property.bathsFull
+	              ),
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                'Half Baths: ',
+	                listings.property.bathsHalf
+	              ),
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                'Square Feet: ',
+	                listings.property.area
+	              ),
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                'Year Built: ',
+	                listings.property.yearBuilt
+	              ),
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                'Property Type: ',
+	                listings.property.type
+	              ),
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                'MLS Id:  ',
+	                listings.listingId
+	              ),
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                'Address: ',
+	                listings.address.full
+	              ),
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                'City:   ',
+	                listings.address.city,
+	                '  '
+	              ),
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                'Zip Code:   ',
+	                listings.address.postalCode,
+	                '  '
+	              ),
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                'Directions:  ',
+	                listings.geo.directions,
+	                '  '
+	              ),
+	              _react2.default.createElement('br', null),
+	              _react2.default.createElement('br', null)
 	            ),
-	            _react2.default.createElement(
-	              'p',
-	              null,
-	              'Status:   ',
-	              listings.mls.status
-	            ),
-	            _react2.default.createElement(
-	              'p',
-	              null,
-	              'Bedrooms: ',
-	              listings.property.bedrooms
-	            ),
-	            _react2.default.createElement(
-	              'p',
-	              null,
-	              'Full Baths: ',
-	              listings.property.bathsFull
-	            ),
-	            _react2.default.createElement(
-	              'p',
-	              null,
-	              'Half Baths: ',
-	              listings.property.bathsHalf
-	            ),
-	            _react2.default.createElement(
-	              'p',
-	              null,
-	              'Square Feet: ',
-	              listings.property.area
-	            ),
-	            _react2.default.createElement(
-	              'p',
-	              null,
-	              'Year Built: ',
-	              listings.property.yearBuilt
-	            ),
-	            _react2.default.createElement(
-	              'p',
-	              null,
-	              'Property Type: ',
-	              listings.property.type
-	            ),
-	            _react2.default.createElement(
-	              'p',
-	              null,
-	              'MLS Id:  ',
-	              listings.listingId
-	            ),
-	            _react2.default.createElement(
-	              'p',
-	              null,
-	              'Address: ',
-	              listings.address.full
-	            ),
-	            _react2.default.createElement(
-	              'p',
-	              null,
-	              'City:   ',
-	              listings.address.city,
-	              '  '
-	            ),
-	            _react2.default.createElement(
-	              'p',
-	              null,
-	              'Zip Code:   ',
-	              listings.address.postalCode,
-	              '  '
-	            ),
-	            _react2.default.createElement(
-	              'p',
-	              null,
-	              'Directions:  ',
-	              listings.geo.directions,
-	              '  '
-	            ),
-	            _react2.default.createElement('br', null),
-	            _react2.default.createElement('br', null),
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'listings-button' },
@@ -37604,7 +37618,6 @@
 	    key: 'render',
 	    value: function render() {
 	      console.log('This is DETAIL state: ', this.state);
-	
 	      if (this.state === null) {
 	        return _react2.default.createElement(
 	          'div',
@@ -37612,11 +37625,9 @@
 	          'loading listing...'
 	        );
 	      }
-	
 	      var self = this;
 	      //var selectedPhoto = this.state.photo;
 	      //console.log('This is selectedPhoto: ', selectedPhoto);
-	
 	
 	      return _react2.default.createElement(
 	        'div',
@@ -37630,7 +37641,7 @@
 	        _react2.default.createElement('br', null),
 	        _react2.default.createElement(
 	          'div',
-	          { id: 'main-pic' },
+	          { id: 'main-pic-detail' },
 	          _react2.default.createElement('img', { src: this.state.selectedUrl })
 	        ),
 	        _react2.default.createElement(
@@ -37731,6 +37742,13 @@
 	            null,
 	            'Directions:  ',
 	            this.state.currentListing.geo.directions,
+	            '  '
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Prpoerty Description:  ',
+	            this.state.currentListing.remarks,
 	            '  '
 	          )
 	        ),

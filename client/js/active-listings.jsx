@@ -27,7 +27,7 @@ class Master extends React.Component {
   render() {
   console.log("This is state:", this.state);
     return (
-      <div className = "listings">
+      <div className = "detail-container">
         <h1>Active Listings</h1>
 
         {this.state.listings.map((listings) => {
@@ -35,26 +35,35 @@ class Master extends React.Component {
 
           return (
 
-            <div className ="listings-container" key={listings.listing_id}>
+            <div id ="listing-actives" key={listings.listing_id}>
               <br/><hr /><br/>
-              <div id="image"><img src={listings.photos[0]} /></div>
+
+              <div id="main-pic-actives">
+                <img src={listings.photos[0]} />
+              </div>
+              <div id="actives-container">
+                <h1><span class="actives-heading">Active</span> Listings</h1>
+                <br/><br/>
+                <p>List Price:  {listings.listPrice}</p>
+                <p>Status:   {listings.mls.status}</p>
+                <p>Bedrooms: {listings.property.bedrooms}</p>
+                <p>Full Baths: {listings.property.bathsFull}</p>
+                <p>Half Baths: {listings.property.bathsHalf}</p>
+                <p>Square Feet: {listings.property.area}</p>
+                <p>Year Built: {listings.property.yearBuilt}</p>
+                <p>Property Type: {listings.property.type}</p>
+                <p>MLS Id:  {listings.listingId}</p>
+                <p>Address: {listings.address.full}</p>
+                <p>City:   {listings.address.city}  </p>
+                <p>Zip Code:   {listings.address.postalCode}  </p>
+                <p>Directions:  {listings.geo.directions}  </p>
+                <br/><br/>
+              </div>
+
+              <div className = "listings-button"><Link to={'/detail/' + listings.listingId}>View Listing Detail</Link>
+              </div>
               <br/><br/>
-              <p>List Price:  {listings.listPrice}</p>
-              <p>Status:   {listings.mls.status}</p>
-              <p>Bedrooms: {listings.property.bedrooms}</p>
-              <p>Full Baths: {listings.property.bathsFull}</p>
-              <p>Half Baths: {listings.property.bathsHalf}</p>
-              <p>Square Feet: {listings.property.area}</p>
-              <p>Year Built: {listings.property.yearBuilt}</p>
-              <p>Property Type: {listings.property.type}</p>
-              <p>MLS Id:  {listings.listingId}</p>
-              <p>Address: {listings.address.full}</p>
-              <p>City:   {listings.address.city}  </p>
-              <p>Zip Code:   {listings.address.postalCode}  </p>
-              <p>Directions:  {listings.geo.directions}  </p>
-              <br/><br/>
-              <div className = "listings-button"><Link to={'/detail/' + listings.listingId}>View Listing Detail</Link></div>
-              <br/><br/>
+
             </div>
           );
         })}
@@ -65,5 +74,4 @@ class Master extends React.Component {
   }
 
 }
-
 module.exports = Master;
