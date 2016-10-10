@@ -254,6 +254,133 @@ table {
   padding-right: 1.5em;
   text-align: center; }
 
+/* Media queries for 55 Retirement Places - 20161009
+   License: Team Trosclair
+*/
+@media screen and (max-width: 840px) {
+  .communities .community {
+    border-top: solid 1px #000;
+    float: none;
+    padding: 40px 20px;
+    width: auto; }
+  .img-container {
+    float: left;
+    margin: .65%;
+    width: 31%; }
+  .img-container img {
+    width: 100%; }
+  .box {
+    border-radius: 10px;
+    float: left;
+    height: 200px;
+    position: relative; }
+  .box-1 {
+    border-radius: 10px;
+    background-color: red;
+    background-image: url(images/robson_ranch.jpg);
+    background-position: center;
+    background-size: cover;
+    margin: 1.5% 1.5% 1.0% 0%;
+    width: 46%; }
+  .box-5 {
+    background-color: red;
+    background-image: url(images/villas_in_the_park.jpg);
+    background-position: center;
+    background-size: cover;
+    margin: 1.5% 1.5% 1.5% 0%;
+    width: 46%; }
+  .box-9 {
+    background-color: red;
+    background-image: url(images/village_at_prestonwood.jpg);
+    background-position: center;
+    background-size: cover;
+    margin: 1.5% 1.5% 1.5% 0%;
+    width: 46%; }
+  .box-13 {
+    background-color: red;
+    background-image: url(images/the_legends.jpg);
+    background-position: center;
+    background-size: cover;
+    margin: 1.5% 1.5% 3% 0%;
+    width: 46%; }
+  .box-2 {
+    background-color: green;
+    background-image: url(images/frisco_lakes_clubhouse.jpg);
+    background-position: center;
+    background-size: cover;
+    margin: 1.5% 1.5% 1.5% 1.5%;
+    width: 46%; }
+  .box-6 {
+    background-color: green;
+    background-image: url(images/ladera_mansfield.jpg);
+    background-position: center;
+    background-size: cover;
+    margin: 1.5% 1.5% 1.5% 1.5%;
+    width: 46%; }
+  .box-10 {
+    background-color: green;
+    background-image: url(images/villas_of_stone_glen.jpg);
+    background-position: center;
+    background-size: cover;
+    margin: 1.5% 1.5% 1.5% 1.5%;
+    width: 46%; }
+  .box-14 {
+    background-color: green;
+    background-image: url(images/cottages_at_lyndhurst.jpg);
+    background-position: center;
+    background-size: cover;
+    margin: 1.5% 1.5% 3% 1.5%;
+    width: 46%; }
+  .box-3 {
+    background-color: orange;
+    background-image: url(images/heritage_ranch.jpg);
+    background-position: center;
+    background-size: cover;
+    margin: 1.5% 1.5% 1.5% 1.5%;
+    width: 46%; }
+  .box-7 {
+    background-color: orange;
+    background-image: url(images/isabella_village_savannah.jpg);
+    background-position: center;
+    background-size: cover;
+    margin: 1.5% 1.5% 1.5% 1.5%;
+    width: 46%; }
+  .box-11 {
+    background-color: orange;
+    background-image: url(images/tuscan_hills.jpg);
+    background-position: center;
+    background-size: cover;
+    margin: 1.5% 1.5% 1.5% 1.5%;
+    width: 46%; }
+  .box-4 {
+    background-color: blue;
+    background-image: url(images/craig_ranch.jpg);
+    background-position: center;
+    background-size: cover;
+    margin: 1.5% 1% 1.5% 1.5%;
+    width: 46%; }
+  .box-8 {
+    background-color: blue;
+    background-image: url(images/villas_at_willow_grove.jpg);
+    background-position: center;
+    background-size: cover;
+    margin: 1.5% 1% 1.5% 1.5%;
+    width: 46%; }
+  .box-12 {
+    background-color: blue;
+    background-image: url(images/orchard_flower.jpg);
+    background-position: center;
+    background-size: cover;
+    margin: 1.5% 1% 1.5% 1.5%;
+    width: 46%; } }
+
+@media (max-width: 600px) {
+  nav li {
+    float: none;
+    padding: 5px 0px; }
+  nav li a {
+    text-decoration: none; } }
+
 /* Styling for 55 Retirement Places 'listings pages' 20161009
    License: Team Trosclair
 */
@@ -493,11 +620,12 @@ body {
   background-color: #201d1c; }
 
 .logo {
+  border: 1px solid red;
   color: beige;
-  font-size: 2em;
-  margin: 0 auto;
   position: fixed;
   top: 0;
+  font-size: 2em;
+  margin: 0 auto;
   letter-spacing: .1em;
   z-index: 500;
   padding-top: 12px;
@@ -505,6 +633,7 @@ body {
   padding-left: 10px; }
 
 nav {
+  border: 1px solid yellow;
   background-color: rgba(0, 0, 0, 0.5);
   height: 50px;
   position: fixed;
@@ -577,19 +706,5 @@ footer {
   color: beige;
   letter-spacing: .1em;
   padding: 20px; }
-
-@media screen and (max-width: 750px) {
-  .communities .community {
-    border-top: solid 1px #000;
-    float: none;
-    padding: 40px 20px;
-    width: auto; } }
-
-@media (max-width: 600px) {
-  nav li {
-    float: none;
-    padding: 5px 0px; }
-  nav li a {
-    text-decoration: none; } }
 
 /*# sourceMappingURL=style.css.map*/

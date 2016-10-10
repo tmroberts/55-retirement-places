@@ -4,6 +4,7 @@
 
 @import 'reset';
 @import 'communities';
+@import 'media';
 @import 'listings';
 @import 'maps';
 @import 'form';
@@ -14,24 +15,24 @@ body {
 }
 
 .logo {
-  //border: 1px solid red;
+  border: 1px solid red;
   color: beige;
   //float:left; goes left by default
+  position:fixed;
+  top:0;
   font-size: 2em;
   //padding-top:10px;
   margin: 0 auto;
   //width:100%;
-  position:fixed;
-  top:0;
   letter-spacing: .1em;
   z-index: 500;
   padding-top:12px;
   padding-bottom: 12px;
   padding-left: 10px;
-
 }
 
 nav {
+  border: 1px solid yellow;
   background-color: rgba(0,0,0,0.5);
   height: 50px;
   position: fixed;
@@ -123,25 +124,4 @@ footer {
   color: beige;
   letter-spacing: .1em;
   padding: 20px;
-}
-
-
-@media screen and (max-width: 750px) {
-	.communities .community {
-		border-top: solid 1px #000;
-	  float: none;
-		padding: 40px 20px;
-		width: auto;
-	}
-}
-
-@media (max-width: 600px) {
-	nav li {
-		float: none;
-		padding: 5px 0px;
-	}
-
-	nav li a {
-		text-decoration: none;
-	}
 }
