@@ -258,6 +258,29 @@ table {
    License: Team Trosclair
 */
 @media screen and (max-width: 840px) {
+  nav {
+    border: 1px solid yellow;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 50px;
+    position: fixed;
+    top: 0;
+    float: left;
+    width: 45%;
+    letter-spacing: .2em;
+    z-index: 100;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 10px;
+    text-shadow: 1px 1px 1px black; }
+  nav ul li {
+    float: right;
+    margin: 0 20px; }
+  nav li a:hover {
+    background-color: rgba(18, 78, 121, 0.5);
+    border-bottom-color: 2px solid beige;
+    border-radius: 8px;
+    padding: 10px 0px;
+    text-decoration: none; }
   .communities .community {
     border-top: solid 1px #000;
     float: none;
@@ -643,19 +666,24 @@ nav {
   z-index: 100;
   padding-top: 12px;
   padding-bottom: 12px;
-  padding-left: 10px; }
+  padding-left: 10px;
+  text-shadow: 1px 1px 1px black; }
 
 nav ul li {
   float: right;
   margin: 0 20px; }
 
-nav ul li:last-child:hover {
-  background-color: #000;
-  color: #fff; }
-
 nav li a {
   color: beige;
   text-decoration: none; }
+
+nav li a:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: rgba(245, 245, 220, 0.8);
+  border-radius: 8px;
+  padding: 10px 0px;
+  text-decoration: none;
+  text-shadow: 0px 0px 0px black; }
 
 .banner {
   background-color: #000;
@@ -700,11 +728,68 @@ nav li a {
   background-color: #adadad;
   color: #000; }
 
+.contact-container {
+  height: 250px;
+  color: beige;
+  clear: both;
+  float: left;
+  width: 100%;
+  background: #201d1c url(//d36s929gmfcqwt.cloudfront.net/assets/office-2-755e0d8434c53962090c49f201c19f68f9486a69183402c2de37bc777e1d008b.jpg) no-repeat center;
+  background-size: cover;
+  padding: 4em 1em; }
+
+.contact-heading {
+  color: beige;
+  font-size: 2.7em;
+  text-align: center;
+  letter-spacing: .1em; }
+
+.contact-button {
+  border-radius: 8px;
+  display: block;
+  font-size: 1.347em;
+  font-weight: 700;
+  background: beige;
+  color: #124e79;
+  border: 2px solid transparent;
+  width: 12em;
+  margin: 2em auto 0;
+  padding: 0.9em 1.25em;
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: .1em; }
+
+.contact-button:hover {
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px black;
+  color: #f5f5f5; }
+
 footer {
   background-color: #333333;
   clear: both;
   color: beige;
+  width: 100%;
   letter-spacing: .1em;
-  padding: 20px; }
+  overflow: auto;
+  text-shadow: 1px 1px 1px black; }
+
+.footer-copyright {
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 25px; }
+
+.footer-container {
+  float: left;
+  height: 5em;
+  text-align: center;
+  width: 25%;
+  margin: 5px auto; }
+
+.footer-logo {
+  max-height: 45%;
+  max-width: 75%; }
 
 /*# sourceMappingURL=style.css.map*/

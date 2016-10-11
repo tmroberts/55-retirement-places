@@ -4,6 +4,52 @@
 
 // Got to 2-col setup at 840px
 @media screen and (max-width: 840px) {
+
+	nav {
+	  border: 1px solid yellow;
+	  background-color: rgba(0,0,0,0.5);
+	  height: 50px;
+	  position: fixed;
+	  top:0;
+		//clear:both;
+		float: left;
+	  width:45%;
+	  letter-spacing: .2em;
+	  z-index: 100;
+	  padding-top:12px;
+	  padding-bottom: 12px;
+	  padding-left: 10px;
+	  //padding-right: 10px;
+	  text-shadow: 1px 1px 1px black;
+	}
+
+	nav ul li {
+	  float: right;
+	  margin: 0 20px;
+	}
+
+	nav li a:hover {
+	  background-color: rgba(18,78,121,0.5);
+	  border-bottom-color: 2px solid beige;
+	  //color: #ccc;
+	  border-radius: 8px;
+	  padding: 10px 0px;
+	  text-decoration: none;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	.communities .community {
 		border-top: solid 1px #000;
 	  float: none;
