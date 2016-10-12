@@ -27,47 +27,103 @@
 
 
 .detail-container{
+  outline: 1px solid green;
+  color: beige;
+  max-width:960px;
+  margin: 0 auto;
+  text-align:left;
+  line-height: 1.5em;
+  overflow:auto;
+  position:relative;
+}
 
+.left-col{
+  float: left;
+  width: 66.666666%;
 }
 
 // Styling for Active Listings page
-#listing-actives {
-  border: 3px solid green;
+.listing-actives {
+  outline: 1px solid yellow;
   color: beige;
   //float:left;
-  //clear:both;
-  //overflow: auto;
-  margin: 0 auto;
-  text-align:left;
-  //margin-top: 50px;
-   line-height: 1.5em;
+  //max-width:960px;
+
+  //margin: 0 auto;
+  //text-align:left;
+  line-height: 1.5em;
 }
 
+
+.sidebarBox {
+  outline: 1px solid purple;
+  background-color: cyan;
+  float:left;
+  width: 33.3333%;
+  padding-top:30px;
+
+}
+
+.scrollingBox {
+  position:fixed;
+  outline: 1px solid blue;
+	background-size: cover;
+	background-color: rgba(0,0,0,0.5);
+	color:rgba(245,245,220,1);
+	line-height: 1.3em;
+  width: 320px;/* Replace with the same width as sidebar */
+
+}
+
+.scrollingImg{
+	float:left;
+	margin: 5px 10px;
+}
+
+.scrollingTxt{
+  padding: 10px;
+}
+
+#headerBar {
+    height: 40px;
+    background: rgba(51,51,51,1);
+		margin-bottom: 5px;
+		text-align: center;
+}
+
+#headerBar h3{
+    color:rgba(245,245,220,1);
+		padding: 10px;
+}
 
 .actives-container {
-  border: 1px solid yellow;
-  background-color: rgb(39, 48, 63);
-  color: yellow;
-  padding: 10px;
-  font-size: 5em;
-	font-weight: lighter;
-  text-align: center;
-	font-weight: bold;
+  //border: 1px solid red;
+  //background-color: rgb(39, 48, 63);
+  //color: #fff;
+  //padding: 10px;
+  //font-size: 5em;
+	//font-weight: lighter;
+  //text-align: center;
+	//font-weight: bold;
 }
 
 
-#main-pic-actives img {
+.main-pic-actives {
   border: 1px solid red;
   border-radius: 8px;
   //margin: 0 auto;
-  //text-align:center;
-    overflow: auto;
+  text-align:center;
+  //overflow: auto;
   margin-bottom: 20px;
+
+ //width: 400px;
+}
+
+.main-pic-actives img {
   max-width: 400px;
   max-height:300px;
   min-width: 400px;
   min-height: 300px;
- //width: 400px;
 }
 
 

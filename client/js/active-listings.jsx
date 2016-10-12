@@ -28,20 +28,22 @@ class Master extends React.Component {
   console.log("This is state:", this.state);
     return (
       <div className = "detail-container">
+        <div className="left-col">
         <h1>Active Listings</h1>
 
         {this.state.listings.map((listings) => {
             console.log('listings', listings);
-
+            //add var for handling unavail image . . . 
           return (
 
-            <div id ="listing-actives" key={listings.listing_id}>
+            <div className ="listing-actives" key={listings.listing_id}>
               <br/><hr /><br/>
 
-              <div id="main-pic-actives">
+              <div className="main-pic-actives">
                 <img src={listings.photos[0]} />
               </div>
-              <div id="actives-container">
+
+              <div className="actives-container">
                 <h1><span class="actives-heading">Active</span> Listings</h1>
                 <br/><br/>
                 <p>List Price:  {listings.listPrice}</p>
@@ -67,6 +69,21 @@ class Master extends React.Component {
             </div>
           );
         })}
+      </div>
+
+        <div className="sidebarBox">
+          <div className="scrollingBox">
+            <div className="scrollingTxt">
+              <p>Want to learn more about the North Texas area? Kathy is a real estate expert who specializes in helping buyers and sellers in this community. She can help you find homes for sale. She is a great organizer for things such as vacations, cruises and a all around great packer for long trips!
+              Want to learn more about the North Texas area? Kathy is a real estate expert who specializes in helping buyers and sellers in this community. She can help you find homes for sale. She is a great organizer for things such as vacations, cruises and a all around great packer for long trips!</p>
+
+              <p>Kathy Roberts - Realtor</p>
+              <p>Keller Williams Realty</p>
+              <p>Phone:  972-370-5400</p>
+              <p>www.HomeTexas.com</p>
+            </div>
+          </div>
+        </div>
 
       </div>
 

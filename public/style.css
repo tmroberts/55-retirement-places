@@ -270,28 +270,66 @@ table {
   width: 90%;
   text-align: center; }
 
-#listing-actives {
-  border: 3px solid green;
+.detail-container {
+  outline: 1px solid green;
   color: beige;
+  max-width: 960px;
   margin: 0 auto;
   text-align: left;
+  line-height: 1.5em;
+  overflow: auto;
+  position: relative; }
+
+.left-col {
+  float: left;
+  width: 66.666666%; }
+
+.listing-actives {
+  outline: 1px solid yellow;
+  color: beige;
   line-height: 1.5em; }
 
-.actives-container {
-  border: 1px solid yellow;
-  background-color: #27303f;
-  color: yellow;
-  padding: 10px;
-  font-size: 5em;
-  font-weight: lighter;
-  text-align: center;
-  font-weight: bold; }
+.sidebarBox {
+  outline: 1px solid purple;
+  background-color: cyan;
+  float: left;
+  width: 33.3333%;
+  padding-top: 30px; }
 
-#main-pic-actives img {
+.scrollingBox {
+  position: fixed;
+  outline: 1px solid blue;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: beige;
+  line-height: 1.3em;
+  width: 320px;
+  /* Replace with the same width as sidebar */ }
+
+.scrollingImg {
+  float: left;
+  margin: 5px 10px; }
+
+.scrollingTxt {
+  padding: 10px; }
+
+#headerBar {
+  height: 40px;
+  background: #333333;
+  margin-bottom: 5px;
+  text-align: center; }
+
+#headerBar h3 {
+  color: beige;
+  padding: 10px; }
+
+.main-pic-actives {
   border: 1px solid red;
   border-radius: 8px;
-  overflow: auto;
-  margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px; }
+
+.main-pic-actives img {
   max-width: 400px;
   max-height: 300px;
   min-width: 400px;
@@ -772,6 +810,8 @@ footer {
   .logo {
     float: none;
     width: auto; }
+  nav {
+    position: relative; }
   nav ul {
     text-align: left;
     float: none;
