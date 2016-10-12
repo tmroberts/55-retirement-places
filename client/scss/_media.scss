@@ -3,51 +3,50 @@
 */
 
 // Got to 2-col setup at 840px
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 950px) {
 
-	nav {
-	  border: 1px solid yellow;
-	  background-color: rgba(0,0,0,0.5);
-	  height: 50px;
-	  position: fixed;
-	  top:0;
-		//clear:both;
-		float: left;
-	  width:45%;
-	  letter-spacing: .2em;
-	  z-index: 100;
-	  padding-top:12px;
-	  padding-bottom: 12px;
-	  padding-left: 10px;
-	  //padding-right: 10px;
-	  text-shadow: 1px 1px 1px black;
+	.logo {
+		//display:none;
+	  // outline: 1px solid red;
+	  // color: beige;
+	  float:none;
+	  width: auto;
+	  // font-size: 2em;
+	  // letter-spacing: .1em;
+	  // padding: 7px;
+	  // box-sizing: border-box;
+	  // z-index: 500;
+	}
+
+	nav ul {
+	  //outline: 1px solid orange;
+	  text-align:left;
+	  float:none;
+	  width: auto;
 	}
 
 	nav ul li {
-	  float: right;
-	  margin: 0 20px;
+	  //outline: 1px solid green;
+	  //display: inline-block;
+	  //padding: 7px;
 	}
 
-	nav li a:hover {
-	  background-color: rgba(18,78,121,0.5);
-	  border-bottom-color: 2px solid beige;
-	  //color: #ccc;
-	  border-radius: 8px;
-	  padding: 10px 0px;
-	  text-decoration: none;
-	}
-
-
-
-
-
-
-
-
-
-
-
-
+	// nav li a {
+	//   color: beige;
+	//   text-decoration: none;
+	// }
+	//
+	// nav li a:hover {
+	//   //background-color: rgba(18,78,121,0.5);
+	//   //  border-bottom-color: 2px solid beige;
+	//   background-color:rgba(0,0,0,0.7);
+	//   color: rgba(245,245,220,0.8);
+	//   //color: beige;
+	//   border-radius: 8px;
+	//   padding: 10px 0px;
+	//   text-decoration: none;
+	//   text-shadow: 0px 0px 0px black;
+	// }
 
 
 	.communities .community {
@@ -204,14 +203,31 @@
 
 }
 
-@media (max-width: 600px) {
-	nav li {
-		float: none;
-		padding: 5px 0px;
+@media (max-width: 420px) {
+	.logo {
+		//display:none;
+		// outline: 1px solid red;
+		// color: beige;
+		float:none;
+		width: auto;
+		// font-size: 2em;
+		// letter-spacing: .1em;
+		// padding: 7px;
+		// box-sizing: border-box;
+		// z-index: 500;
 	}
 
-	nav li a {
-		text-decoration: none;
+	nav ul {
+		//outline: 1px solid orange;
+		text-align:left;
+		float:none;
+		width: auto;
+	}
+
+	nav ul li {
+		//outline: 1px solid green;
+		display: block;
+		//padding: 7px;
 	}
 
 }
