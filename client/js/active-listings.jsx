@@ -29,54 +29,63 @@ class Master extends React.Component {
     return (
       <div className = "detail-container">
         <div className="left-col">
-        <h1>Active Listings</h1>
+          <div className="actives-heading">Active Listings</div>
 
-        {this.state.listings.map((listings) => {
+          {this.state.listings.map((listings) => {
             console.log('listings', listings);
-            //add var for handling unavail image . . . 
-          return (
+            //add var for handling unavail image . . .
+            return (
 
-            <div className ="listing-actives" key={listings.listing_id}>
-              <br/><hr /><br/>
+              <div className ="listing-actives" key={listings.listing_id}>
+                <br/>
 
-              <div className="main-pic-actives">
-                <img src={listings.photos[0]} />
-              </div>
+                <div className="actives-container">
+                  <p><span className="address">Address: {listings.address.full}</span></p>
+                  <br/>
+                  <div className="main-pic-actives">
+                    <img src={listings.photos[0]} />
+                  </div>
 
-              <div className="actives-container">
-                <h1><span class="actives-heading">Active</span> Listings</h1>
+                  <br/>
+                  <div className="detail-left">
+                    <p>List Price:  {listings.listPrice}</p>
+                    <p>Status:   {listings.mls.status}</p>
+                    <p>Bedrooms: {listings.property.bedrooms}</p>
+                    <p>Full Baths: {listings.property.bathsFull}</p>
+                    <p>Half Baths: {listings.property.bathsHalf}</p>
+                    <p>Square Feet: {listings.property.area}</p>
+                  </div>
+
+                  <div className="detail-right">
+                    <p>Year Built: {listings.property.yearBuilt}</p>
+                    <p>Property Type: {listings.property.type}</p>
+                    <p>MLS Id:  {listings.listingId}</p>
+                    <p>Address: {listings.address.full}</p>
+                    <p>City:   {listings.address.city}  </p>
+                    <p>Zip Code:   {listings.address.postalCode}  </p>
+                  </div>
+
+                </div>
+
+                <div className = "listings-button"><Link to={'/detail/' + listings.listingId}>View Listing Detail</Link>
+                </div>
                 <br/><br/>
-                <p>List Price:  {listings.listPrice}</p>
-                <p>Status:   {listings.mls.status}</p>
-                <p>Bedrooms: {listings.property.bedrooms}</p>
-                <p>Full Baths: {listings.property.bathsFull}</p>
-                <p>Half Baths: {listings.property.bathsHalf}</p>
-                <p>Square Feet: {listings.property.area}</p>
-                <p>Year Built: {listings.property.yearBuilt}</p>
-                <p>Property Type: {listings.property.type}</p>
-                <p>MLS Id:  {listings.listingId}</p>
-                <p>Address: {listings.address.full}</p>
-                <p>City:   {listings.address.city}  </p>
-                <p>Zip Code:   {listings.address.postalCode}  </p>
-                <p>Directions:  {listings.geo.directions}  </p>
                 <br/><br/>
+                <div className="listings-divider"></div>
               </div>
-
-              <div className = "listings-button"><Link to={'/detail/' + listings.listingId}>View Listing Detail</Link>
-              </div>
-              <br/><br/>
-
-            </div>
-          );
-        })}
-      </div>
+            );
+          })}
+        </div>
 
         <div className="sidebarBox">
           <div className="scrollingBox">
+            <div id="headerBar"><h3>Senior Real Estate Expert</h3></div>
+      			<div className="scrollingImg">
+      				<img src="/images/kathy1.jpg"  alt="" />
+      			</div>
             <div className="scrollingTxt">
-              <p>Want to learn more about the North Texas area? Kathy is a real estate expert who specializes in helping buyers and sellers in this community. She can help you find homes for sale. She is a great organizer for things such as vacations, cruises and a all around great packer for long trips!
-              Want to learn more about the North Texas area? Kathy is a real estate expert who specializes in helping buyers and sellers in this community. She can help you find homes for sale. She is a great organizer for things such as vacations, cruises and a all around great packer for long trips!</p>
-
+              <p>Want to learn more about the North Texas area? Kathy is a real estate expert who specializes in helping buyers and sellers in this and other Over 55 Communities in North Texas. Researching communitiesthat cater to Senior Living  can be overwhelming and frustrating! Kathy can help you find homes for sale!</p>
+              <br/><hr />
               <p>Kathy Roberts - Realtor</p>
               <p>Keller Williams Realty</p>
               <p>Phone:  972-370-5400</p>
