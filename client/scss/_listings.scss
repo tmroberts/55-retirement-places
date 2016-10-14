@@ -32,7 +32,9 @@
   //color: rgba(0,0,0,1);
 
   //color: beige;
-  max-width:960px;
+  //max-width:960px;
+  max-width:1057px;
+  //width: 100%;
   margin: 0 auto;
   text-align:left;
   line-height: 1.5em;
@@ -40,36 +42,70 @@
   position:relative;
 }
 
-.left-col{
+.left-col {
   float: left;
   width: 66.666666%;
   padding-top: 10px;
 }
 
-.left-col h1{
+.left-col h1 {
   text-align: center;
 }
 
 // Styling for Active Listings page
+
+.actives-container {
+  //border: 1px solid red;
+  //background-color: rgb(39, 48, 63);
+  color:rgba(245,245,220,1);
+  clear:both;
+  //color: black;
+  //padding: 10px;
+  text-align: center;
+  overflow:auto;
+}
+
+.actives-container .address{
+  border-bottom: 2px solid rgba(51,51,51,1);
+  border-top: 2px solid rgba(51,51,51,1);
+}
+
 .listing-actives {
   //outline: 1px solid yellow;
   color: beige;
-  //float:left;
-  //max-width:960px;
-
-  //margin: 0 auto;
-  //text-align:left;
   line-height: 1.5em;
+  text-align: center;
+  overflow:auto;
+  // margin-bottom: 10px;
 }
 
+.actives-heading {
+  //border: 1px solid red;
+  width:90%;
+  background: rgba(51,51,51,1);
+  border-radius: 10px;
+  font-size: 1.3em;
+  //background-color: rgb(39, 48, 63);
+  color:rgba(245,245,220,1);
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+.detail-left {
+  float:left;
+  width:50%;
+}
+
+.detail-right {
+  float:left;
+  width:50%;
+}
 
 .sidebarBox {
-  //outline: 1px solid purple;
-  //background-color: cyan;
   float:left;
   width: 33.3333%;
-  padding-top:30px;
-
 }
 
 .scrollingBox {
@@ -77,21 +113,19 @@
   position:fixed;
   //outline: 1px solid blue;
 	background-size: cover;
-  background-color: rgba(0,0,0,0.5);
+  //background-color: rgba(0,0,0,0.5);
 	color:rgba(245,245,220,1);
-
-
 	background-color: rgba(0,0,0,0.2);
 	color:rgba(245,245,220,1);
 	line-height: 1.3em;
-  width: 320px;/* Replace with the same width as sidebar */
-
+  width: 320px;
 }
 
 .scrollingImg {
 	float:left;
 	margin: 5px 10px;
 }
+
 .scrollingImg img{
   border-radius: 10px;
   width: 100px;
@@ -117,123 +151,62 @@
 	padding: 10px;
 }
 
-.actives-heading {
-  //border: 1px solid red;
-  //height: 40px;
-  width:90%;
-  background: rgba(51,51,51,1);
-  border-radius: 10px;
-  font-size: 1.3em;
-  //background-color: rgb(39, 48, 63);
-  color:rgba(245,245,220,1);
-  padding: 10px;
-  text-align: center;
-  margin-bottom: 5px;
-  margin-top: 10px;
-}
-
-
-
-.actives-container {
-  //border: 1px solid red;
-  //background-color: rgb(39, 48, 63);
-  color:rgba(245,245,220,1);
-  clear:both;
-  //color: black;
-  //padding: 10px;
-  //font-size: 5em;
-	//font-weight: lighter;
-  text-align: center;
-  overflow:auto;
-	//font-weight: bold;
-}
-
-.actives-container .address{
-  border-bottom: 2px solid rgba(51,51,51,1);
-  border-top: 2px solid rgba(51,51,51,1);
-}
-
-.detail-left{
-  float:left;
-  width:50%;
-}
-
-.detail-right{
-  float:left;
-  width:50%;
-}
-
-.listings-divider{
-  height: 10px;
-  background: rgba(51,51,51,1);
-  width:85%;
-  margin: 0 auto;
-  margin-top: 50px;
-
-}
-
-
-.main-pic-actives {
-  //border: 1px solid red;
-
-  //margin: 0 auto;
+.main-pic {
   text-align:center;
-  //overflow: auto;
   margin-bottom: 20px;
+  //width:100%;
 
- //width: 400px;
 }
 
-.main-pic-actives img {
+.main-pic img {
+  //border: 1px solid red;
   border-radius: 8px;
   max-width: 80%;
-  //max-height:80%;
   min-width: 400px;
   min-height: 300px;
-}
 
+}
 
 // Styling for Detail page
+.main-pic-detail {
+  border: 1px solid red;
+  text-align:center;
+  margin-bottom: 20px;
 
-#listing-detail {
- border: 3px solid green;
- color: beige;
- float:left;
- clear:both;
- text-align:left;
- margin-top: 50px;
- line-height: 1.5em;
 }
 
-#main-pic-detail img {
-  border-radius: 8px;
-  //margin: auto;
-  //text-align:center;
+.main-pic-detail img {
   //border: 1px solid red;
-  margin-bottom: 20px;
-  //width: 400px;
-  max-width: 400px;
-  max-height:300px;
+  border-radius: 8px;
+  max-width: 80%;
   min-width: 400px;
   min-height: 300px;
+}
+
+.images{
+  //border: 1px solid blue;
+  overflow:auto;
+  text-align: left;
+  //margin-left: 40px;
 }
 
 #thumbnails img {
+  //outline: 1px solid blue;
   border-radius: 8px;
   float:left;
-  text-align:center;
-  max-width: 100px;
-  max-height:65px;
-  min-width: 100px;
-  min-height: 65px;
+  //text-align:center;
+  max-width: 50px;
+  max-height:50px;
+  min-width: 50px;
+  min-height: 50px;
   padding: 5px;
+  overflow: auto;
   //clear:both;
 }
 
 #thumbnails img:hover {
-  //#thumbnails img:hover
   //outline: 3px solid blue;
-  box-shadow: 0 0 8px 8px cyan inset;
+  box-shadow: 0 0 5px 5px cyan inset;
   //box-shadow: 0 0 8px 8px blue inset;
 }
 
@@ -250,7 +223,7 @@
  font-size: 1em;
  display: inline-block;
  padding: 10px;
- margin-top: 30px;
+ margin-top: 35px;
  margin-left: 90px;
  text-align:center;
  clear:both;
@@ -263,6 +236,14 @@
   clear:both;
 }
 
+.listings-divider{
+  height: 10px;
+  background: rgba(51,51,51,1);
+  width:85%;
+  margin: 0 auto;
+  margin-top: 120px;
+
+}
 
 // button to return to Active Listings
 .return-listings-button {

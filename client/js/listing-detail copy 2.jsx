@@ -1,3 +1,11 @@
+<p>Directions:  {this.state.currentListing.geo.directions}  </p>
+<p>Property Description:  {this.state.currentListing.remarks}</p>
+</div>
+
+
+
+
+
 import React from 'react';
 import store from './rets-store.jsx';
 import { Link } from 'react-router'

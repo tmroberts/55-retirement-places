@@ -30,22 +30,18 @@ class Master extends React.Component {
       <div className = "detail-container">
         <div className="left-col">
           <div className="actives-heading">Active Listings</div>
-
-          {this.state.listings.map((listings) => {
+            {this.state.listings.map((listings) => {
             console.log('listings', listings);
             //add var for handling unavail image . . .
             return (
-
-              <div className ="listing-actives" key={listings.listing_id}>
-                <br/>
-
-                <div className="actives-container">
+              <div className="actives-container">
+                <div className ="listing-actives" key={listings.listing_id}>
+                  <br/>
                   <p><span className="address">Address: {listings.address.full}</span></p>
                   <br/>
-                  <div className="main-pic-actives">
+                  <div className="main-pic">
                     <img src={listings.photos[0]} />
                   </div>
-
                   <br/>
                   <div className="detail-left">
                     <p>List Price:  {listings.listPrice}</p>
@@ -64,13 +60,10 @@ class Master extends React.Component {
                     <p>City:   {listings.address.city}  </p>
                     <p>Zip Code:   {listings.address.postalCode}  </p>
                   </div>
-
                 </div>
 
                 <div className = "listings-button"><Link to={'/detail/' + listings.listingId}>View Listing Detail</Link>
                 </div>
-                <br/><br/>
-                <br/><br/>
                 <div className="listings-divider"></div>
               </div>
             );
@@ -95,9 +88,7 @@ class Master extends React.Component {
         </div>
 
       </div>
-
     );
   }
-
 }
 module.exports = Master;

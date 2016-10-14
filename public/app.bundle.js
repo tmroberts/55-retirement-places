@@ -27205,11 +27205,11 @@
 	            //add var for handling unavail image . . .
 	            return _react2.default.createElement(
 	              'div',
-	              { className: 'listing-actives', key: listings.listing_id },
-	              _react2.default.createElement('br', null),
+	              { className: 'actives-container' },
 	              _react2.default.createElement(
 	                'div',
-	                { className: 'actives-container' },
+	                { className: 'listing-actives', key: listings.listing_id },
+	                _react2.default.createElement('br', null),
 	                _react2.default.createElement(
 	                  'p',
 	                  null,
@@ -27223,7 +27223,7 @@
 	                _react2.default.createElement('br', null),
 	                _react2.default.createElement(
 	                  'div',
-	                  { className: 'main-pic-actives' },
+	                  { className: 'main-pic' },
 	                  _react2.default.createElement('img', { src: listings.photos[0] })
 	                ),
 	                _react2.default.createElement('br', null),
@@ -27319,10 +27319,6 @@
 	                  'View Listing Detail'
 	                )
 	              ),
-	              _react2.default.createElement('br', null),
-	              _react2.default.createElement('br', null),
-	              _react2.default.createElement('br', null),
-	              _react2.default.createElement('br', null),
 	              _react2.default.createElement('div', { className: 'listings-divider' })
 	            );
 	          })
@@ -37690,129 +37686,177 @@
 	        'div',
 	        { className: 'detail-container' },
 	        _react2.default.createElement(
-	          'h1',
-	          null,
-	          'Listing Detail'
-	        ),
-	        _react2.default.createElement('br', null),
-	        _react2.default.createElement('br', null),
-	        _react2.default.createElement(
 	          'div',
-	          { id: 'main-pic-detail' },
-	          _react2.default.createElement('img', { src: this.state.selectedUrl })
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'images' },
+	          { className: 'left-col' },
 	          _react2.default.createElement(
-	            'ul',
-	            { id: 'thumbnails' },
-	            this.state.currentListing.photos.map(function (item, i) {
-	              {/*return <li key={i}><img src={item}/> </li>*/}
-	              return _react2.default.createElement(
-	                'li',
-	                { key: i, onClick: self.selectPhoto },
-	                _react2.default.createElement('img', { src: self.state.currentListing.photos[i] })
-	              );
-	            })
+	            'div',
+	            { className: 'actives-container' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'listing-actives' },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'main-pic' },
+	                _react2.default.createElement('img', { src: this.state.selectedUrl }),
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'images' },
+	                  _react2.default.createElement(
+	                    'ul',
+	                    { id: 'thumbnails' },
+	                    this.state.currentListing.photos.map(function (item, i) {
+	                      {/*return <li key={i}><img src={item}/> </li>*/}
+	                      return _react2.default.createElement(
+	                        'li',
+	                        { key: i, onClick: self.selectPhoto },
+	                        _react2.default.createElement('img', { src: self.state.currentListing.photos[i] })
+	                      );
+	                    })
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'detail-left' },
+	                _react2.default.createElement(
+	                  'p',
+	                  null,
+	                  'List Price:  ',
+	                  this.state.currentListing.listPrice
+	                ),
+	                _react2.default.createElement(
+	                  'p',
+	                  null,
+	                  'Status:   ',
+	                  this.state.currentListing.mls.status
+	                ),
+	                _react2.default.createElement(
+	                  'p',
+	                  null,
+	                  'Bedrooms: ',
+	                  this.state.currentListing.property.bedrooms
+	                ),
+	                _react2.default.createElement(
+	                  'p',
+	                  null,
+	                  'Full Baths: ',
+	                  this.state.currentListing.property.bathsFull
+	                ),
+	                _react2.default.createElement(
+	                  'p',
+	                  null,
+	                  'Half Baths: ',
+	                  this.state.currentListing.property.bathsHalf
+	                ),
+	                _react2.default.createElement(
+	                  'p',
+	                  null,
+	                  'Square Feet: ',
+	                  this.state.currentListing.property.area
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'detail-right' },
+	                _react2.default.createElement(
+	                  'p',
+	                  null,
+	                  'Year Built: ',
+	                  this.state.currentListing.property.yearBuilt
+	                ),
+	                _react2.default.createElement(
+	                  'p',
+	                  null,
+	                  'Property Type: ',
+	                  this.state.currentListing.property.type
+	                ),
+	                _react2.default.createElement(
+	                  'p',
+	                  null,
+	                  'MLS Id:  ',
+	                  this.state.currentListing.listingId
+	                ),
+	                _react2.default.createElement(
+	                  'p',
+	                  null,
+	                  'Address: ',
+	                  this.state.currentListing.address.full
+	                ),
+	                _react2.default.createElement(
+	                  'p',
+	                  null,
+	                  'City:   ',
+	                  this.state.currentListing.address.city,
+	                  '  '
+	                ),
+	                _react2.default.createElement(
+	                  'p',
+	                  null,
+	                  'Zip Code:   ',
+	                  this.state.currentListing.address.postalCode,
+	                  '  '
+	                )
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'return-listings-button', onClick: this.handleClick },
+	              'Return to Listings'
+	            )
 	          )
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { id: 'listing-detail' },
+	          { className: 'sidebarBox' },
 	          _react2.default.createElement(
-	            'p',
-	            null,
-	            'List Price:  ',
-	            this.state.currentListing.listPrice
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            'Status:   ',
-	            this.state.currentListing.mls.status
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            'Bedrooms: ',
-	            this.state.currentListing.property.bedrooms
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            'Full Baths: ',
-	            this.state.currentListing.property.bathsFull
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            'Half Baths: ',
-	            this.state.currentListing.property.bathsHalf
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            'Square Feet: ',
-	            this.state.currentListing.property.area
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            'Year Built: ',
-	            this.state.currentListing.property.yearBuilt
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            'Property Type: ',
-	            this.state.currentListing.property.type
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            'MLS Id:  ',
-	            this.state.currentListing.listingId
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            'Address: ',
-	            this.state.currentListing.address.full
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            'City:   ',
-	            this.state.currentListing.address.city,
-	            '  '
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            'Zip Code:   ',
-	            this.state.currentListing.address.postalCode,
-	            '  '
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            'Directions:  ',
-	            this.state.currentListing.geo.directions,
-	            '  '
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            'Prpoerty Description:  ',
-	            this.state.currentListing.remarks,
-	            '  '
+	            'div',
+	            { className: 'scrollingBox' },
+	            _react2.default.createElement(
+	              'div',
+	              { id: 'headerBar' },
+	              _react2.default.createElement(
+	                'h3',
+	                null,
+	                'Senior Real Estate Expert'
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'scrollingImg' },
+	              _react2.default.createElement('img', { src: '/images/kathy1.jpg', alt: '' })
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'scrollingTxt' },
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                'Want to learn more about the North Texas area? Kathy is a real estate expert who specializes in helping buyers and sellers in this and other Over 55 Communities in North Texas. Researching communitiesthat cater to Senior Living  can be overwhelming and frustrating! Kathy can help you find homes for sale!'
+	              ),
+	              _react2.default.createElement('br', null),
+	              _react2.default.createElement('hr', null),
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                'Kathy Roberts - Realtor'
+	              ),
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                'Keller Williams Realty'
+	              ),
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                'Phone:  972-370-5400'
+	              ),
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                'www.HomeTexas.com'
+	              )
+	            )
 	          )
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'return-listings-button', onClick: this.handleClick },
-	          'Return to Listings'
 	        )
 	      );
 	    }

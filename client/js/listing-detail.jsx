@@ -74,47 +74,64 @@ class Detail extends React.Component {
 
     return (
       <div className = "detail-container">
-        <h1>Listing Detail</h1>
-        <br/><br/>
+        <div className="left-col">
+          <div className="actives-container">
+            <div className="listing-actives">
+              <div className="main-pic">
+                <img src={this.state.selectedUrl} />
 
-        <div id="main-pic-detail">
-          <img src={this.state.selectedUrl} />
+              <div className="images">
+                <ul id="thumbnails">
+                  {this.state.currentListing.photos.map(function(item,i){
+                    {/*return <li key={i}><img src={item}/> </li>*/}
+                    return <li key={i} onClick={self.selectPhoto}>
+                         <img src={self.state.currentListing.photos[i]} />
+                    </li>
+                   })
+                 }
+                </ul>
+              </div>
+            </div>
+              <div className="detail-left">
+                  <p>List Price:  {this.state.currentListing.listPrice}</p>
+                  <p>Status:   {this.state.currentListing.mls.status}</p>
+                  <p>Bedrooms: {this.state.currentListing.property.bedrooms}</p>
+                  <p>Full Baths: {this.state.currentListing.property.bathsFull}</p>
+                  <p>Half Baths: {this.state.currentListing.property.bathsHalf}</p>
+                  <p>Square Feet: {this.state.currentListing.property.area}</p>
+              </div>
+
+              <div className="detail-right">
+                <p>Year Built: {this.state.currentListing.property.yearBuilt}</p>
+                <p>Property Type: {this.state.currentListing.property.type}</p>
+                <p>MLS Id:  {this.state.currentListing.listingId}</p>
+                <p>Address: {this.state.currentListing.address.full}</p>
+                <p>City:   {this.state.currentListing.address.city}  </p>
+                <p>Zip Code:   {this.state.currentListing.address.postalCode}  </p>
+
+              </div>
+
+            </div>
+            <div className = "return-listings-button" onClick={this.handleClick}>Return to Listings</div>
+          </div>
         </div>
 
-        <div className="images">
-          <ul id="thumbnails">
-            {this.state.currentListing.photos.map(function(item,i){
-              {/*return <li key={i}><img src={item}/> </li>*/}
-              return <li key={i} onClick={self.selectPhoto}>
-                   <img src={self.state.currentListing.photos[i]} />
-              </li>
-             })
-           }
-          </ul>
+        <div className="sidebarBox">
+          <div className="scrollingBox">
+            <div id="headerBar"><h3>Senior Real Estate Expert</h3></div>
+            <div className="scrollingImg">
+              <img src="/images/kathy1.jpg"  alt="" />
+            </div>
+            <div className="scrollingTxt">
+              <p>Want to learn more about the North Texas area? Kathy is a real estate expert who specializes in helping buyers and sellers in this and other Over 55 Communities in North Texas. Researching communitiesthat cater to Senior Living  can be overwhelming and frustrating! Kathy can help you find homes for sale!</p>
+              <br/><hr />
+              <p>Kathy Roberts - Realtor</p>
+              <p>Keller Williams Realty</p>
+              <p>Phone:  972-370-5400</p>
+              <p>www.HomeTexas.com</p>
+            </div>
+          </div>
         </div>
-
-        <div id="listing-detail">
-
-          <p>List Price:  {this.state.currentListing.listPrice}</p>
-          <p>Status:   {this.state.currentListing.mls.status}</p>
-          <p>Bedrooms: {this.state.currentListing.property.bedrooms}</p>
-          <p>Full Baths: {this.state.currentListing.property.bathsFull}</p>
-          <p>Half Baths: {this.state.currentListing.property.bathsHalf}</p>
-          <p>Square Feet: {this.state.currentListing.property.area}</p>
-          <p>Year Built: {this.state.currentListing.property.yearBuilt}</p>
-          <p>Property Type: {this.state.currentListing.property.type}</p>
-          <p>MLS Id:  {this.state.currentListing.listingId}</p>
-          <p>Address: {this.state.currentListing.address.full}</p>
-          <p>City:   {this.state.currentListing.address.city}  </p>
-          <p>Zip Code:   {this.state.currentListing.address.postalCode}  </p>
-          <p>Directions:  {this.state.currentListing.geo.directions}  </p>
-          <p>Prpoerty Description:  {this.state.currentListing.remarks}  </p>
-
-        </div>
-
-        <div className = "return-listings-button" onClick={this.handleClick}>Return to Listings
-        </div>
-
 
       </div>
     );

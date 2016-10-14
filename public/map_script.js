@@ -72,8 +72,8 @@
         });
 
           google.maps.event.addListener(marker, 'mouseover', function(event) {
-              //this.setIcon(this.altIcon);
-              this.setIcon('pin-blue.png');
+              this.setIcon(this.altIcon);
+              //this.setIcon('pin-blue.png');
           });
           google.maps.event.addListener(marker, 'mouseout', function(event) {
               //this.setIcon('blue_circle.png');
