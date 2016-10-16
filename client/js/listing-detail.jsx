@@ -79,39 +79,72 @@ class Detail extends React.Component {
             <div className="listing-actives">
               <div className="main-pic">
                 <img src={this.state.selectedUrl} />
-
-              <div className="images">
-                <ul id="thumbnails">
-                  {this.state.currentListing.photos.map(function(item,i){
-                    {/*return <li key={i}><img src={item}/> </li>*/}
-                    return <li key={i} onClick={self.selectPhoto}>
-                         <img src={self.state.currentListing.photos[i]} />
-                    </li>
-                   })
-                 }
-                </ul>
+                <div className="images">
+                  <ul id="thumbnails">
+                    {this.state.currentListing.photos.map(function(item,i){
+                      {/*return <li key={i}><img src={item}/> </li>*/}
+                      return <li key={i} onClick={self.selectPhoto}>
+                           <img src={self.state.currentListing.photos[i]} />
+                      </li>
+                     })
+                   }
+                  </ul>
+                </div>
               </div>
+
+
+              <div className="detail-main-info">
+
+                <div className="detail-bar"></div>
+                <div className="detail-left">
+                  <dl>
+                    <dt className="detail-label">List Price</dt>
+                    <dd className="detail-text">{this.state.currentListing.listPrice}</dd>
+                    <dt className="detail-label">Status</dt>
+                    <dd className="detail-text">{this.state.currentListing.mls.status}</dd>
+                    <dt className="detail-label">Bedrooms</dt>
+                    <dd className="detail-text">{this.state.currentListing.property.bedrooms}</dd>
+                    <dt className="detail-label">Full Baths</dt>
+                    <dd className="detail-text">{this.state.currentListing.property.bathsFull}</dd>
+                    <dt className="detail-label">Half Baths</dt>
+                    <dd className="detail-text">{this.state.currentListing.property.bathsHalf}</dd>
+                    <dt className="detail-label">Square Feet</dt>
+                    <dd className="detail-text">{this.state.currentListing.property.area}</dd>
+                    <dt className="detail-label">Year Built</dt>
+                    <dd className="detail-text">{this.state.currentListing.property.yearBuilt}</dd>
+                    <dt className="detail-label">Property Type</dt>
+                    <dd className="detail-text">{this.state.currentListing.property.type}</dd>
+                    <dt className="detail-label">MLS Id</dt>
+                    <dd className="detail-text">{this.state.currentListing.listingId}</dd>
+                    <dt className="detail-label">Address</dt>
+                    <dd className="detail-text">{this.state.currentListing.address.full}</dd>
+                    <dt className="detail-label">City</dt>
+                    <dd className="detail-text">{this.state.currentListing.address.city}</dd>
+                    <dt className="detail-label">Zip Code</dt>
+                    <dd className="detail-text">{this.state.currentListing.address.postalCode}</dd>
+                  </dl>
+                </div>
+              </div>
+
+              <div className="detail-description">
+                  <div className="detail-label">Description</div>
+                  <div className="detail-text">{this.state.currentListing.remarks}</div>
+              </div>
+
+              <div className="courtesyBox">
+                <div className="courtesyImg">
+                  <img src="images/NTREISlogo_CMYK_60.png"  alt="" />
+                </div>
+                <div className="courtesyTxt">
+                  <p>Listing courtesy of Jim Swiggert of ABC Realty
+                    © 2016 North Texas Real Estate Information Systems. All rights reserved. Information is deemed reliable, but is not guaranteed accurate by the MLS or NTREIS. The information being provided is for the consumers personal, non-commercial use, and may not be reproduced, redistributed or used for any purpose other than to identify prospective properties consumers may be interested in purchasing.
+                  </p>
+                </div>
+              </div>
+
+
             </div>
-              <div className="detail-left">
-                  <p>List Price:  {this.state.currentListing.listPrice}</p>
-                  <p>Status:   {this.state.currentListing.mls.status}</p>
-                  <p>Bedrooms: {this.state.currentListing.property.bedrooms}</p>
-                  <p>Full Baths: {this.state.currentListing.property.bathsFull}</p>
-                  <p>Half Baths: {this.state.currentListing.property.bathsHalf}</p>
-                  <p>Square Feet: {this.state.currentListing.property.area}</p>
-              </div>
 
-              <div className="detail-right">
-                <p>Year Built: {this.state.currentListing.property.yearBuilt}</p>
-                <p>Property Type: {this.state.currentListing.property.type}</p>
-                <p>MLS Id:  {this.state.currentListing.listingId}</p>
-                <p>Address: {this.state.currentListing.address.full}</p>
-                <p>City:   {this.state.currentListing.address.city}  </p>
-                <p>Zip Code:   {this.state.currentListing.address.postalCode}  </p>
-
-              </div>
-
-            </div>
             <div className = "return-listings-button" onClick={this.handleClick}>Return to Listings</div>
           </div>
         </div>
@@ -123,7 +156,7 @@ class Detail extends React.Component {
               <img src="/images/kathy1.jpg"  alt="" />
             </div>
             <div className="scrollingTxt">
-              <p>Want to learn more about the North Texas area? Kathy is a real estate expert who specializes in helping buyers and sellers in this and other Over 55 Communities in North Texas. Researching communitiesthat cater to Senior Living  can be overwhelming and frustrating! Kathy can help you find homes for sale!</p>
+              <p>Want more information about Over 55 Communities in North Texas?  Kathy is a senior real estate specialist who will listen deeply, ask the right questions, take time to get to know your family’s situation and help develop available options so the outcome is one that will suit your family the best.  She has a 30+ year career in the real estate/mortgage industry with a strong focus on providing the best customer service whether you are buying, selling or investing in real estate.  Following the golden rule and treating her clients the way she would want to be treated is top priority and always goes the extra mile to shows that dedication.  Call Kathy so you can experience this exceptional level of service for yourself.</p>
               <br/><hr />
               <p>Kathy Roberts - Realtor</p>
               <p>Keller Williams Realty</p>

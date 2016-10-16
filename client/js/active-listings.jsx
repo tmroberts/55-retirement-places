@@ -43,26 +43,45 @@ class Master extends React.Component {
                     <img src={listings.photos[0]} />
                   </div>
                   <br/>
-                  <div className="detail-left">
-                    <p>List Price:  {listings.listPrice}</p>
-                    <p>Status:   {listings.mls.status}</p>
-                    <p>Bedrooms: {listings.property.bedrooms}</p>
-                    <p>Full Baths: {listings.property.bathsFull}</p>
-                    <p>Half Baths: {listings.property.bathsHalf}</p>
-                    <p>Square Feet: {listings.property.area}</p>
+
+                  <div className="detail-main-info">
+
+                    <div className="detail-left">
+                      <dl>
+                         <dt className="detail-label">List Price</dt>
+                         <dd className="detail-text">{listings.listPrice}</dd>
+                           <dt className="detail-label">Status</dt>
+                           <dd className="detail-text">{listings.mls.status}</dd>
+                           <dt className="detail-label">MLS Id</dt>
+                           <dd className="detail-text">{listings.listingId}</dd>
+                           <dt className="detail-label">Address</dt>
+                           <dd className="detail-text">{listings.address.full}</dd>
+                           <dt className="detail-label">City</dt>
+                           <dd className="detail-text">{listings.address.city}</dd>
+                           <dt className="detail-label">Zip Code</dt>
+                           <dd className="detail-text">{listings.address.postalCode}</dd>
+                      </dl>
+                    </div>
+
+                    <div className="detail-right">
+                      <dt className="detail-label">Year Built</dt>
+                      <dd className="detail-text">{listings.property.yearBuilt}</dd>
+                      <dt className="detail-label">Type</dt>
+                      <dd className="detail-text">{listings.property.type}</dd>
+                      <dt className="detail-label">Bedrooms</dt>
+                      <dd className="detail-text">{listings.property.bedrooms}</dd>
+                      <dt className="detail-label">Full Baths</dt>
+                      <dd className="detail-text">{listings.property.bathsFull}</dd>
+                      <dt className="detail-label">Half Baths</dt>
+                      <dd className="detail-text">{listings.property.bathsHalf}</dd>
+                      <dt className="detail-label">Square Feet</dt>
+                      <dd className="detail-text">{listings.property.area}</dd>
+                    </div>
+
                   </div>
 
-                  <div className="detail-right">
-                    <p>Year Built: {listings.property.yearBuilt}</p>
-                    <p>Property Type: {listings.property.type}</p>
-                    <p>MLS Id:  {listings.listingId}</p>
-                    <p>Address: {listings.address.full}</p>
-                    <p>City:   {listings.address.city}  </p>
-                    <p>Zip Code:   {listings.address.postalCode}  </p>
-                  </div>
                 </div>
-
-                <div className = "listings-button"><Link to={'/detail/' + listings.listingId}>View Listing Detail</Link>
+                <div className="listings-button"><Link to={'/detail/' + listings.listingId}>View Listing Detail</Link>
                 </div>
                 <div className="listings-divider"></div>
               </div>
@@ -77,7 +96,7 @@ class Master extends React.Component {
       				<img src="/images/kathy1.jpg"  alt="" />
       			</div>
             <div className="scrollingTxt">
-              <p>Want to learn more about the North Texas area? Kathy is a real estate expert who specializes in helping buyers and sellers in this and other Over 55 Communities in North Texas. Researching communitiesthat cater to Senior Living  can be overwhelming and frustrating! Kathy can help you find homes for sale!</p>
+              <p>Want more information about Over 55 Communities in North Texas?  Kathy is a senior real estate specialist who will listen deeply, ask the right questions, take time to get to know your family’s situation and help develop available options so the outcome is one that will suit your family the best.  She has a 30+ year career in the real estate/mortgage industry with a strong focus on providing the best customer service whether you are buying, selling or investing in real estate.  Following the golden rule and treating her clients the way she would want to be treated is top priority and always goes the extra mile to shows that dedication.  Call Kathy so you can experience this exceptional level of service for yourself.</p>
               <br/><hr />
               <p>Kathy Roberts - Realtor</p>
               <p>Keller Williams Realty</p>

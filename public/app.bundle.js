@@ -27229,84 +27229,138 @@
 	                _react2.default.createElement('br', null),
 	                _react2.default.createElement(
 	                  'div',
-	                  { className: 'detail-left' },
+	                  { className: 'detail-main-info' },
 	                  _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'List Price:  ',
-	                    listings.listPrice
+	                    'div',
+	                    { className: 'detail-left' },
+	                    _react2.default.createElement(
+	                      'dl',
+	                      null,
+	                      _react2.default.createElement(
+	                        'dt',
+	                        { className: 'detail-label' },
+	                        'List Price'
+	                      ),
+	                      _react2.default.createElement(
+	                        'dd',
+	                        { className: 'detail-text' },
+	                        listings.listPrice
+	                      ),
+	                      _react2.default.createElement(
+	                        'dt',
+	                        { className: 'detail-label' },
+	                        'Status'
+	                      ),
+	                      _react2.default.createElement(
+	                        'dd',
+	                        { className: 'detail-text' },
+	                        listings.mls.status
+	                      ),
+	                      _react2.default.createElement(
+	                        'dt',
+	                        { className: 'detail-label' },
+	                        'MLS Id'
+	                      ),
+	                      _react2.default.createElement(
+	                        'dd',
+	                        { className: 'detail-text' },
+	                        listings.listingId
+	                      ),
+	                      _react2.default.createElement(
+	                        'dt',
+	                        { className: 'detail-label' },
+	                        'Address'
+	                      ),
+	                      _react2.default.createElement(
+	                        'dd',
+	                        { className: 'detail-text' },
+	                        listings.address.full
+	                      ),
+	                      _react2.default.createElement(
+	                        'dt',
+	                        { className: 'detail-label' },
+	                        'City'
+	                      ),
+	                      _react2.default.createElement(
+	                        'dd',
+	                        { className: 'detail-text' },
+	                        listings.address.city
+	                      ),
+	                      _react2.default.createElement(
+	                        'dt',
+	                        { className: 'detail-label' },
+	                        'Zip Code'
+	                      ),
+	                      _react2.default.createElement(
+	                        'dd',
+	                        { className: 'detail-text' },
+	                        listings.address.postalCode
+	                      )
+	                    )
 	                  ),
 	                  _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'Status:   ',
-	                    listings.mls.status
-	                  ),
-	                  _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'Bedrooms: ',
-	                    listings.property.bedrooms
-	                  ),
-	                  _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'Full Baths: ',
-	                    listings.property.bathsFull
-	                  ),
-	                  _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'Half Baths: ',
-	                    listings.property.bathsHalf
-	                  ),
-	                  _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'Square Feet: ',
-	                    listings.property.area
-	                  )
-	                ),
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'detail-right' },
-	                  _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'Year Built: ',
-	                    listings.property.yearBuilt
-	                  ),
-	                  _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'Property Type: ',
-	                    listings.property.type
-	                  ),
-	                  _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'MLS Id:  ',
-	                    listings.listingId
-	                  ),
-	                  _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'Address: ',
-	                    listings.address.full
-	                  ),
-	                  _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'City:   ',
-	                    listings.address.city,
-	                    '  '
-	                  ),
-	                  _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'Zip Code:   ',
-	                    listings.address.postalCode,
-	                    '  '
+	                    'div',
+	                    { className: 'detail-right' },
+	                    _react2.default.createElement(
+	                      'dt',
+	                      { className: 'detail-label' },
+	                      'Year Built'
+	                    ),
+	                    _react2.default.createElement(
+	                      'dd',
+	                      { className: 'detail-text' },
+	                      listings.property.yearBuilt
+	                    ),
+	                    _react2.default.createElement(
+	                      'dt',
+	                      { className: 'detail-label' },
+	                      'Type'
+	                    ),
+	                    _react2.default.createElement(
+	                      'dd',
+	                      { className: 'detail-text' },
+	                      listings.property.type
+	                    ),
+	                    _react2.default.createElement(
+	                      'dt',
+	                      { className: 'detail-label' },
+	                      'Bedrooms'
+	                    ),
+	                    _react2.default.createElement(
+	                      'dd',
+	                      { className: 'detail-text' },
+	                      listings.property.bedrooms
+	                    ),
+	                    _react2.default.createElement(
+	                      'dt',
+	                      { className: 'detail-label' },
+	                      'Full Baths'
+	                    ),
+	                    _react2.default.createElement(
+	                      'dd',
+	                      { className: 'detail-text' },
+	                      listings.property.bathsFull
+	                    ),
+	                    _react2.default.createElement(
+	                      'dt',
+	                      { className: 'detail-label' },
+	                      'Half Baths'
+	                    ),
+	                    _react2.default.createElement(
+	                      'dd',
+	                      { className: 'detail-text' },
+	                      listings.property.bathsHalf
+	                    ),
+	                    _react2.default.createElement(
+	                      'dt',
+	                      { className: 'detail-label' },
+	                      'Square Feet'
+	                    ),
+	                    _react2.default.createElement(
+	                      'dd',
+	                      { className: 'detail-text' },
+	                      listings.property.area
+	                    )
 	                  )
 	                )
 	              ),
@@ -27349,7 +27403,7 @@
 	              _react2.default.createElement(
 	                'p',
 	                null,
-	                'Want to learn more about the North Texas area? Kathy is a real estate expert who specializes in helping buyers and sellers in this and other Over 55 Communities in North Texas. Researching communitiesthat cater to Senior Living  can be overwhelming and frustrating! Kathy can help you find homes for sale!'
+	                'Want more information about Over 55 Communities in North Texas?  Kathy is a senior real estate specialist who will listen deeply, ask the right questions, take time to get to know your family’s situation and help develop available options so the outcome is one that will suit your family the best.  She has a 30+ year career in the real estate/mortgage industry with a strong focus on providing the best customer service whether you are buying, selling or investing in real estate.  Following the golden rule and treating her clients the way she would want to be treated is top priority and always goes the extra mile to shows that dedication.  Call Kathy so you can experience this exceptional level of service for yourself.'
 	              ),
 	              _react2.default.createElement('br', null),
 	              _react2.default.createElement('hr', null),
@@ -37717,84 +37771,167 @@
 	              ),
 	              _react2.default.createElement(
 	                'div',
-	                { className: 'detail-left' },
+	                { className: 'detail-main-info' },
+	                _react2.default.createElement('div', { className: 'detail-bar' }),
 	                _react2.default.createElement(
-	                  'p',
-	                  null,
-	                  'List Price:  ',
-	                  this.state.currentListing.listPrice
-	                ),
-	                _react2.default.createElement(
-	                  'p',
-	                  null,
-	                  'Status:   ',
-	                  this.state.currentListing.mls.status
-	                ),
-	                _react2.default.createElement(
-	                  'p',
-	                  null,
-	                  'Bedrooms: ',
-	                  this.state.currentListing.property.bedrooms
-	                ),
-	                _react2.default.createElement(
-	                  'p',
-	                  null,
-	                  'Full Baths: ',
-	                  this.state.currentListing.property.bathsFull
-	                ),
-	                _react2.default.createElement(
-	                  'p',
-	                  null,
-	                  'Half Baths: ',
-	                  this.state.currentListing.property.bathsHalf
-	                ),
-	                _react2.default.createElement(
-	                  'p',
-	                  null,
-	                  'Square Feet: ',
-	                  this.state.currentListing.property.area
+	                  'div',
+	                  { className: 'detail-left' },
+	                  _react2.default.createElement(
+	                    'dl',
+	                    null,
+	                    _react2.default.createElement(
+	                      'dt',
+	                      { className: 'detail-label' },
+	                      'List Price'
+	                    ),
+	                    _react2.default.createElement(
+	                      'dd',
+	                      { className: 'detail-text' },
+	                      this.state.currentListing.listPrice
+	                    ),
+	                    _react2.default.createElement(
+	                      'dt',
+	                      { className: 'detail-label' },
+	                      'Status'
+	                    ),
+	                    _react2.default.createElement(
+	                      'dd',
+	                      { className: 'detail-text' },
+	                      this.state.currentListing.mls.status
+	                    ),
+	                    _react2.default.createElement(
+	                      'dt',
+	                      { className: 'detail-label' },
+	                      'Bedrooms'
+	                    ),
+	                    _react2.default.createElement(
+	                      'dd',
+	                      { className: 'detail-text' },
+	                      this.state.currentListing.property.bedrooms
+	                    ),
+	                    _react2.default.createElement(
+	                      'dt',
+	                      { className: 'detail-label' },
+	                      'Full Baths'
+	                    ),
+	                    _react2.default.createElement(
+	                      'dd',
+	                      { className: 'detail-text' },
+	                      this.state.currentListing.property.bathsFull
+	                    ),
+	                    _react2.default.createElement(
+	                      'dt',
+	                      { className: 'detail-label' },
+	                      'Half Baths'
+	                    ),
+	                    _react2.default.createElement(
+	                      'dd',
+	                      { className: 'detail-text' },
+	                      this.state.currentListing.property.bathsHalf
+	                    ),
+	                    _react2.default.createElement(
+	                      'dt',
+	                      { className: 'detail-label' },
+	                      'Square Feet'
+	                    ),
+	                    _react2.default.createElement(
+	                      'dd',
+	                      { className: 'detail-text' },
+	                      this.state.currentListing.property.area
+	                    ),
+	                    _react2.default.createElement(
+	                      'dt',
+	                      { className: 'detail-label' },
+	                      'Year Built'
+	                    ),
+	                    _react2.default.createElement(
+	                      'dd',
+	                      { className: 'detail-text' },
+	                      this.state.currentListing.property.yearBuilt
+	                    ),
+	                    _react2.default.createElement(
+	                      'dt',
+	                      { className: 'detail-label' },
+	                      'Property Type'
+	                    ),
+	                    _react2.default.createElement(
+	                      'dd',
+	                      { className: 'detail-text' },
+	                      this.state.currentListing.property.type
+	                    ),
+	                    _react2.default.createElement(
+	                      'dt',
+	                      { className: 'detail-label' },
+	                      'MLS Id'
+	                    ),
+	                    _react2.default.createElement(
+	                      'dd',
+	                      { className: 'detail-text' },
+	                      this.state.currentListing.listingId
+	                    ),
+	                    _react2.default.createElement(
+	                      'dt',
+	                      { className: 'detail-label' },
+	                      'Address'
+	                    ),
+	                    _react2.default.createElement(
+	                      'dd',
+	                      { className: 'detail-text' },
+	                      this.state.currentListing.address.full
+	                    ),
+	                    _react2.default.createElement(
+	                      'dt',
+	                      { className: 'detail-label' },
+	                      'City'
+	                    ),
+	                    _react2.default.createElement(
+	                      'dd',
+	                      { className: 'detail-text' },
+	                      this.state.currentListing.address.city
+	                    ),
+	                    _react2.default.createElement(
+	                      'dt',
+	                      { className: 'detail-label' },
+	                      'Zip Code'
+	                    ),
+	                    _react2.default.createElement(
+	                      'dd',
+	                      { className: 'detail-text' },
+	                      this.state.currentListing.address.postalCode
+	                    )
+	                  )
 	                )
 	              ),
 	              _react2.default.createElement(
 	                'div',
-	                { className: 'detail-right' },
+	                { className: 'detail-description' },
 	                _react2.default.createElement(
-	                  'p',
-	                  null,
-	                  'Year Built: ',
-	                  this.state.currentListing.property.yearBuilt
+	                  'div',
+	                  { className: 'detail-label' },
+	                  'Description'
 	                ),
 	                _react2.default.createElement(
-	                  'p',
-	                  null,
-	                  'Property Type: ',
-	                  this.state.currentListing.property.type
+	                  'div',
+	                  { className: 'detail-text' },
+	                  this.state.currentListing.remarks
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'courtesyBox' },
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'courtesyImg' },
+	                  _react2.default.createElement('img', { src: 'images/NTREISlogo_CMYK_60.png', alt: '' })
 	                ),
 	                _react2.default.createElement(
-	                  'p',
-	                  null,
-	                  'MLS Id:  ',
-	                  this.state.currentListing.listingId
-	                ),
-	                _react2.default.createElement(
-	                  'p',
-	                  null,
-	                  'Address: ',
-	                  this.state.currentListing.address.full
-	                ),
-	                _react2.default.createElement(
-	                  'p',
-	                  null,
-	                  'City:   ',
-	                  this.state.currentListing.address.city,
-	                  '  '
-	                ),
-	                _react2.default.createElement(
-	                  'p',
-	                  null,
-	                  'Zip Code:   ',
-	                  this.state.currentListing.address.postalCode,
-	                  '  '
+	                  'div',
+	                  { className: 'courtesyTxt' },
+	                  _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Listing courtesy of Jim Swiggert of ABC Realty © 2016 North Texas Real Estate Information Systems. All rights reserved. Information is deemed reliable, but is not guaranteed accurate by the MLS or NTREIS. The information being provided is for the consumers personal, non-commercial use, and may not be reproduced, redistributed or used for any purpose other than to identify prospective properties consumers may be interested in purchasing.'
+	                  )
 	                )
 	              )
 	            ),
@@ -37831,7 +37968,7 @@
 	              _react2.default.createElement(
 	                'p',
 	                null,
-	                'Want to learn more about the North Texas area? Kathy is a real estate expert who specializes in helping buyers and sellers in this and other Over 55 Communities in North Texas. Researching communitiesthat cater to Senior Living  can be overwhelming and frustrating! Kathy can help you find homes for sale!'
+	                'Want more information about Over 55 Communities in North Texas?  Kathy is a senior real estate specialist who will listen deeply, ask the right questions, take time to get to know your family’s situation and help develop available options so the outcome is one that will suit your family the best.  She has a 30+ year career in the real estate/mortgage industry with a strong focus on providing the best customer service whether you are buying, selling or investing in real estate.  Following the golden rule and treating her clients the way she would want to be treated is top priority and always goes the extra mile to shows that dedication.  Call Kathy so you can experience this exceptional level of service for yourself.'
 	              ),
 	              _react2.default.createElement('br', null),
 	              _react2.default.createElement('hr', null),
