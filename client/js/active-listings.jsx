@@ -26,6 +26,7 @@ class Master extends React.Component {
 
   render() {
   console.log("This is state:", this.state);
+              //add conditional to handle loading mechanism
     return (
       <div className = "detail-container">
         <div className="left-col">
@@ -33,6 +34,7 @@ class Master extends React.Component {
             {this.state.listings.map((listings) => {
             console.log('listings', listings);
             //add var for handling unavail image . . .
+
             return (
               <div className="actives-container">
                 <div className ="listing-actives" key={listings.listing_id}>

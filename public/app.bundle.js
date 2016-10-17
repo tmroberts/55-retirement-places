@@ -27189,6 +27189,7 @@
 	    key: 'render',
 	    value: function render() {
 	      console.log("This is state:", this.state);
+	      //add conditional to handle loading mechanism
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'detail-container' },
@@ -27203,6 +27204,7 @@
 	          this.state.listings.map(function (listings) {
 	            console.log('listings', listings);
 	            //add var for handling unavail image . . .
+	
 	            return _react2.default.createElement(
 	              'div',
 	              { className: 'actives-container' },
