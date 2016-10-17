@@ -49,7 +49,7 @@ class Master extends React.Component {
                     <div className="detail-left">
                       <dl>
                          <dt className="detail-label">List Price</dt>
-                         <dd className="detail-text">{listings.listPrice}</dd>
+                         <dd className="detail-text listPrice">{listings.listPrice}</dd>
                            <dt className="detail-label">Status</dt>
                            <dd className="detail-text">{listings.mls.status}</dd>
                            <dt className="detail-label">MLS Id</dt>

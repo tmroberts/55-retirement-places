@@ -27243,7 +27243,7 @@
 	                      ),
 	                      _react2.default.createElement(
 	                        'dd',
-	                        { className: 'detail-text' },
+	                        { className: 'detail-text listPrice' },
 	                        listings.listPrice
 	                      ),
 	                      _react2.default.createElement(

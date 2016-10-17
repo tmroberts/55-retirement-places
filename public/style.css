@@ -196,7 +196,7 @@ table {
 .overlay {
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.5);
-  color: #FFF;
+  color: beige;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -298,10 +298,11 @@ table {
 
 .actives-container .address {
   border-bottom: 2px solid #333333;
-  border-top: 2px solid #333333; }
+  border-top: 2px solid #333333;
+  font-size: 1.2em; }
 
 .listing-actives {
-  color: beige;
+  color: rgba(245, 245, 220, 0.8);
   line-height: 1.5em;
   text-align: center;
   overflow: auto; }
@@ -311,7 +312,7 @@ table {
   background: #333333;
   border-radius: 10px;
   font-size: 1.3em;
-  color: beige;
+  color: rgba(245, 245, 220, 0.5);
   padding: 10px;
   text-align: center;
   margin-bottom: 5px;
@@ -356,6 +357,9 @@ dt {
   text-align: right;
   color: #999; }
 
+.listPrice::before {
+  content: "$"; }
+
 dt:after {
   content: ":"; }
 
@@ -365,8 +369,6 @@ dd {
 
 .detail-description {
   display: block;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
   clear: both;
   margin: 0 auto;
   margin-top: 20px;
@@ -375,12 +377,15 @@ dd {
   margin-bottom: 20px;
   width: 80%; }
 
+.detail-description .detail-label {
+  font-size: 1.2em; }
+
 .courtesyBox {
   display: block;
   clear: both;
   border-radius: 12px;
   color: black;
-  background-color: rgba(245, 245, 220, 0.5);
+  background-color: rgba(245, 245, 220, 0.6);
   line-height: 1.3em;
   font-weight: lighter;
   margin: 0 auto;
@@ -399,7 +404,7 @@ dd {
 
 .courtesyImg img {
   width: 50px;
-  height: 60px;
+  height: 50px;
   margin-top: 8px; }
 
 .sidebarBox {
@@ -411,7 +416,7 @@ dd {
   position: fixed;
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.2);
-  color: beige;
+  color: rgba(245, 245, 220, 0.7);
   line-height: 1.3em;
   width: 320px; }
 
@@ -488,7 +493,7 @@ dd {
   display: inline-block;
   padding: 10px;
   margin-top: 35px;
-  margin-left: 90px;
+  margin-left: 70px;
   text-align: center;
   clear: both; }
 
@@ -520,7 +525,8 @@ dd {
   padding: 10px;
   text-align: center;
   clear: both;
-  margin-top: 10px; }
+  margin-top: 10px;
+  margin-left: 65px; }
 
 .return-listings-button a {
   border-radius: 8px;
@@ -714,14 +720,6 @@ nav li a:hover {
   padding-top: 150px;
   width: 100%;
   z-index: -1000; }
-
-.banner h1 {
-  color: beige;
-  font-size: 72px;
-  text-align: center;
-  margin-top: 50px;
-  position: fixed;
-  width: 100%; }
 
 .container {
   background-color: #201d1c;
@@ -941,7 +939,59 @@ footer {
     background-position: center;
     background-size: cover;
     margin: 1.5% 3% 1.5% 1.5%;
-    width: 45.5%; } }
+    width: 45.5%; }
+  .actives-container {
+    width: 100%; }
+  .actives-heading {
+    margin-top: 30px; }
+  .detail-container {
+    width: 100%;
+    position: relative;
+    margin-top: 30px;
+    text-align: left; }
+  .left-col {
+    float: none;
+    width: 100%; }
+  .sidebarBox {
+    position: relative;
+    top: 0;
+    text-align: left;
+    margin: 0 auto;
+    padding: 40px 20px;
+    float: none;
+    width: 80%; }
+  .scrollingBox {
+    border-radius: 10px;
+    position: relative;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: rgba(245, 245, 220, 0.7);
+    line-height: 1.3em;
+    width: 100%; }
+  .scrollingImg {
+    float: left;
+    margin: 5px 10px; }
+  .scrollingImg img {
+    border-radius: 10px;
+    width: 100px;
+    height: 150px; }
+  .scrollingTxt {
+    padding: 10px; }
+  #headerBar {
+    height: 40px;
+    background: #333333;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: 5px;
+    text-align: center; }
+  #headerBar h3 {
+    color: beige;
+    padding: 10px; }
+  .main-pic img {
+    border-radius: 8px;
+    max-width: 80%;
+    min-width: 200px;
+    min-height: 150px; } }
 
 @media (max-width: 420px) {
   .logo {
@@ -954,6 +1004,13 @@ footer {
     float: none;
     width: auto; }
   nav ul li {
-    display: block; } }
+    display: block; }
+  .actives-heading {
+    margin-top: 10px; }
+  #app {
+    margin-top: 10px;
+    padding-top: 5px; }
+  .container-no-pic {
+    margin-top: 5px; } }
 
 /*# sourceMappingURL=style.css.map*/

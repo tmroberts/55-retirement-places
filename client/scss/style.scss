@@ -32,7 +32,8 @@ nav {
 
 .logo {
   //outline: 1px solid red;
-  color: beige;
+  //color: beige;
+  color:rgba(245,245,220,1);
   float:left;
   width: 50%;
   font-size: 2em;
@@ -89,21 +90,12 @@ nav li a:hover {
   z-index: -1000;
 }
 
-.banner h1 {
-  //outline: 1px solid red;
-  color:beige;
-  font-size: 72px;
-  text-align: center;
-  margin-top: 50px;
-  //z-index: -1000;
-  position: fixed;
-  width:100%;
-}
+
 
 .container {
   background-color: #201d1c;
   //background-color: rgba(0,0,0,0.5);
-  //border: 5px solid red;
+  //outline: 2px solid red;
   margin-top: 42%;
   width:100%;
   overflow: auto;
@@ -188,7 +180,7 @@ footer {
   //border: 1px solid red;
   background-color: #333333;
   clear: both;
-  color: beige;
+  color:rgba(245,245,220,1);
   width: 100%;
   letter-spacing: .2em;
   line-height: 1.3em;

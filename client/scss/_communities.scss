@@ -2,7 +2,6 @@
    License: Team Trosclair
 */
 
-
 .communities .community {
   float: left;
 	padding: 1%;
@@ -172,7 +171,8 @@
 .overlay {
   border-radius: 10px;
 	background-color: rgba(0, 0, 0, 0.5);
-	color: #FFF;
+	//color: #FFF;
+  color:rgba(245,245,220,1);
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -215,6 +215,7 @@
 .view-community:hover {
 	background-color: #000;
 	color: #fff;
+  //color:rgba(245,245,220,1);
 }
 
 .overlay .heading {
