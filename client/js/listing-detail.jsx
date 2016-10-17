@@ -57,7 +57,7 @@ class Detail extends React.Component {
   componentDidMount() {
     var stateObj = store.copyState();
     this.mapStoreState(stateObj)
-
+    window.scrollTo(0,0);
     store.addListener(state => {
       console.log("State has changed", state);
       this.mapStoreState(state);
