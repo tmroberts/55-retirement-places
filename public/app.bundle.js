@@ -37743,6 +37743,59 @@
 	        { className: 'detail-container' },
 	        _react2.default.createElement(
 	          'div',
+	          { className: 'sidebarBox' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'scrollingBox' },
+	            _react2.default.createElement(
+	              'div',
+	              { id: 'headerBar' },
+	              _react2.default.createElement(
+	                'h3',
+	                null,
+	                'Senior Real Estate Expert'
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'scrollingImg' },
+	              _react2.default.createElement('img', { src: '/images/kathy1.jpg', alt: '' })
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'scrollingTxt' },
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                'Want more information about Over 55 Communities in North Texas?  Kathy is a senior real estate specialist who will listen deeply, ask the right questions, take time to get to know your family’s situation and help develop available options so the outcome is one that will suit your family the best.  She has a 30+ year career in the real estate/mortgage industry with a strong focus on providing the best customer service whether you are buying, selling or investing in real estate.  Following the golden rule and treating her clients the way she would want to be treated is top priority and always goes the extra mile to shows that dedication.  Call Kathy so you can experience this exceptional level of service for yourself.'
+	              ),
+	              _react2.default.createElement('br', null),
+	              _react2.default.createElement('hr', null),
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                'Kathy Roberts - Realtor'
+	              ),
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                'Keller Williams Realty'
+	              ),
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                'Phone:  972-370-5400'
+	              ),
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                'www.HomeTexas.com'
+	              )
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
 	          { className: 'left-col' },
 	          _react2.default.createElement(
 	            'div',
@@ -37941,59 +37994,6 @@
 	              'div',
 	              { className: 'return-listings-button', onClick: this.handleClick },
 	              'Return to Listings'
-	            )
-	          )
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'sidebarBox' },
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'scrollingBox' },
-	            _react2.default.createElement(
-	              'div',
-	              { id: 'headerBar' },
-	              _react2.default.createElement(
-	                'h3',
-	                null,
-	                'Senior Real Estate Expert'
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'scrollingImg' },
-	              _react2.default.createElement('img', { src: '/images/kathy1.jpg', alt: '' })
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'scrollingTxt' },
-	              _react2.default.createElement(
-	                'p',
-	                null,
-	                'Want more information about Over 55 Communities in North Texas?  Kathy is a senior real estate specialist who will listen deeply, ask the right questions, take time to get to know your family’s situation and help develop available options so the outcome is one that will suit your family the best.  She has a 30+ year career in the real estate/mortgage industry with a strong focus on providing the best customer service whether you are buying, selling or investing in real estate.  Following the golden rule and treating her clients the way she would want to be treated is top priority and always goes the extra mile to shows that dedication.  Call Kathy so you can experience this exceptional level of service for yourself.'
-	              ),
-	              _react2.default.createElement('br', null),
-	              _react2.default.createElement('hr', null),
-	              _react2.default.createElement(
-	                'p',
-	                null,
-	                'Kathy Roberts - Realtor'
-	              ),
-	              _react2.default.createElement(
-	                'p',
-	                null,
-	                'Keller Williams Realty'
-	              ),
-	              _react2.default.createElement(
-	                'p',
-	                null,
-	                'Phone:  972-370-5400'
-	              ),
-	              _react2.default.createElement(
-	                'p',
-	                null,
-	                'www.HomeTexas.com'
-	              )
 	            )
 	          )
 	        )
