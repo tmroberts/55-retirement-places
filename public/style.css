@@ -826,10 +826,13 @@ footer {
     float: none;
     width: auto; }
   .communities .community {
-    border-top: solid 1px #000;
     float: none;
     padding: 40px 20px;
-    width: auto; }
+    width: auto;
+    text-align: center;
+    list-style-type: none; }
+  .the-list {
+    list-style-type: none; }
   .img-container {
     float: left;
     margin: .65%;
