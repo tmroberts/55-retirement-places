@@ -22,18 +22,33 @@
 	  //padding: 7px;
 	}
 
-	.communities .community {
-		//border-top: solid 1px #000;
-	  float: none;
-		padding: 40px 20px;
-		width: auto;
-		text-align:center;
-	  list-style-type: none;
+	.communities {
+		clear:both;
+	  margin:0 auto;
+		overflow:auto;
+		text-align:left;
+		float:none;
+		width: 70%;
 	}
 
-	.the-list{
-			list-style-type: none;
+	.communities .community {
+		//border-top: solid 1px #000;
+	  //float: none;
+		padding: 20px 20px;
+		padding-top: 20px;
+		padding-bottom: 0px;
+
+
+
+
+		width: auto;
+		//text-align:left;
+		margin:0 auto;
+
 	}
+
+
+
 
 
   .img-container {
@@ -313,6 +328,15 @@
 
 
 
+
+
+	// Button to view Listings
+	.listings-button {
+	  margin-top: 15px;
+	  margin-left: 85px;
+	}
+
+
 }
 
 @media (max-width: 420px) {
@@ -364,25 +388,6 @@
 		text-align: center;
 		text-shadow: 2px 0px 5px rgba(0,0,0,0.2);
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }

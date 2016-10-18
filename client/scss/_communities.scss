@@ -2,14 +2,27 @@
    License: Team Trosclair
 */
 
+.communities {
+  //outline: 1px solid yellow;
+  width:100%;
+  margin:0 auto;
+  overflow:auto;
+  margin-top:40px;
+  margin-bottom: 40px;
+  text-align:center;
+}
+
+
 .communities .community {
+  outline: 1ps solid red;
   float: left;
-	padding: 1%;
+	//padding: 1%;
 	width: 31.3333333%;
 }
 
 .communities img {
 	max-width: 100%;
+  padding-left: 80px;
 }
 
 .communities h2 {
@@ -20,7 +33,14 @@
   line-height: 1.2em;
   margin: 10px 0;
 }
-
+.communities .community .the-list {
+  text-align:left;
+  margin-left: 30px;
+  //outline: 1ps solid red;
+  //float: left;
+	//padding: 1%;
+	//width: 31.3333333%;
+}
 
 //moved from landing-page mockup
 
