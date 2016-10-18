@@ -270,6 +270,49 @@
 	  min-height: 150px;
 	}
 
+	.detail-left {
+		float:none;
+		width:auto;
+	}
+
+	.detail-right {
+		float:none;
+		width:auto;
+	}
+
+	.contact-heading {
+		font-size: 1.8em;
+		text-align: center;
+		letter-spacing: .1em;
+	}
+
+	.contact-button {
+			border-radius: 8px;
+			display: block;
+			font-size: 1.0em;
+			font-weight: 700;
+			background: rgba(245,245,220,1);
+			color: rgba(18, 78, 121,1);
+			border: 2px solid transparent;
+			width: 12em;
+			margin: 2em auto 0;
+			padding: 0.9em 1.25em;
+			text-decoration: none;
+			text-align: center;
+			letter-spacing: .1em;
+	}
+
+	.contact-button:hover {
+			background: transparent;
+			border: 2px solid #fff;
+			border-radius: 8px;
+			text-decoration: none;
+			text-shadow: 1px 1px 1px black;
+			color: #f5f5f5;
+	}
+
+
+
 }
 
 @media (max-width: 420px) {
@@ -308,5 +351,38 @@
 	.container-no-pic {
 		margin-top: 5px;
 	}
+
+
+	.overlay .heading {
+		font-family: "Verlag A", "Verlag B", "Helvetica", "Arial", sans-serif;
+		font-size: 1.4em;
+		font-weight: 100;
+	  letter-spacing: 2px;
+		line-height: 1.1em;
+		margin-top: 100px auto;
+		margin-bottom: 0.15em;
+		text-align: center;
+		text-shadow: 2px 0px 5px rgba(0,0,0,0.2);
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
