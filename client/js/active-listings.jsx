@@ -105,8 +105,7 @@ class Master extends React.Component {
                   </div>
 
                 </div>
-                <div className="listings-button"><Link to={'/detail/' + listings.listingId}>View Listing Detail</Link>
-                </div>
+                <div className="listings-button"><Link to={'/detail/' + listings.listingId}>View Listing Detail</Link></div>
                 <div className="listings-divider"></div>
               </div>
             );

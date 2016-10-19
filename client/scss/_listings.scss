@@ -319,19 +319,20 @@ dd {
  //background-color: #c33;
  //background-color: #B40101;
  background-color: #688d34;
- border: 1px solid #f5f5dc;
+ border: 2px solid #f5f5dc;
  border-radius: 8px;
+ clear:both;
  color: #f5f5dc;
- width: 150px;
+ width: 12em;
  float: left;
- font-size: 1em;
+ font-size: 1.347em;
+ letter-spacing: .1em;
  display: inline-block;
- padding: 15px;
+ padding: 1em 0.3em;
  margin-top: 35px;
  margin-bottom: 35px;
-
+ text-shadow: 3px 3px 3px black;
  text-align:center;
- clear:both;
 }
 
 .active-listings-button a {
@@ -351,18 +352,19 @@ dd {
  //background-color: #c33;
  //background-color: #B40101;
  background-color: #688d34;
- border: 1px solid #f5f5dc;
+ border: 2px solid #f5f5dc;
  border-radius: 8px;
  color: #f5f5dc;
- width: 150px;
+ width: 12em;
  float: left;
- font-size: 1em;
+ font-size: 1.347em;
+ letter-spacing: .1em;
  display: inline-block;
- padding: 10px;
+ padding: 1em 0.3em;
  margin-top: 35px;
  margin-left: 10%;
- //margin-left: 70px;
  text-align:center;
+ text-shadow: 3px 3px 3px black;
  clear:both;
 }
 
@@ -383,28 +385,29 @@ dd {
   background: rgba(51,51,51,1);
   width:85%;
   margin: 0 auto;
-  margin-top: 120px;
-
+  margin-top: 10em;
+  margin-bottom: 3em;
 }
 
 // button to return to Active Listings
 .return-listings-button {
-  border: 1px solid #fff;
+  //border: 1px solid #fff;
   border-radius: 8px;
   //background-color: #B40101;
   background-color: #688d34;
   border: 1px solid #f5f5dc;
   color: #f5f5dc;
-  width: 150px;
+  width: 12em;
   float: left;
-  font-size: 1em;
-  //display: inline-block;
-  padding: 10px;
-  text-align:center;
-  clear:both;
+  font-size: 1.347em;
+  letter-spacing: .1em;
   margin-top: 10px;
-  //margin-left: 65px;
   margin-left: 10%;
+  padding: 1em 0.3em;
+  text-align:center;
+  text-shadow: 3px 3px 3px black;
+  clear:both;
+
 }
 
 
