@@ -766,6 +766,9 @@ nav {
   box-sizing: border-box;
   z-index: 500; }
 
+.logo h1 {
+  padding-left: 10px; }
+
 nav ul {
   text-align: right;
   float: left;
@@ -909,6 +912,8 @@ footer {
   .logo {
     float: none;
     width: auto; }
+  .logo h1 {
+    padding-left: 0px; }
   nav ul {
     text-align: left;
     float: none;
