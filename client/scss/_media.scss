@@ -2,7 +2,21 @@
    License: Team Trosclair
 */
 
-// Got to 2-col setup at 840px
+// Landing page box text at 1140px
+@media screen and (max-width: 1140px) {
+	.overlay .heading {
+		font-size: 1.6em;
+	}
+}
+
+// Landing page box text at 1030px
+@media screen and (max-width: 1030px) {
+	.overlay .heading {
+		font-size: 1.4em;
+	}
+}
+
+// Go to 2-col setup at 950px
 @media screen and (max-width: 950px) {
 
 	.logo {
@@ -37,19 +51,11 @@
 		padding: 20px 20px;
 		padding-top: 20px;
 		padding-bottom: 0px;
-
-
-
-
 		width: auto;
 		//text-align:left;
 		margin:0 auto;
 
 	}
-
-
-
-
 
   .img-container {
   	float: left;
@@ -201,8 +207,6 @@
 		width:100%;
 	}
 
-
-
 	.actives-heading {
 	  margin-top: 30px;
 	}
@@ -220,11 +224,6 @@
 	}
 
 	.sidebarBox {
-		//outline: 2px solid blue;
-	  //display:inline-block;
-		//position: absolute;
-		//top:0;
-		//left:0;
 		position: relative;
 		text-align:left;
 		margin: 0 auto;
@@ -239,11 +238,9 @@
 	  position:relative;
 		background-size: cover;
 		background-color: rgba(0,0,0,0.2);
-		//color:rgba(245,245,220,1);
 	  color:rgba(245,245,220,0.7);
 		line-height: 1.3em;
-	  //width: 320px;
-		width:100%
+		width:100%;
 	}
 
 	.scrollingImg {
@@ -274,8 +271,6 @@
 	  color:rgba(245,245,220,1);
 		padding: 10px;
 	}
-
-
 
 	.main-pic img {
 	  //border: 1px solid red;
@@ -326,20 +321,31 @@
 			color: #f5f5f5;
 	}
 
-
-
-
+	.overlay .heading {
+		font-size: 1.6em;
+	}
 
 	// Button to view Listings
 	.listings-button {
 	  margin-top: 15px;
-	  margin-left: 85px;
+	  //margin-left: 85px;
 	}
 
 
 }
 
-@media (max-width: 420px) {
+
+
+@media screen and (max-width: 490px) {
+	.overlay .heading {
+		font-size: 1.2em;
+	}
+
+}
+
+
+
+@media screen and (max-width: 420px) {
 	.logo {
 		float:none;
 		width: auto;
@@ -376,18 +382,12 @@
 		margin-top: 5px;
 	}
 
-
 	.overlay .heading {
-		font-family: "Verlag A", "Verlag B", "Helvetica", "Arial", sans-serif;
-		font-size: 1.4em;
-		font-weight: 100;
-	  letter-spacing: 2px;
-		line-height: 1.1em;
-		margin-top: 100px auto;
-		margin-bottom: 0.15em;
-		text-align: center;
-		text-shadow: 2px 0px 5px rgba(0,0,0,0.2);
+		font-size: .9em;
 	}
+
+
+
 
 
 }

@@ -531,6 +531,30 @@ dd {
 #thumbnails img:hover {
   box-shadow: 0 0 5px 5px cyan inset; }
 
+.active-listings-button {
+  background-color: #688d34;
+  border: 1px solid #f5f5dc;
+  border-radius: 8px;
+  color: #f5f5dc;
+  width: 150px;
+  float: left;
+  font-size: 1em;
+  display: inline-block;
+  padding: 15px;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  text-align: center;
+  clear: both; }
+
+.active-listings-button a {
+  border-radius: 8px;
+  text-decoration: none;
+  color: #FFF;
+  clear: both; }
+
+.active-listings-button:hover {
+  background: transparent; }
+
 .listings-button {
   background-color: #688d34;
   border: 1px solid #f5f5dc;
@@ -542,6 +566,7 @@ dd {
   display: inline-block;
   padding: 10px;
   margin-top: 35px;
+  margin-left: 10%;
   text-align: center;
   clear: both; }
 
@@ -574,7 +599,7 @@ dd {
   text-align: center;
   clear: both;
   margin-top: 10px;
-  margin-left: 65px; }
+  margin-left: 10%; }
 
 .return-listings-button a {
   border-radius: 8px;
@@ -771,7 +796,7 @@ nav li a:hover {
 
 .container {
   background-color: #201d1c;
-  margin-top: 35%;
+  margin-top: 29%;
   width: 100%;
   overflow: auto; }
 
@@ -865,6 +890,14 @@ footer {
 /* Media queries for 55 Retirement Places - 20161009
    License: Team Trosclair
 */
+@media screen and (max-width: 1140px) {
+  .overlay .heading {
+    font-size: 1.6em; } }
+
+@media screen and (max-width: 1030px) {
+  .overlay .heading {
+    font-size: 1.4em; } }
+
 @media screen and (max-width: 950px) {
   .logo {
     float: none;
@@ -1078,11 +1111,16 @@ footer {
     text-decoration: none;
     text-shadow: 1px 1px 1px black;
     color: #f5f5f5; }
+  .overlay .heading {
+    font-size: 1.6em; }
   .listings-button {
-    margin-top: 15px;
-    margin-left: 85px; } }
+    margin-top: 15px; } }
 
-@media (max-width: 420px) {
+@media screen and (max-width: 490px) {
+  .overlay .heading {
+    font-size: 1.2em; } }
+
+@media screen and (max-width: 420px) {
   .logo {
     float: none;
     width: auto; }
@@ -1102,14 +1140,6 @@ footer {
   .container-no-pic {
     margin-top: 5px; }
   .overlay .heading {
-    font-family: "Verlag A", "Verlag B", "Helvetica", "Arial", sans-serif;
-    font-size: 1.4em;
-    font-weight: 100;
-    letter-spacing: 2px;
-    line-height: 1.1em;
-    margin-top: 100px auto;
-    margin-bottom: 0.15em;
-    text-align: center;
-    text-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2); } }
+    font-size: .9em; } }
 
 /*# sourceMappingURL=style.css.map*/
