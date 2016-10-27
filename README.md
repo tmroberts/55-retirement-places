@@ -10,9 +10,12 @@ The following API's are used:
 - MLS API is used to pull current active listings 
 - Google Maps API is used to provide map feature
 
-This project incorporated HTML5, CSS, and Javascript/React in the MVP version.  
+The MVP version of this project incorporated:
+- HTML5
+- CSS
+- Javascript/React   
 
-Plans are underway for additional improvements to the site!
+Phase II feature development and site improvements are underway!
 
 
 ## Setup
