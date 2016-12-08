@@ -24,27 +24,30 @@
 
 
       <div class="form-content">
-      <div class="form button group">
-        <button type="button" id="one">Email Us</button>
-        <button type="button" id="two"></button>
-      </div>
-      <!--registration-->
-      <form action = "#" method="post" id="registration">
+      <!--FORM-->
+      <!--<form action = "#" method="post" id="registration">-->
+        <form action="contactform.js" method="post" id="contactme">
         <div id="form-input">
           <input type="text" name="name" id="name" placeholder="Enter your Name" >
         </div>
+
         <div id="form-input">
           <input type="text" name="email" id="email" placeholder="Enter your Email Address">
         </div>
+
         <div id='form-input'>
           <input type="text" name="phone" id="phone" placeholder="Enter your phone number">
         </div>
+
         <div id='form-input'>
-          <input type="text" name="info" id="info" placeholder="Additional Information">
+          <!--<input type="text" name="info" id="info" placeholder="Additional Information">-->
+          <textarea type="text" name="info" id="info" placeholder="Additional Information"></textarea>
         </div>
+
         <div id='form-submit'>
-        <input type="submit" name="submit" id="submit">
+        <input type="submit" name="submit" value="Submit" id="submit">
       </div>
+
         <br/>
         <br/>
         <div id='form-footer'>&copy; Team Trosclair - Keller Williams, 2016</div>
@@ -53,9 +56,7 @@
   </div>
 </div>
     <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-    <!-- Add jQuery script line here -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="script.js"></script> -->
+    <script src="contactform.js"></script>
   </body>
 
 </html>

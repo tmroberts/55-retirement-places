@@ -8,29 +8,27 @@
 @import url(https://fonts.googleapis.com/css?family=Exo);
 @import url(https://fonts.googleapis.com/css?family=Play);
 
-
 .form-container{
-		//border: 8px solid red;
-		margin: 0 auto;
-		padding: 0;
-		background:  #000 url('/images/header_test1.jpg') no-repeat center center fixed;
-	 background-size:cover;
-	 height:100vh;
-		width:100%;
-		overflow:auto;
+	margin: 0 auto;
+	padding: 0;
+	background:  #000 url('/images/header_test1.jpg') no-repeat center center fixed;
+	background-size:cover;
+	height:100vh;
+	width:100%;
+	overflow:auto;
 }
 
 .form-content{
-	margin-top: 80px;
+	margin-top: 140px;
 }
 
 form{
-	background-color: rgba(0, 0,0, 0.5);
+	background-color: rgba(0, 0,0, 0.8);
 	padding: 2em 4em 2em;
 	max-width: 400px;
 	margin: 20px auto ;
 	box-shadow: 0 0 1em #222;
-	border-radius: 5px;
+	border-radius: 10px;
 }
 
 input {
@@ -40,53 +38,103 @@ input {
 	outline: none
 }
 
-input[type="password"],
 input[type="text"]{
 	padding:20px;
 	margin:2%;
 	border-radius:10px;
-	background:rgba(0,0,0,0.7)
+	background-color: rgba(245,245,220,0.8);
+	font-family: 'Play', sans-serif;
+	letter-spacing:3px;
+	text-align:center;
+	font-weight:bolder;
+	font-size: 1.1em;
 }
 
-input[type="text"],
-input[type="password"]{
-	outline:none;
+// input[type="text"]{
+//  	outline:none;
+//  }
+
+// input[type="text"]:focus{
+// 	background-color: rgba(245,245,220,1);
+// 	color: rgba(0, 0, 0, 0.5);
+// 	font-family: 'Play', sans-serif;
+// 	letter-spacing:3px;
+// 	text-align:center;
+// 	font-weight:bolder;
+// }
+
+textarea:focus, input:focus{
+	background-color: rgba(245,245,220,1);
+	color: rgba(0, 0, 0, 0.5);
+	font-family: 'Play', sans-serif;
+	letter-spacing:3px;
+	text-align:center;
+	font-weight:bolder;
+  outline: none;
 }
 
-input[type="text"]:focus,
-input[type="password"]:focus{
-	background:rgba(255,255,255,1);
-}
-
+//::-webkit-input-placeholder { /* Chrome/Opera/Safari */
 input::-webkit-input-placeholder{
-font-family: 'Play', sans-serif;
-letter-spacing:3px;
-text-align:center;
-font-weight:bolder;
-font-size: 1.3em;
+	color: rgba(0, 0, 0, 0.5);
+	font-family: 'Play', sans-serif;
+	letter-spacing:3px;
+	text-align:center;
+	font-weight:bolder;
+}
+
+input::-moz-placeholder { /* Firefox 19+ */
+//input:-moz-placeholder { /* Firefox 18- */
+	color: rgba(0, 0, 0, 0.5);
+	font-family: 'Play', sans-serif;
+	letter-spacing:3px;
+	text-align:center;
+	font-weight:bolder;
+}
+
+input::-moz-input { /* Firefox 19+ */
+	color: rgba(0, 0, 0, 0.5);
+	font-family: 'Play', sans-serif;
+	letter-spacing:3px;
+	text-align:center;
+	font-weight:bolder;
+}
+
+textarea {
+	display: block;
+	box-sizing: border-box;
+	padding:20px;
+	margin:2%;
+	border-radius:10px;
+	background-color: rgba(245,245,220,0.8);
+	font-family: 'Play', sans-serif;
+	letter-spacing:3px;
+	text-align:center;
+	font-weight:bolder;
+	font-size: 1.1em;
+	width: 100%;
+}
+
+textarea::-webkit-input-placeholder{
+	color: rgba(0, 0, 0, 0.5);
+	font-family: 'Play', sans-serif;
+	letter-spacing:3px;
+	text-align:center;
+	font-weight:bolder;
+}
+
+textarea::-moz-placeholder { /* Firefox 19+ */
+	//input:-moz-placeholder { /* Firefox 18- */
+	color: rgba(0, 0, 0, 0.5);
+	font-family: 'Play', sans-serif;
+	letter-spacing:3px;
+	text-align:center;
+	font-weight:bolder;
 }
 
 .form{
 	width:50%;
 	margin:auto;
 	font-weight:bolder;
-}
-
-.form button{
-	float:right;
-	margin-right:10px;
-	background:none;
-	color:#fff;
-	border:none;
-	cursor:pointer;
-	font-family: 'Exo', sans-serif;
-	margin-top:2%;
-	font-size:1.75em;
-	outline:none;
-}
-
-form button:hover{
-	color:#FF8C00;
 }
 
 input[type="submit"] {
@@ -96,14 +144,16 @@ input[type="submit"] {
  border:none;
  border-radius:5px;
  font-size:1em;
- color:#fff;
+ color: rgba(245, 245, 219, 1);
  margin-left:30%;
  border:1px solid #fff;
-	cursor:pointer;
+ cursor:pointer;
 }
 
 input[type="submit"]:hover{
-	background:rgba(255,255,255,0.7);
+	//background:rgba(255,255,255,0.7);
+	background:rgba(104,141,52,1);
+	//background-color: #688d34;
 	color:#222;
 }
 
@@ -122,5 +172,5 @@ input[type="submit"]:hover{
 }
 
 #form-footer {
-	color: #fff;
+	color: rgba(245, 245, 219, 1);
 }
