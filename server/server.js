@@ -39,8 +39,8 @@ app.post('/sendemail', function (req, res) {
   var helper = require('sendgrid').mail
 
   from_email = new helper.Email("55retirementplaces@example.com");
-  to_email = new helper.Email("tmroberts7@gmail.com");
-  //to_email = new helper.Email("trkr6@verizon.net")
+  //to_email = new helper.Email("tmroberts7@gmail.com");
+  to_email = new helper.Email("trkr6@verizon.net")
   subject = "Testing email with SendGrid";
 
   //content = new helper.Content("text/plain", info);
