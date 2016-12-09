@@ -1,9 +1,5 @@
 var $ = require('jquery');
-
-var state = {
-  listings: []
-};
-
+var state = {listings: []};
 var store = {
   listeners: [], //for keeping tracking of components listening for change events
   actions: {} //for actions, see below
@@ -19,8 +15,6 @@ store.removeListener = function(listener) {
   store.listeners.splice(index, 1);
   console.log('listener length (remove)', store.listeners.length);
 }
-
-
 
 //Makes a copy of the state. This is to protect the state that is managed by the store.
 store.copyState = function() {
@@ -38,9 +32,7 @@ function changed() {
   });
 }
 
-
 // Parameterize the query string so that all 14 communities can be handled here.
-
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, "\\$&");
@@ -50,7 +42,6 @@ function getParameterByName(name, url) {
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
-
 
 /* ========================================= */
 /* Actions                                   */
@@ -63,8 +54,7 @@ store.actions.load = function() {
   var q = getParameterByName('q');
   var postalCode = getParameterByName('postalCode');
 
-  // th 9/28/2016: to stop extraneous
-  // api calls
+  // th 9/28/2016: to stop extraneous api calls
   // I have data already! Don't make ajax call.
   // if (state.listings.length > 0) {
   //   changed();

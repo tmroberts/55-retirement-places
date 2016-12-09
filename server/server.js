@@ -2,14 +2,16 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 
+var apiKey = process.env.SIMPLYRETS_KEY;
+//console.log('This is var apiKey:  ', process.env.SIMPLYRETS_KEY); atm, this is undefined...
+
+
 app.use(express.static('public'));
 //Here we are configuring express to use body-parser as middle-ware.
 app.use(bodyParser.urlencoded({extended: false}));
 
 //console.log('process.env', process.env);
 
-var apiKey = process.env.SIMPLYRETS_KEY;
-//console.log('This is var apiKey:  ', process.env.SIMPLYRETS_KEY); atm, this is undefined...
 
 app.post('/sendemail', function (req, res) {
   res.send('Got a POST request');
@@ -36,12 +38,10 @@ app.post('/sendemail', function (req, res) {
 
   var helper = require('sendgrid').mail
 
-  from_email = new helper.Email("55retirementplaces@example.com")
-
-  to_email = new helper.Email("tmroberts7@gmail.com")
+  from_email = new helper.Email("55retirementplaces@example.com");
+  to_email = new helper.Email("tmroberts7@gmail.com");
   //to_email = new helper.Email("trkr6@verizon.net")
-
-  subject = "Testing email with SendGrid"
+  subject = "Testing email with SendGrid";
 
   //content = new helper.Content("text/plain", info);
   //content = new helper.Content("text/plain", "I'm interested in Robson Ranch, please give me a call at the above number")
@@ -55,8 +55,6 @@ app.post('/sendemail', function (req, res) {
   //console.log("Info = "+info+"");
 
   mail = new helper.Mail(from_email, subject, to_email, content)
-
-
 
 process.env.SENDGRID_API_KEY='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'
   var sg = require('sendgrid')(process.env.SENDGRID_API_KEY);
