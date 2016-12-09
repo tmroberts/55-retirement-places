@@ -56,7 +56,7 @@ app.post('/sendemail', function (req, res) {
 
   mail = new helper.Mail(from_email, subject, to_email, content)
 
-process.env.SENDGRID_API_KEY='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'
+
   var sg = require('sendgrid')(process.env.SENDGRID_API_KEY);
 
   var request = sg.emptyRequest({
