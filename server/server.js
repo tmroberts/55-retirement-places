@@ -9,13 +9,10 @@ app.use(express.static('public'));
 //Here we are configuring express to use body-parser as middle-ware.
 app.use(bodyParser.urlencoded({extended: false}));
 
-console.log('USERNAME is:', process.env.SIMPLYRETS_USERNAME);
-console.log('API KEY is:', process.env.SIMPLYRETS_API_KEY);
 
 app.get('/active_listings', function(req, res){
-  console.log('we have hit active listings');
-
-  console.log('This is req.params: ', req.params);
+  //console.log('we have hit active listings');
+  //console.log('This is req.params: ', req.params);
   console.log('This is req.query.q: ', req.query.q);
   console.log('This is req.query.postalCode: ', req.query.postalCode);
   var q = req.query.q;

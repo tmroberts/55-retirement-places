@@ -27462,7 +27462,7 @@
 	store.removeListener = function (listener) {
 	  var index = store.listeners.indexOf(listener);
 	  store.listeners.splice(index, 1);
-	  console.log('listener length (remove)', store.listeners.length);
+	  //console.log('listener length (remove)', store.listeners.length);
 	};
 	
 	//Makes a copy of the state. This is to protect the state that is managed by the store.
@@ -27503,11 +27503,6 @@
 	  var q = getParameterByName('q');
 	  var postalCode = getParameterByName('postalCode');
 	
-	  console.log('This is parameter q: ', q);
-	  console.log('This is parameter postalCode: ', postalCode);
-	  //////////////. . . WE GET HERE . . . ///////////////////////////
-	
-	
 	  // th 9/28/2016: to stop extraneous api calls
 	  // I have data already! Don't make ajax call.
 	  // if (state.listings.length > 0) {
@@ -27519,11 +27514,9 @@
 	    $.ajax({
 	      //the AJAX call uses the /properties endpoint
 	      url: 'active_listings?q=' + q + '&postalCode=' + postalCode
-	
 	    }).done(function (returnedData) {
-	      //////////////. . . WE DO NOT GET HERE . . . ///////////////////////////
 	      //console.log('This is the AJAX url being passed to server.js: ', url);
-	      console.log('data returned from server.js :', returnedData);
+	      //console.log('data returned from server.js :', returnedData);
 	      state.listings = returnedData;
 	      changed();
 	    });
