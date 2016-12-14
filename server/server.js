@@ -12,9 +12,15 @@ app.use(bodyParser.urlencoded({extended: false}));
 console.log('USERNAME is:', process.env.SIMPLYRETS_USERNAME);
 console.log('API KEY is:', process.env.SIMPLYRETS_API_KEY);
 
-
 app.get('/active_listings', function(req, res){
   console.log('we have hit active listings');
+
+  console.log('This is req.params: ', req.params);
+  console.log('This is req.query.q: ', req.query.q);
+  console.log('This is req.query.postalCode: ', req.query.postalCode);
+  var q = req.query.q;
+  var postalCode = req.query.postalCode;
+
   var options = {
     //the AJAX call uses the /properties endpoint
     url: 'https://api.simplyrets.com/properties?limit=50&type=residential&status=active&q='+ q + '&postalCode=',
@@ -28,12 +34,17 @@ app.get('/active_listings', function(req, res){
   function callback(error, response, body) {
     if (!error && response.statusCode == 200) {
       var info = JSON.parse(body);
+      res.send(info);
     }
-    console.log('data returned is:  ', body );
+    //console.log('raw data returned from api is:  ', body );
+    //console.log('parsed data is:  ', info );
     console.log('status code:  ', response.statusCode );
+
+    //////////////. . . WE GET HERE . . . ///////////////////////////
   }
 
   request(options, callback);
+
   //res.end('Done');
 });
 
