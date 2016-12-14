@@ -27512,14 +27512,8 @@
 	
 	  if (state.listings.length === 0) {
 	    $.ajax({
-	      //the AJAX call uses the /properties endpoint
-	      //url: 'https://api.simplyrets.com/properties?q=Robson%20Ranch&status=active&type=residential&postalCode=76207&limit=50',
-	
-	      url: 'https://api.simplyrets.com/properties?limit=50&type=residential&status=active&q=' + q + '&postalCode=' + postalCode,
-	
-	      beforeSend: function beforeSend(xhr) {
-	        xhr.setRequestHeader("Authorization", "Basic " + btoa('tmrob_3503e746' + ":" + '4221b62v5493lg44'));
-	      }
+	      //    //the AJAX call uses the /properties endpoint
+	      url: '/active_listings'
 	    }).done(function (returnedData) {
 	      console.log('data', returnedData);
 	      state.listings = returnedData;
