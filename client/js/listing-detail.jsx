@@ -153,7 +153,7 @@ class Detail extends React.Component {
                   <img src="images/NTREISlogo_CMYK_60.png"  alt="" />
                 </div>
                 <div className="courtesyTxt">
-                  <p>Listing courtesy of Jim Swiggert of ABC Realty
+                  <p>Listing courtesy of -agent placeholder- of -broker placeholder -ABC Realty-
                     © 2016 North Texas Real Estate Information Systems. All rights reserved. Information is deemed reliable, but is not guaranteed accurate by the MLS or NTREIS. The information being provided is for the consumers personal, non-commercial use, and may not be reproduced, redistributed or used for any purpose other than to identify prospective properties consumers may be interested in purchasing.
                   </p>
                 </div>

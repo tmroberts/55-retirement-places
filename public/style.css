@@ -529,7 +529,16 @@ dd {
   overflow: auto; }
 
 #thumbnails img:hover {
+  /* hover state */
   box-shadow: 0 0 5px 5px cyan inset; }
+
+#thumbnails img:active {
+  /* click state */
+  box-shadow: 0 0 5px 5px lightgreen inset; }
+
+#thumbnails img.active {
+  /* after click state */
+  box-shadow: 0 0 5px 5px lightgreen inset; }
 
 .active-listings-button {
   background-color: #688d34;
