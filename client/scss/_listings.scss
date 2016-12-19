@@ -312,16 +312,19 @@ dd {
    /* hover state */
   //outline: 3px solid blue;
   box-shadow: 0 0 5px 5px cyan inset;
+  //transform:scale(1.1);
 }
 
 #thumbnails img:active {
   /* click state */
   box-shadow: 0 0 5px 5px lightgreen inset;
+  //transform:scale(1.1);
 }
 
 #thumbnails img.active{
   /* after click state */
   box-shadow: 0 0 5px 5px lightgreen inset;
+
 }
 
 // Button to go to Active Listings
