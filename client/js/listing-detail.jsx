@@ -100,6 +100,7 @@ class Detail extends React.Component {
                   <ul id="thumbnails">
                     {this.state.currentListing.photos.map(function(item,i){
                       {/*return <li key={i}><img src={item}/> </li>*/}
+
                       return <li key={i} onClick={self.selectPhoto}>
                            <img src={self.state.currentListing.photos[i]} />
                       </li>
@@ -146,6 +147,7 @@ class Detail extends React.Component {
               <div className="detail-description">
                   <div className="detail-label">Description</div>
                   <div className="detail-text">{this.state.currentListing.remarks}</div>
+
               </div>
 
               <div className="courtesyBox">
@@ -153,8 +155,8 @@ class Detail extends React.Component {
                   <img src="images/NTREISlogo_CMYK_60.png"  alt="" />
                 </div>
                 <div className="courtesyTxt">
-                  <p>Listing courtesy of -agent placeholder- of -broker placeholder -ABC Realty-
-                    © 2016 North Texas Real Estate Information Systems. All rights reserved. Information is deemed reliable, but is not guaranteed accurate by the MLS or NTREIS. The information being provided is for the consumers personal, non-commercial use, and may not be reproduced, redistributed or used for any purpose other than to identify prospective properties consumers may be interested in purchasing.
+                  <p>Listing courtesy of {this.state.currentListing.agent.lastName},  {this.state.currentListing.agent.firstName} of {this.state.currentListing.office.name}.</p>
+                  <p>© 2016 North Texas Real Estate Information Systems. All rights reserved. Information is deemed reliable, but is not guaranteed accurate by the MLS or NTREIS. The information being provided is for the consumers personal, non-commercial use, and may not be reproduced, redistributed or used for any purpose other than to identify prospective properties consumers may be interested in purchasing.
                   </p>
                 </div>
               </div>

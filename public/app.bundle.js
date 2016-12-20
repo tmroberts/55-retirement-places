@@ -37804,6 +37804,7 @@
 	                    { id: 'thumbnails' },
 	                    this.state.currentListing.photos.map(function (item, i) {
 	                      {/*return <li key={i}><img src={item}/> </li>*/}
+	
 	                      return _react2.default.createElement(
 	                        'li',
 	                        { key: i, onClick: self.selectPhoto },
@@ -37974,7 +37975,18 @@
 	                  _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'Listing courtesy of -agent placeholder- of -broker placeholder -ABC Realty- © 2016 North Texas Real Estate Information Systems. All rights reserved. Information is deemed reliable, but is not guaranteed accurate by the MLS or NTREIS. The information being provided is for the consumers personal, non-commercial use, and may not be reproduced, redistributed or used for any purpose other than to identify prospective properties consumers may be interested in purchasing.'
+	                    'Listing courtesy of ',
+	                    this.state.currentListing.agent.lastName,
+	                    ',  ',
+	                    this.state.currentListing.agent.firstName,
+	                    ' of ',
+	                    this.state.currentListing.office.name,
+	                    '.'
+	                  ),
+	                  _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    '© 2016 North Texas Real Estate Information Systems. All rights reserved. Information is deemed reliable, but is not guaranteed accurate by the MLS or NTREIS. The information being provided is for the consumers personal, non-commercial use, and may not be reproduced, redistributed or used for any purpose other than to identify prospective properties consumers may be interested in purchasing.'
 	                  )
 	                )
 	              )
