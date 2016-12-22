@@ -37,6 +37,7 @@
     // });
 
     console.log('This is the formData: ', formData);
+    $("#contactme")[0].reset();
     console.log('End of PROCESSING contactform');
   });
   //
