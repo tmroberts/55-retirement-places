@@ -26,7 +26,10 @@
            console.log(errorMessage); // Optional
            console.log(formData);
         },
-        success: function(data) {console.log(data)}
+        success: function(data) {
+          console.log(data)
+          alert('Success!  Email sent to Kathy.');
+        }
 
     });
     // .done(function (data) {
@@ -34,6 +37,14 @@
     //   console.log('This is the data: ', data);
     //   console.log('This is the formData: ', formData);
     //   console.log('End of PROCESSING contactform');
+
+    /* Alerts the results */
+    //      posting.done(function( data ) {
+    //        alert('success');
+    //      });
+
+
+
     // });
 
     console.log('This is the formData: ', formData);
