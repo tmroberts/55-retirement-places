@@ -468,7 +468,7 @@ dd {
   background-color: rgba(0, 0, 0, 0.2);
   color: rgba(245, 245, 220, 0.7);
   line-height: 1.3em;
-  width: 320px; }
+  width: 375px; }
 
 .scrollingImg {
   float: left;
@@ -951,7 +951,9 @@ footer {
 
 @media screen and (max-width: 1030px) {
   .overlay .heading {
-    font-size: 1.4em; } }
+    font-size: 1.4em; }
+  .scrollingBox {
+    width: 340px; } }
 
 @media screen and (max-width: 950px) {
   .logo {
