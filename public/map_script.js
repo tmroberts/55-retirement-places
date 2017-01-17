@@ -13,8 +13,6 @@
     //console.log('Map is invoked!');
     // code to draw map
     var map;
-    var col = '#FF0000';
-    //var col = '#0000FF';
     var link ;
     var latLng;
     var polypoints;
@@ -41,8 +39,6 @@
       var markers = {};
       var mapOptions = {
         center: new google.maps.LatLng(33.140053, -96.898784),
-        //center: new google.maps.LatLng(33.0212642, -96.9076653),
-        //center: new google.maps.LatLng(33.57801474614399, -96.85546875),
         zoom: 10,
         scrollwheel: false,
         scaleControl: true,
@@ -58,6 +54,12 @@
          }
       };
 
+      /*
+      - create the map object
+      Two parameters:
+        -- page/html element where the map will be loaded
+        -- mapOptions - tells Google how we want the mapto display
+      */
       map = new google.maps.Map(document.getElementById('map'),
       mapOptions);
 
@@ -73,13 +75,10 @@
           position: new google.maps.LatLng(community_locations[i][1], community_locations[i][2]),
           map: map
           ,id: id
-          //,icon: 'red_circle.png'
           ,icon:'pin-red.png'
           ,url: community_locations[i][5]
           ,zIndex:100
-          //,size: new google.maps.Size(20, 32)
           ,altIcon: community_locations[i][4]
-          //,altIcon: 'robson_ranch.jpg'
         });
 
           google.maps.event.addListener(marker, 'mouseover', function(event) {
