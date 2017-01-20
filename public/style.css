@@ -828,10 +828,11 @@ nav li a {
   text-decoration: none; }
 
 nav li a:hover {
-  background-color: rgba(0, 0, 0, 0.7);
   color: rgba(245, 245, 220, 0.8);
+  border-left: 1px solid beige;
+  border-right: 1px solid beige;
   border-radius: 8px;
-  padding: 10px 0px;
+  padding: 10px 6px;
   text-decoration: none;
   text-shadow: 0px 0px 0px black; }
 
