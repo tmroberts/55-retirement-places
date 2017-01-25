@@ -5,6 +5,7 @@
 // This is styling for the main map on the communities page
 
 #map {
+  //outline: 3px solid orange;
   margin-top: 1.5%;
   border-radius: 10px;
   text-align: center;
@@ -39,5 +40,11 @@
   // }
 
 }
+
+div #map {
+    border-radius: 10px;
+}
+
+
 
 //
