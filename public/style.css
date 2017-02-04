@@ -890,7 +890,7 @@ nav li a:hover {
   clear: both;
   float: left;
   width: 100%;
-  background: #201d1c url(//d36s929gmfcqwt.cloudfront.net/assets/office-2-755e0d8434c53962090c49f201c19f68f9486a69183402c2de37bc777e1d008b.jpg) no-repeat center;
+  background: #201d1c url("/images/office.jpg") no-repeat center;
   background-size: cover;
   padding: 4em 0; }
 
