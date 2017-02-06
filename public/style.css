@@ -836,9 +836,8 @@ nav li a {
 
 nav li a:hover {
   color: rgba(245, 245, 220, 0.8);
-  border-left: 1px solid beige;
-  border-right: 1px solid beige;
-  border-radius: 8px;
+  border-bottom: 2px solid beige;
+  border-top: 2px solid beige;
   padding: 10px 6px;
   text-decoration: none;
   text-shadow: 0px 0px 0px black; }
