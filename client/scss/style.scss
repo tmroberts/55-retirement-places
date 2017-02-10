@@ -58,12 +58,22 @@ nav {
 
 }
 
-nav ul {
+/* nav ul {
   //outline: 1px solid orange;
   text-align:right;
   float: left;
   width: 50%;
+} */
+
+nav ul {
+  //outline: 1px solid orange;
+  text-align:right;
+  float: right;
+  margin-right: 25px;
+  padding-top: 8px;
+  //width: 50%;
 }
+
 
 nav ul li {
   //outline: 1px solid green;

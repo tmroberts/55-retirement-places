@@ -838,10 +838,17 @@ nav {
     text-decoration: none;
     color: beige; }
 
+/* nav ul {
+  //outline: 1px solid orange;
+  text-align:right;
+  float: left;
+  width: 50%;
+} */
 nav ul {
   text-align: right;
-  float: left;
-  width: 50%; }
+  float: right;
+  margin-right: 25px;
+  padding-top: 8px; }
 
 nav ul li {
   display: inline-block;
