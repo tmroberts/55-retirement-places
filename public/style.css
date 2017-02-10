@@ -821,6 +821,23 @@ nav {
 .logo h1 {
   padding-left: 10px; }
 
+.logo a {
+  color: beige;
+  text-decoration: none;
+  /* Each state */ }
+  .logo a a:visited {
+    text-decoration: none;
+    color: beige; }
+  .logo a a:hover {
+    text-decoration: none;
+    color: beige; }
+  .logo a a:focus {
+    text-decoration: none;
+    color: beige; }
+  .logo a a:hover, .logo a a:active {
+    text-decoration: none;
+    color: beige; }
+
 nav ul {
   text-align: right;
   float: left;
