@@ -129,6 +129,64 @@ nav li a:hover {
   overflow: auto;
 }
 
+
+.abbeyImg img {
+  border-radius: 8px;
+  box-shadow: 3px 3px 2px 2px #555;
+  //display: block;
+  float:right;
+  margin-right: 6%;
+  margin-left: 3%;
+  width: 15%;
+}
+
+.canterburyImg img {
+  border-radius: 8px;
+  box-shadow: 3px 3px 2px 2px #555;
+  //display: block;
+  float:left;
+  margin-right: 4%;
+  margin-bottom: 5%;
+  width: 15%;
+}
+
+#tours {
+  font-size:  1.3em;
+  font-weight: bold;
+  margin-top: 10%;
+}
+
+#abbey-title {
+  font-size:  1.1em;
+  font-weight: bold;
+  margin-top: 3%;
+}
+
+.abbeyParagraph {
+  //font-size: .8em;
+  //font-size: 1.3em;
+  //font-weight: bold;
+  line-height: 1.3em;
+  letter-spacing: .1em;
+  padding: 0px 20px 0px 0px;
+}
+
+#canterbury-title {
+  font-size:  1.1em;
+  font-weight: bold;
+  margin-top: 10%;
+  padding-bottom: 1%;
+}
+
+.canterburyParagraph {
+  //font-size: .8em;
+  //font-weight: bold;
+  line-height: 1.3em;
+  letter-spacing: .1em;
+  padding: 0px 20px 20px 20px;
+}
+
+
 .ntx-heading {
   //border: 1px solid green;
   background-color:#333333;
