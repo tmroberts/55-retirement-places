@@ -8,8 +8,6 @@
 //
 //
 //   function start() {
-
-    //Call your code here
     //console.log('Map is invoked!');
     // code to draw map
     var map;
@@ -63,10 +61,10 @@
       map = new google.maps.Map(document.getElementById('map'),
       mapOptions);
 
-     //***  Communities
+     //***  Communities pins
+     //  this section creates the pins and their locations on the main landing page map
       var marker, i;
       var id = 'community';
-
       for (i = 0; i < community_locations.length; i++) {
         var id = 'community' + (i+1);
           //console.log('This is community_locations[i][4]: ',community_locations[i][4]);
@@ -83,15 +81,24 @@
 
           google.maps.event.addListener(marker, 'mouseover', function(event) {
               this.setIcon(this.altIcon);
-              //this.setIcon('pin-blue.png');
+              // this.setIcon('pin-blue.png');
           });
           google.maps.event.addListener(marker, 'mouseout', function(event) {
               //this.setIcon('blue_circle.png');
               this.setIcon('pin-red.png');
           });
+
+          // Add 'onclick' that takes you to the community page
+          //google.maps.event.addEventListener(marker, 'click', function(event){
+              //infoWindow.open(this.url);
+               //window.open(marker.url);
+               //window.open(marker.this.url);
+          //});
+
       }
     }
     google.maps.event.addDomListener(window, 'load', initialize);
+
   //
   //
   // }

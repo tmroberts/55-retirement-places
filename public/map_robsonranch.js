@@ -10,7 +10,7 @@
 //   function start() {
 
     //Call your code here
-    console.log('Map is invoked!');
+    //console.log('Map is invoked!');
     // code to draw map
     var map;
     var col = '#FF0000';
@@ -55,13 +55,12 @@
 
       for (i = 0; i < community_locations.length; i++) {
         var id = 'community' + (i+1);
-          console.log('This is community_locations[i][4]: ',community_locations[i][4]);
-          console.log('The value of id is: ',id);
+          //console.log('This is community_locations[i][4]: ',community_locations[i][4]);
+          //console.log('The value of id is: ',id);
           marker = new google.maps.Marker({
           position: new google.maps.LatLng(community_locations[i][1], community_locations[i][2]),
           map: map
           ,id: id
-          //,icon: 'red_circle.png'
           ,icon:'pin-red.png'
           ,url: community_locations[i][5]
           ,zIndex:100
