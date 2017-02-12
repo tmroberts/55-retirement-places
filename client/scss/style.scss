@@ -150,15 +150,7 @@ nav li a:hover {
   width: 15%;
 }
 
-.canterburyImg img {
-  border-radius: 8px;
-  box-shadow: 3px 3px 2px 2px #555;
-  //display: block;
-  float:left;
-  margin-right: 4%;
-  margin-bottom: 5%;
-  width: 15%;
-}
+
 
 #tours {
   font-size:  1.3em;
@@ -170,6 +162,10 @@ nav li a:hover {
   font-size:  1.1em;
   font-weight: bold;
   margin-top: 3%;
+}
+
+#abbey-tour {
+  padding-top: 4%;
 }
 
 .abbeyParagraph {
@@ -188,6 +184,10 @@ nav li a:hover {
   padding-bottom: 1%;
 }
 
+#canterbury-tour {
+  padding-top: 4%;
+}
+
 .canterburyParagraph {
   //font-size: .8em;
   //font-weight: bold;
@@ -196,6 +196,15 @@ nav li a:hover {
   padding: 0px 20px 20px 20px;
 }
 
+.canterburyImg img {
+  border-radius: 8px;
+  box-shadow: 3px 3px 2px 2px #555;
+  //display: block;
+  float:left;
+  margin-right: 4%;
+  margin-bottom: 5%;
+  width: 15%;
+}
 
 .ntx-heading {
   //border: 1px solid green;
