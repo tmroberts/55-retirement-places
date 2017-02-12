@@ -84,6 +84,7 @@ table {
   font-size: .8em; }
 
 .communityImg {
+  border-radius: 10px;
   float: left;
   max-width: 70%;
   margin-right: 1.5em;
