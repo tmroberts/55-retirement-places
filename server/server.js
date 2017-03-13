@@ -65,14 +65,14 @@ app.post('/sendemail', function (req, res) {
   // using SendGrid's v3 Node.js Library
   //https://github.com/sendgrid/sendgrid-nodejs
 
-  var helper = require('sendgrid').mail
+  var helper = require('sendgrid').mail;
 
   from_email = new helper.Email("55retirementplaces@example.com");
   //to_email = new helper.Email("tmroberts7@gmail.com");
   to_email = new helper.Email("trkr6@verizon.net")
   subject = "Testing email with SendGrid";
   content = new helper.Content("text/plain", html);
-  mail = new helper.Mail(from_email, subject, to_email, content)
+  mail = new helper.Mail(from_email, subject, to_email, content);
 
   var sg = require('sendgrid')(process.env.SENDGRID_API_KEY);
 
