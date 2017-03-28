@@ -940,6 +940,35 @@ nav li a:hover {
   margin-bottom: 5%;
   width: 15%; }
 
+.virtual-tour-button {
+  border-radius: 8px;
+  font-size: 1.347em;
+  font-weight: 700;
+  max-width: 250px;
+  width: 10em;
+  margin: 2em auto;
+  padding: .5em 0.5em;
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: .1em;
+  background-color: #999999;
+  background-color: #688d34;
+  border: solid 2px #000;
+  color: #f5f5dc;
+  text-shadow: 3px 3px 3px black;
+  opacity: .6;
+  transition: 0.2s;
+  transition-property: bottom; }
+
+.virtual-tour-button:hover {
+  background-color: #688d34;
+  border-radius: 8px;
+  border: solid 2px #000;
+  color: #f5f5f5;
+  text-decoration: none;
+  text-shadow: 3px 3px 3px black;
+  opacity: 1; }
+
 .ntx-heading {
   background-color: #333333;
   color: beige;
