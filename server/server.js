@@ -70,7 +70,7 @@ app.post('/sendemail', function (req, res) {
   from_email = new helper.Email("55retirementplaces@example.com");
   //to_email = new helper.Email("tmroberts7@gmail.com");
   to_email = new helper.Email("trkr6@verizon.net")
-  subject = "Testing email with SendGrid";
+  subject = "55 Retirementplaces Client Contact";
   content = new helper.Content("text/plain", html);
   mail = new helper.Mail(from_email, subject, to_email, content);
 
