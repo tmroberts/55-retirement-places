@@ -27176,6 +27176,7 @@
 	      _this.setState(state);
 	    };
 	    _retsStore2.default.addListener(_this.listeningFunc);
+	    //alert('No Ative Listings to display at this time.');
 	    return _this;
 	  }
 	
@@ -27190,6 +27191,7 @@
 	    value: function render() {
 	      console.log("This is state:", this.state);
 	      //add conditional to handle loading mechanism
+	
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'detail-container' },
@@ -27518,6 +27520,11 @@
 	      //console.log('This is the AJAX url being passed to server.js: ', url);
 	      //console.log('data returned from server.js :', returnedData);
 	      state.listings = returnedData;
+	
+	      if (state.listings.length === 0) {
+	        alert('No Active Listings to display at this time.');
+	      }
+	
 	      changed();
 	    });
 	  }
