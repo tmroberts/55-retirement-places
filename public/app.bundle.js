@@ -27176,7 +27176,7 @@
 	      _this.setState(state);
 	    };
 	    _retsStore2.default.addListener(_this.listeningFunc);
-	    //alert('No Ative Listings to display at this time.');
+	
 	    return _this;
 	  }
 	

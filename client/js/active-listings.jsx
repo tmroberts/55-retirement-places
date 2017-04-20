@@ -16,7 +16,7 @@ class Master extends React.Component {
       this.setState(state);
     }
     store.addListener(this.listeningFunc);
-    //alert('No Ative Listings to display at this time.');
+
   }
 
   componentWillUnmount() {
