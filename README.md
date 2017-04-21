@@ -15,13 +15,12 @@ The MVP version of this project incorporated:
 - CSS
 - Javascript/React   
 
-Phase II feature development and site improvements are underway!
+Feature development and site improvements are underway!
 
 
 ## Setup
 
 Run `npm install`
-
 
 
 ## Running the Project
